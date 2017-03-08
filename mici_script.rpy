@@ -1,196 +1,82 @@
 # micelle's script
-# sample script. testing uploading a new file
-    play music "illurock.ogg"
+# variables in different script
 
-    scene bg lecturehall
-    with fade
 
-    "Well, professor Eileen's lecture was interesting."
-    "But to be honest, I couldn't concentrate on it very much."
-    "I had a lot of other thoughts on my mind."
-    "And they all ended up with a question."
-    "A question, I've been meaning to ask someone."
+# The game starts here.
 
-    scene bg uni
-    with fade
+label start:
 
-    "When we came out of the university, I saw her."
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
 
-    show sylvie normal
-    with dissolve
+ #   scene bg room
 
-    "She was a wonderful person."
-    "I've known her ever since we were children."
-    "And she's always been a good friend."
-    "But..."
-    "Recently..."
-    "I think..."
-    "... that I wanted more."
-    "More just talking... more than just walking home together when our classes ended."
-    "And I decided..."
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
 
+  #  show eileen happy
+  
+    scene bg_outside
+    show oso_naked
+
+    # These display lines of dialogue.
+
+    "Look at that virgin NEET"
+
+    o "COOL"
+
+    o "I'm naked! Lookit me."
+
+    "You wonder why this man is disgusting and yet his smile was ... nice"
+
+    "sorta..."
+
+    "actually he's quite charming."
+
+    o "You want to come with me?"
     menu:
 
-        "... to ask her right away.":
+        "NO! Get away from me you pervert!":
 
-            jump rightaway
+            jump byeoso
 
-        "... to ask her later.":
+        "Sure. I guess":
 
-            jump later
+            jump why
+        
+       # "Pretend you didn't see him":        
 
 
-label rightaway:
+label why:
 
-    show sylvie smile
-
-    s "Oh, hi, do we walk home together?"
-    m "Yes..."
-    "I said and my voice was already shaking."
-
-    scene bg meadow
-    with fade
-
-    "We reached the meadows just outside our hometown."
-    "Autumn was so beautiful here."
-    "When we were children, we often played here."
-    m "Hey... ummm..."
-
-    show sylvie smile
+    scene bg_fish
     with dissolve
 
-    "She turned to me and smiled."
-    "I'll ask her..."
-    m "Ummm... will you..."
-    m "Will you be my artist for a visual novel?"
+    show oso_naked
 
-    show sylvie surprised
+    o "Fishing is fun"
 
-    "Silence."
-    "She is shocked. And then..."
+    "Are you usually naked when you fish?"
 
-    show sylvie smile
+    o "No."
 
-    s "Sure, but what is a \"visual novel?\""
+    o "I just don't have clothes right now because I lost all my money in gambling"
 
-    menu:
-
-        "It's a story with pictures.":
-            jump vn
-
-        "It's a hentai game.":
-            jump hentai
-
-label vn:
-
-    m "It's a story with pictures and music."
-    m "And you'll be able to make choices that influence the outcome of the story."
-    s "So it's like those choose-your-adventure books?"
-    m "Exactly! I plan on making a small romantic story."
-    m "And I figured you could help me... since I know how you like to draw."
-
-    show sylvie normal
-
-    s "Well, I can try. I hope I don't disappoint you."
-    m "You can't disappoint me, you know that."
-
-    jump marry
-
-label hentai:
-
-    $ bl_game = True
-
-    m "Why it's a game with lots of sex."
-    s "You mean, like a boy's love game?"
-    s "I've always wanted to make one of those."
-    s "I'll get right on it!"
-
-    hide sylvie
-    with dissolve
-
-    "..."
-
-    m "That wasn't what I meant!"
-
-    jump marry
-
-label marry:
+    o "so I paid them with my clothes"
 
     scene black
     with dissolve
 
-    "--- years later ---"
-
-    scene bg club
-    with dissolve
-
-    "And so, we became a visual novel creating team."
-    "We made games and had a lot of fun making them."
-
-    if bl_game:
-        "Well, apart from that Boy's Love game she insisted on making."
-
-    "And one day..."
-
-    show sylvie2 normal
-    with dissolve
-
-    s "Hey..."
-    m "Yes?"
-
-    show sylvie2 giggle
-
-    s "Marry me!"
-    m "What???"
-
-    show sylvie2 surprised
-
-    s "Well, don't you love me?"
-    m "I do, actually."
-
-    show sylvie2 smile
-
-    s "See? We've been making romantic visual novels, spending time together, helping each other...."
-    s "... and when you give love to others, love will come to you."
-    m "Hmmm, that's a nice thought."
-
-    show sylvie2 giggle
-
-    s "I just made that up."
-    m "But it's good."
-
-    show sylvie2 normal
-
-    s "I know. So, will you marry me?"
-    m "Ummm, of course I will. I've actually been meaning to ask you, but since you brought it up..."
-    s "I know, but you are so indecisive, that I thought I'd take the initiative. "
-    m "I guess... It's all about asking the right question... at the right time."
-
-    show sylvie2 giggle
-
-    s "It is. But now, stop being theoretical, and give me a kiss!"
-
-    scene black
-    with dissolve
-
-    "And we got married shortly after that."
-    "In fact, we made many more visual novels."
-    "And together, we lived happily ever after."
-
-    ".:. Good Ending."
+    "And thus begins your lovely adventure with this virgin NEET"
 
     return
-
-label later:
+label byeoso:
 
     scene black
     with dissolve
 
-    "And so I decided to ask her later."
-    "But I was indecisive."
-    "I couldn't ask her that day, and I couldn't ask her later."
-    "I guess I will never know now."
-
-    ".:. Bad Ending."
+    "And thus ends your lovely adventure with this virgin NEET"
 
     return
