@@ -62,21 +62,29 @@ image oso faded flip = Transform("oso faded",xzoom=-1.0)
 # name of the character.
 
 define o = Character("Osomatsu", color = "#c20000")
-define k = Character("Karamatsu", color = "#2860f0") 
+define k = Character("Karamatsu", color = "#2860f0")
+
+# Font Style Stuff
+
+style itai_text is text:
+    size 80
+    font "cac_champagne.ttf"
 
 # The game starts here.
 
 label start:
 
+    # Declare variables
+    
+    $ karaPoints = 0
+    $ jyushiPoints = 3
+    $ ichiPoints = 4
+    
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    scene bg_classroom
 
     #show oso normal flip at leftPos
     show oso normal flip at leftPos
@@ -92,6 +100,49 @@ label start:
     show kara normal at rightPos
     
     k "You called, brother?"
+    
+    menu:
+        
+        "Why are you naked you dumbass":
+            $ karaPoints -= 5
+            jump annoyedKara
+        
+        "Yeah man, where were you?":
+            $ karaPoints += 5
+            jump okKara
+    
+    label annoyedKara:
+    
+    k "I was changing when you called me, Osomatsu."
+    
+    "You have [karaPoints] support point(s) with Karamatsu."
+    
+    jump finalComparison
+    
+    return
+
+    label okKara:
+        
+    k "I was changing, my dear brother."
+    
+    k "For my... {=itai_text}Karamatsu Girls{/style}."
+    
+    "You have [karaPoints] support point(s) with Karamatsu."
+    
+    jump finalComparison
+    
+    return
+    
+    label finalComparison:
+    
+    if karaPoints > max(jyushiPoints,ichiPoints):
+        "You are now BFFs with Karamatsu"
+        
+        "{size=+20}SHEEEEEEEHHHH!!!!!!1ONE1!!1{/size}"
+        return
+    else:
+        "Karamatsu BAD END"
+        return
 
     # This ends the game.
 
