@@ -1,6 +1,30 @@
 init:
+    #$ rightosPos = (1,1)
+    #$ righttransPos = (0.5,1)
     $ leftPos = Position(xpos=0.15, xanchor=0.15, ypos=1.0, yanchor=1.0)
     $ rightPos = Position(xpos=0.85, xanchor=0.85, ypos =1.0, yanchor=1.0)
+    
+    #various expressions
+    $ angry1 = "angry1"
+    $ angry2 = "angry2"
+    $ neutral = "neutral"
+    $ blank = "blank"
+    $ dark = "dark"
+    $ displeased = "displeased"
+    $ happy = "happy"
+    $ shocked = "shocked"
+    $ surprised = "surprised"
+    
+    #various clothes
+    $ school = "school"
+    $ naked = "naked"
+    $ sera = "sera"
+    
+    #vars to change face/clothes
+    $ osoExp = neutral
+    $ karaExp = neutral
+    $ osoClothes = naked
+    $ karaClothes = naked
     
 # The script of the game goes in this file.
 
@@ -11,18 +35,68 @@ init:
 #image oso normal flip = im.Flip("oso_naked.png",horizontal = True)
 #image oso faded flip = im.Flip(im.MatrixColor('oso_naked.png',im.matrix.brightness(-.25)), horizontal = True)
 
-image kara normal = "kara_naked.png"
+#image kara normal = "kara_naked.png"
+
+image kara head:
+    ConditionSwitch(
+        "karaExp == neutral", "kara_neutral01.png"
+        )
+    choice:
+        3
+    choice:
+        2.5
+    choice:
+        1.5
+    ConditionSwitch(
+        "karaExp == neutral", "kara_neutral02.png"
+        )
+    .25
+    repeat
+
+image kara = LiveComposite(
+                        (800,950),
+                        (0,0),ConditionSwitch(
+                            "karaClothes == school", "kara_schools.png",
+                            "karaClothes == naked", "kara_naked.png"
+                            ),
+                        (0,0),ConditionSwitch(
+                            "karaClothes == school", "kara_schools_arms.png",
+                            "karaClothes == naked", "kara_naked_arms.png"
+                            ),
+                        (0,0),"kara head"
+                    )
 
 # Oso with animation
-image oso normal = LiveComposite(
+image oso = Flatten(
+            LiveComposite(
                     (800,950),
-                    (0,0),"osomatsu_school.png",
-                    (0,0),"oso eyes normal"
+                    (0,0), ConditionSwitch(
+                        "osoClothes == school", "oso_schools.png",
+                        "osoClothes == naked", "oso_naked.png",
+                        "osoClothes == sera", "oso_sera.png"
+                        ),
+                    (0,0),ConditionSwitch(
+                        "osoClothes == school", "oso_schools_arms.png",
+                        "osoClothes == naked", "oso_naked_arms.png",
+                        "osoClothes == sera", "oso_sera_arms.png"
+                        ),
+                    (0,0),"oso head"
                     )
+            )
 
 #To animate eyes
-image oso eyes normal:
-    "osoface_neutral01.png"
+image oso head:
+    ConditionSwitch(
+        "osoExp == neutral", "oso_neutral01.png",
+        "osoExp == displeased", "oso_displeased01.png",
+        "osoExp == angry1", "oso_angry01.png",
+        "osoExp == angry2", "oso_angry03.png",
+        "osoExp == blank", "oso_blank01.png",
+        "osoExp == dark", "oso_dark.png",
+        "osoExp == happy", "oso_happy01.png",
+        "osoExp == shocked", "oso_shocked01.png",
+        "osoExp == surprised", "oso_surprised01.png"
+    )
     choice:
         3
     choice:
@@ -30,19 +104,23 @@ image oso eyes normal:
     choice:
         1.5
     #Randomnizes time between blinking
-    "osoface_neutral02.png"
+    ConditionSwitch(
+        "osoExp == neutral", "oso_neutral02.png",
+        "osoExp == displeased", "oso_displeased02.png",
+        "osoExp == angry1", "oso_angry02.png",
+        "osoExp == angry2", "oso_angry04.png",
+        "osoExp == blank", "oso_blank02.png",
+        "osoExp == dark", "oso_dark.png",
+        "osoExp == happy", "oso_happy02.png",
+        "osoExp == shocked", "oso_shocked02.png",
+        "osoExp == surprised", "oso_surprised02.png"
+    )
     .25
     repeat
 
-# Faded oso version I really wish it wasn't so copypasta orz
-image oso faded = LiveComposite(
-                    (800,950),
-                    (0,0),im.MatrixColor("osomatsu_school.png",im.matrix.brightness(-.25)),
-                    (0,0),"oso eyes faded"
-                    )
-
+#old faded code stuff
 image oso eyes faded:
-    im.MatrixColor("osoface_neutral01.png",im.matrix.brightness(-.25))
+    im.MatrixColor("oso_neutral01.png",im.matrix.brightness(-.25))
     choice:
         3
     choice:
@@ -50,13 +128,14 @@ image oso eyes faded:
     choice:
         1.5
     #Randomnizes time between blinking
-    im.MatrixColor("osoface_neutral02.png",im.matrix.brightness(-.25))
+    im.MatrixColor("oso_neutral02.png",im.matrix.brightness(-.25))
     .25
     repeat
 
-# To flip the oso sprites
-image oso normal flip = Transform("oso normal",xzoom=-1.0)
-image oso faded flip = Transform("oso faded",xzoom=-1.0)
+# To flip
+image oso flip = Transform("oso",xzoom=-1.0)
+
+# image oso faded flip = Transform("oso faded",xzoom=-1.0)
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -77,8 +156,6 @@ label start:
     # Declare variables
     
     $ karaPoints = 0
-    $ jyushiPoints = 3
-    $ ichiPoints = 4
     
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -87,62 +164,97 @@ label start:
     scene bg_classroom
 
     #show oso normal flip at leftPos
-    show oso normal flip at leftPos
+    show oso flip at leftPos with dissolve
     
     # These display lines of dialogue.
 
-    "It's quiet"
-    
     o "Hey hey where's everyone...?"
 
-    hide oso normal flip
-    show oso faded flip at leftPos
-    show kara normal at rightPos
+    #hide oso normal flip
+    #show oso faded flip at leftPos
+    show kara at rightPos with dissolve
+    #show kara naked at Move(rightosPos,righttransPos,1.5, xanchor = "center", yanchor = "bottom")
     
     k "You called, brother?"
     
+    o "Oh you haven't changed either"
+    
+    k "Yeah"
+    
+    o "Let's go!"
+    
+    hide kara
+    
+    o "Hrm... what should I wear...?"
+    
     menu:
-        
-        "Why are you naked you dumbass":
-            $ karaPoints -= 5
-            jump annoyedKara
-        
-        "Yeah man, where were you?":
-            $ karaPoints += 5
-            jump okKara
+        "Wear the sailor outfit":
+            jump SeraOso
+        "Wear your normal uniform":
+            jump NormalOso
     
-    label annoyedKara:
+label SeraOso:
     
-    k "I was changing when you called me, Osomatsu."
+    $ osoClothes = sera
+    $ karaClothes = school
+    $ osoExp = displeased
     
-    "You have [karaPoints] support point(s) with Karamatsu."
+    o "T-the skirt's a little shor--"
     
-    jump finalComparison
+    show kara at rightPos
+    $ osoExp = shocked
+    
+    k "I'm back"
+    
+    o "I-"
+    
+    k "UH"
     
     return
+    
+label NormalOso:
+    
+    $ osoClothes = school
+    $ karaClothes = school
+    
+    o "Let's go?"
+    
+    k "Let's go"
+    
+    return
+    
+    #label annoyedKara:
+    
+    #k "I was changing when you called me, Osomatsu."
+    
+    #k "Give me a sec"
+    
+    #jump finalComparison
+    
+    #return
 
-    label okKara:
+    #label okKara:
         
-    k "I was changing, my dear brother."
+    #k "I was changing, my dear brother."
     
-    k "For my... {=itai_text}Karamatsu Girls{/style}."
+    #k "For my... {=itai_text}Karamatsu Girls{/style}."
     
-    "You have [karaPoints] support point(s) with Karamatsu."
+    #"You have [karaPoints] support point(s) with Karamatsu."
     
-    jump finalComparison
+    #jump finalComparison
     
-    return
+    #return
     
-    label finalComparison:
+    #label finalComparison:
     
-    if karaPoints > max(jyushiPoints,ichiPoints):
-        "You are now BFFs with Karamatsu"
+    #if karaPoints > max(jyushiPoints,ichiPoints):
+    #    "You are now BFFs with Karamatsu"
         
-        "{size=+20}SHEEEEEEEHHHH!!!!!!1ONE1!!1{/size}"
-        return
-    else:
-        "Karamatsu BAD END"
-        return
+    #    "{size=+20}SHEEEEEEEHHHH!!!!!!1ONE1!!1{/size}"
+    #    return
+    #else:
+    #    "Karamatsu BAD END"
+    #    return
 
     # This ends the game.
 
