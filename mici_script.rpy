@@ -1,49 +1,44 @@
-# micelle's script
-# variables in different script
-
-
-# The game starts here.
+# micelle's scrip
+# The game start
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
- #   scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-  #  show eileen happy
   
     scene bg_outside
-    show oso_naked
 
-    # These display lines of dialogue.
+    #show osoSera at right
 
-    "Look at that virgin NEET"
+    "One day SeraOso was walking to school"
 
-    o "COOL"
+    show osoSera at right
 
-    o "I'm naked! Lookit me."
+    o "COOL!"
 
-    "You wonder why this man is disgusting and yet his smile was ... nice"
+    o "My uniform looks so cute" 
 
-    "sorta..."
+    show kara at left with dissolve
 
-    "actually he's quite charming."
+    k "Hello burazah, how are you this fine day?"
 
-    o "You want to come with me?"
+    "Osomatsu looked stunned"
+
+    show osoSera angry at right
+
+    o "What the hell Karamatsu!"
+
+    o "Why the fuck are you naked?"
+
+    k "Various circumstances has caused me to be in this form"
+
+    k "Want to come with me?"
+
     menu:
 
-        "NO! Get away from me you pervert!":
+        "WTF NO!":
 
             jump byeoso
 
         "Sure. I guess":
-
+            $kara_points +=1
             jump why
         
        # "Pretend you didn't see him":        
@@ -54,29 +49,35 @@ label why:
     scene bg_fish
     with dissolve
 
-    show oso_naked
+    show kara at left
 
-    o "Fishing is fun"
+    k "Fishing is fun"
 
-    "Are you usually naked when you fish?"
+    show osoSera wut at right with dissolve
 
-    o "No."
-
-    o "I just don't have clothes right now because I lost all my money in gambling"
-
-    o "so I paid them with my clothes"
+    o "You're fucked up"
 
     scene black
     with dissolve
 
-    "And thus begins your lovely adventure with this virgin NEET"
+    "The end"
 
-    return
+    jump end
+    
 label byeoso:
 
+    scene classroom
+    with dissolve
+
+    show osoSera
+
+    o "Glad I could get away from that pervert"
+
+label end:
+
     scene black
     with dissolve
 
-    "And thus ends your lovely adventure with this virgin NEET"
+    "The end"
 
-    return
+return
