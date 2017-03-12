@@ -9,7 +9,7 @@ label start:
 
     "One day SeraOso was walking to school"
 
-    show osoSera at right
+    show seraOso at right
 
     o "COOL!"
 
@@ -21,7 +21,7 @@ label start:
 
     "Osomatsu looked stunned"
 
-    show osoSera angry at right
+    show seraOso wut at right
 
     o "What the hell Karamatsu!"
 
@@ -30,6 +30,24 @@ label start:
     k "Various circumstances has caused me to be in this form"
 
     k "Want to come with me?"
+
+    show seraOso blank at right
+
+    call subroutine #in script2.rpy
+
+    show seraOso wut at right
+
+    o "What the hell was that?"
+
+    show seraOso blank at right
+
+    k "I have no idea."
+
+    k "Nevetherless..."
+
+    k "back to the question at hand..."
+
+    k "Will you be coming with me Osomatsu?"
 
     menu:
 
@@ -53,25 +71,24 @@ label why:
 
     k "Fishing is fun"
 
-    show osoSera wut at right with dissolve
+    show seraOso wut at right with dissolve
 
     o "You're fucked up"
 
-    scene black
-    with dissolve
-
-    "The end"
-
     jump end
-    
+
+   
 label byeoso:
 
     scene classroom
     with dissolve
 
-    show osoSera
+    show seraOso
 
     o "Glad I could get away from that pervert"
+
+    hide seraOso with moveoutleft
+    call subroutine
 
 label end:
 
