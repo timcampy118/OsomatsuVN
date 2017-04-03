@@ -17,6 +17,8 @@ label start:
 
     show kara at left with dissolve
 
+    with scrshake #sudden screen shake
+
     k "Hello burazah, how are you this fine day?"
 
     "Osomatsu looked stunned"
@@ -67,11 +69,11 @@ label why:
     scene bg_fish
     with dissolve
 
-    show kara at left
+    show kara at left with dissolve
 
     k "Fishing is fun"
 
-    show seraOso wut at right with dissolve
+    show seraOso wut at right with tremble #show characters while shaking
 
     o "You're fucked up"
 
