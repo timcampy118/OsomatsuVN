@@ -67,35 +67,7 @@ static Integer response;
 		{
 			faces.add(scan.nextLine());
 		}
-		
-		//body.add("Casual");
-		//body.add("SchoolS");
-		//body.add("SchoolW");
-		//body.add("Bathrobe");
-		//body.add("Bathtowel");
-		//body.add("Mainpark");
-		//body.add("Maintee");
-		//body.add("Naked");
-		//body.add("Pj");
-		//body.add("Sera");
-	
-		
-		//faces.add("Angry3");
-		//faces.add("Angry4");
-		//faces.add("Neutral");
-		//faces.add("Angry1");
-		//faces.add("Angry2");
-		//faces.add("Blank");
-		//faces.add("Dark");
-		//faces.add("Displeased");
-		//faces.add("Happy");
-		//faces.add("Shocked");
-		//faces.add("Surprised");
-		//faces.add("Nervous");
-		//faces.add("Thinking");
-		
-		
-		
+
 		list=new ArrayList<String>();
 	
 
@@ -129,7 +101,7 @@ static Integer response;
 				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='2')
 				{
 					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"03\",\"04\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = Fade DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"03\",\"04\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"03\",\"04\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
 				
 				}
 				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='1')
@@ -140,7 +112,7 @@ static Integer response;
 				else
 				{
 					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = Fade DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
 				}
 				
 				
