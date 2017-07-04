@@ -70,59 +70,52 @@ static Integer response;
 
 		list=new ArrayList<String>();
 	
+		
 
 		for (int x=0; x<body.size(); x++)
 		{
 			for (int y=0; y<faces.size();y++)
 			{
+				for(int z=1; z<4; z++)
+				{
 				
+				int num=1;
+				if(z==3 && name.equals("oso"))
+				{
+					num=0;
+				}
 			
 				if(faces.get(y)=="dark")
-				//nothing 
+				//special case 
 				{
 					//nothing
-					list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase() +"\",\"\",\"\",\""+ body.get(x).toLowerCase() +"\",\"false\",800,950))");	
+					list.add("image "+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase() +"\",\"\",\"\",\""+ body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"false\",800,950))");	
 					//fade
-					list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase() +"\",\"\",\"\",\""+ body.get(x).toLowerCase() +"\",\"true\",800,950))");	
+					list.add("image "+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase() +"\",\"\",\"\",\""+ body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"true\",800,950))");
 					
 				}
 				
-				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='4')
+				else if((faces.get(y)).charAt((faces.get(y).length()-1))>'0' && ((faces.get(y)).charAt((faces.get(y).length()-1))<':'))
 				{
-					list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase() +"\",\"07\",\"08\",\""+ body.get(x).toLowerCase() +"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase() +"\",\"07\",\"08\",\""+ body.get(x).toLowerCase() +"\",\"true\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase() +"\",\"0" + ((((int) (faces.get(y).charAt((faces.get(y).length()-1)))-48))*2-1) + "\",\"0" + ((((int) (faces.get(y).charAt((faces.get(y).length()-1)))-48))*2) + "\",\""+ body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"false\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase() +"\",\"0" + ((((int) (faces.get(y).charAt((faces.get(y).length()-1)))-48))*2-1) + "\",\"0" + ((((int) (faces.get(y).charAt((faces.get(y).length()-1)))-48))*2) + "\",\""+ body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"true\",800,950))");
 					
-				}
-				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='3')
-				{
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"05\",\"06\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"05\",\"06\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
-				}
-				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='2')
-				{
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"03\",\"04\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"03\",\"04\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
-				
-				}
-				else if((faces.get(y)).charAt((faces.get(y).length()-1))=='1')
-				{
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ (faces.get(y).substring(0,faces.get(y).length()-1)).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
 				}
 				else
 				{
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"false\",800,950))");
-					list.add("image "+ name +" "+ body.get(x) +" " +faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase()+"\",\"true\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"false\",800,950))");
+					list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Fade = DynamicDisplayable(renpy.curry(charComposite)(\""+ name +"\",\""+ faces.get(y).toLowerCase()+"\",\"01\",\"02\",\""+body.get(x).toLowerCase() +"\",\"\","+num+",\"0"+z+"\",\"true\",800,950))");
 				}
 				
 				
 				//flip only
-				list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +"\",xzoom=-1.0)");
+				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +"\",xzoom=-1.0)");
 					
 				//fade + flip
-				list.add("image "+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade\",xzoom=-1.0)");
+				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Fade Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade\",xzoom=-1.0)");
 				
-							}
+			}
+					}
 		}
 		
 		Path file = Paths.get("imageList.txt");
@@ -134,7 +127,6 @@ static Integer response;
 
 
 	}
-
 
 
 
