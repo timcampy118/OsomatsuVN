@@ -109,10 +109,10 @@ static Integer response;
 				
 				
 				//flip only
-				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +"\",xzoom=-1.0)");
+				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Flip= Transform(\""+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +"\",xzoom=-1.0)");
 					
 				//fade + flip
-				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Fade Flip= Transform(\""+ name +" "+ body.get(x) +" "+ faces.get(y) +" Fade\",xzoom=-1.0)");
+				list.add("image "+ name +" "+ body.get(x) +" 0" + z +" "+ faces.get(y) +" Fade Flip= Transform(\""+ name +" "+ body.get(x) +" 0"+ z +" "+ faces.get(y) +" Fade\",xzoom=-1.0)");
 				
 			}
 					}
