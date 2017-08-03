@@ -4,7 +4,6 @@ package gui;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.EventQueue;
-import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,10 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
-import java.awt.image.TileObserver;
 import java.awt.image.BufferedImage;
-import java.awt.image.RescaleOp;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -489,9 +485,11 @@ public class PositionScreen implements ActionListener {
 					
 					File outfitFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+shortCharName+"_"+clothesCbox.getSelectedItem().toString()+".png");
 					
+					System.out.println(tmpFace);
 					File faceFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+revisedExpressionName+meme+".png");
 					File faceFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace+"01.png");	
 					File faceFile3 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace+".png");	
+					File faceFile4 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace.substring(0,tmpFace.length()-1)+"0"+tmpFace.charAt(tmpFace.length()-1)+".png");
 					
 					
 					File armFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+shortCharName+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s0"+armCbox.getSelectedItem().toString().charAt(armCbox.getSelectedItem().toString().length()-1)+".png");
@@ -545,8 +543,16 @@ public class PositionScreen implements ActionListener {
 						}
 						catch (Exception d)
 						{
+							 try
+							 {
 							 System.out.println(faceFile3);
 							 faceImage= ImageIO.read(faceFile3);
+							 }
+							 catch (Exception f)
+							 {
+								 System.out.println(faceFile4);
+								 faceImage= ImageIO.read(faceFile4);
+							 }
 						}
 					}
 					
@@ -919,14 +925,15 @@ public class PositionScreen implements ActionListener {
 		    
 		    if (source == genTextFileMenuItem) 
 		    {
-		    	Path file = Paths.get("position.txt");
+		    	String path = JOptionPane.showInputDialog("Name your file (dont forget the .txt");
+		    	Path file = Paths.get(path);
 				try {
 					Files.write(file, codeText, Charset.forName("UTF-8"));
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				JOptionPane.showMessageDialog(null, "Done, look for a position.txt in the same folder as program");
+				JOptionPane.showMessageDialog(null, "Done, look for a "+ path+" in the same folder as program");
 		    
 		    }
 		    else if(source == setCounter)
