@@ -34,7 +34,8 @@ public class PositionScreen implements ActionListener {
 	static String fadeText;
 	static String flipText;
 	static int counterNum;
-	
+	static int errorNum;
+	static int backupCount;
 	
 	//define canvas
 	Canvas fakeScreen;
@@ -87,6 +88,8 @@ public class PositionScreen implements ActionListener {
 	JMenuItem deleteEntryMenuItem;
 	JMenuItem genTextFileMenuItem;
 	JMenuItem setCounter;
+	JMenuItem exitMenuItem;
+	JMenuItem clearListMenuItem;
 	JMenuBar menuBar;
 	
 	
@@ -138,27 +141,24 @@ public class PositionScreen implements ActionListener {
 	    deleteEntryMenuItem= new JMenuItem("Delete Scene");
 	    genTextFileMenuItem= new JMenuItem("Generate Code File");
 	    setCounter 		   = new JMenuItem("Set Counter");
+	    exitMenuItem	   = new JMenuItem("Exit");
+	    clearListMenuItem  = new JMenuItem("Clear all Scene");
 	    
-	    
-	    fileMenu.setMnemonic('F');
-	    iMessedUpMenu.setMnemonic('a');
-	    
-	    genTextFileMenuItem.setMnemonic('x');
+	 
 	    genTextFileMenuItem.addActionListener(this);
-	    
-	    setCounter.setMnemonic('t');
 	    setCounter.addActionListener(this);
-	    
-	    deleteEntryMenuItem.setMnemonic('z');
 	    deleteEntryMenuItem.addActionListener(this);
-	    
+	    exitMenuItem.addActionListener(this);
+	    clearListMenuItem.addActionListener(this);
 	    
 	    menuBar.add(fileMenu);
 	    fileMenu.add(genTextFileMenuItem);
 	    fileMenu.add(setCounter);
+	    fileMenu.add(exitMenuItem);
 	    counterNum=0;
 	    menuBar.add(iMessedUpMenu);
 	    iMessedUpMenu.add(deleteEntryMenuItem);
+	    iMessedUpMenu.add(clearListMenuItem);
 	    
 	  
 		
@@ -170,7 +170,7 @@ public class PositionScreen implements ActionListener {
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 730, 441);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.setJMenuBar(menuBar);
 		
 		
@@ -511,11 +511,12 @@ public class PositionScreen implements ActionListener {
 					System.out.println(faceFile);
 					
 					
-					
+					errorNum=0;
 					BufferedImage outfitImage = ImageIO.read(outfitFile);
 					BufferedImage faceImage;
-					
 					System.out.println(armFile);
+					
+					errorNum=1;
 					try
 					{
 						 System.out.println(armFile);
@@ -528,6 +529,7 @@ public class PositionScreen implements ActionListener {
 						 armImage = ImageIO.read(armFile2);
 						
 					}
+					errorNum=2;
 					try
 					{
 						 System.out.println(faceFile);
@@ -673,6 +675,20 @@ public class PositionScreen implements ActionListener {
 				
 				{
 					
+					if(errorNum==0)
+					{
+						 JOptionPane.showMessageDialog(null, "Missing Body asset");
+					}
+					else if (errorNum==1)
+					{
+						 JOptionPane.showMessageDialog(null, "Missing Arm asset");
+					}
+					else if(errorNum==2)
+					{
+						 JOptionPane.showMessageDialog(null, "Missing Face asset");
+					}
+					
+					
 					File baseFile = new File("image\\"+charaCbox.getSelectedItem().toString()+".jpg");
 					Image nakedImage=null;
 					try {
@@ -719,6 +735,9 @@ public class PositionScreen implements ActionListener {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+			
+				
+				
 			}
 		});
 		
@@ -873,6 +892,20 @@ public class PositionScreen implements ActionListener {
 		{
 			System.out.println(codeText.get(y));
 		}
+		
+		backupCount++;
+		if(backupCount==10)
+		{
+			String path = "backup.txt";
+	    	Path file = Paths.get(path);
+			try {
+				Files.write(file, codeText, Charset.forName("UTF-8"));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			backupCount=0;
+		}
 	}
 	
 	
@@ -935,6 +968,18 @@ public class PositionScreen implements ActionListener {
 				}
 				JOptionPane.showMessageDialog(null, "Done, look for a "+ path+" in the same folder as program");
 		    
+				
+				
+				String path2 = "backup.txt";
+		    	Path file2 = Paths.get(path2);
+		    	
+				try {
+					Files.delete(file2);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 		    }
 		    else if(source == setCounter)
 		    {
@@ -987,6 +1032,48 @@ public class PositionScreen implements ActionListener {
 					}
 		    	}
 		 }
+		    else if(source==exitMenuItem)
+		    {
+		    	int check= JOptionPane.showConfirmDialog(null, "Did you export your code already?");
+		    	System.out.println("check" + check);
+		    	
+		    	if(check==0)
+		    	{
+		    		System.exit(0);
+		    	}
+		    }
+		    else if(source==clearListMenuItem)
+		    {
+		    	int check= JOptionPane.showConfirmDialog(null, "This will delete all generated Scenes are you ok with this?");
+		    	System.out.println("check" + check);
+		    	
+		    	if(check==0)
+		    	{
+			    	int x=codeText.size();
+					if(x==0)
+					{
+						JOptionPane.showMessageDialog(null, "No code found");
+					}
+					else
+					{
+						while(codeText.size()!=0)
+						{
+							codeText.remove(0);
+						}
+						JOptionPane.showMessageDialog(null, "All scenes removed");
+						
+						String path2 = "backup.txt";
+				    	Path file2 = Paths.get(path2);
+				    	
+						try {
+							Files.delete(file2);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+		    	}					
+		    }
 	 }
 
 
