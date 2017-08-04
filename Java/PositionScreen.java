@@ -28,7 +28,7 @@ public class PositionScreen implements ActionListener {
 	
 	//These are variables we need throughout the program and I was lazy so they're static. Live with it.
 	static Sprite arraySprite[];
-	static String isThere[];
+	static Sprite isThere[];
 	static ArrayList<String> codeText;
 	
 	static String fadeText;
@@ -163,7 +163,7 @@ public class PositionScreen implements ActionListener {
 	  
 		
 		arraySprite = new Sprite[7]; 
-		isThere = new String [7];
+		isThere = new Sprite [7];
 		codeText = new ArrayList<String>();
 		
 		//creating frame
@@ -858,31 +858,38 @@ public class PositionScreen implements ActionListener {
 	{
 		for(int x=0; x<7; x++)
 		{
+
+			//int tmpInt= arraySprite[x].getPosPos();
+			
 			if(arraySprite[x]==null)
 			{
 				if(isThere[x]!=null)
 					{
-						codeText.add("hide "+isThere[x]);
+						codeText.add("hide "+isThere[x].getCharacter());
 						isThere[x]=null;
 					}
 			}
-			else
-			{
+			else if (arraySprite[x]!=null && isThere[x]!=null && isThere[x].getCharacter()!=arraySprite[x].getCharacter())
+				codeText.add("hide " + isThere[x].getCharacter());
+			
+			
 				fadeText="";
 				flipText="";
 				
-				if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
-					flipText= " Flip";
-				if(arraySprite[x].getFade())
-					fadeText= " Fade";
-				System.out.println(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1) +" " +  ((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ));
-				
-				//THIS IS THE IMPORTANT PART, MAKE SURE THIS IS RIGHT
-				
-				codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
-				isThere[x]=arraySprite[x].getCharacter();		
+				if(arraySprite[x]!=null)
+				{
+					if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
+						flipText= " Flip";
+					if(arraySprite[x].getFade())
+						fadeText= " Fade";
+					System.out.println(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1) +" " +  ((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ));	
+					//THIS IS THE IMPORTANT PART, MAKE SURE THIS IS RIGHT
+					
+					codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
+					isThere[x]=arraySprite[x];	
+				}
 			}				
-		}
+		
 		JOptionPane.showMessageDialog(null, "Scene Generated");
 		counterNum++;
 		counter.setText("Line: "+counterNum);
