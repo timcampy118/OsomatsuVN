@@ -871,7 +871,9 @@ public class PositionScreen implements ActionListener {
 			}
 			else if (arraySprite[x]!=null && isThere[x]!=null && isThere[x].getCharacter()!=arraySprite[x].getCharacter())
 				codeText.add("hide " + isThere[x].getCharacter());
-			
+		}
+		for(int x=0; x<7; x++)
+		{
 			
 				fadeText="";
 				flipText="";
@@ -1069,14 +1071,15 @@ public class PositionScreen implements ActionListener {
 						}
 						JOptionPane.showMessageDialog(null, "All scenes removed");
 						
+						try
+						{
 						String path2 = "backup.txt";
 				    	Path file2 = Paths.get(path2);
-				    	
-						try {
-							Files.delete(file2);
-						} catch (IOException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+				    	Files.delete(file2);
+						}
+						catch(Exception z)
+						{
+							
 						}
 					}
 		    	}					
