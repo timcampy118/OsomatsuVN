@@ -447,32 +447,14 @@ public class PositionScreen implements ActionListener {
 					
 					//create Sprite object
 					createSprite(charaCbox.getSelectedItem().toString(),(String)faceCbox.getSelectedItem().toString(),(String)armCbox.getSelectedItem().toString(),(String)clothesCbox.getSelectedItem().toString(),(String)posCbox.getSelectedItem().toString(),fadeChcbx.isSelected(),charaCbox.getSelectedIndex(),faceCbox.getSelectedIndex(),armCbox.getSelectedIndex(),clothesCbox.getSelectedIndex(),posCbox.getSelectedIndex());
-					@SuppressWarnings("unused")
-					
 					//find image file
-					String shortCharName = "";
+					
 					String revisedExpressionName = "";
 					String tmpFace="";
 					
-					switch(charaCbox.getSelectedItem().toString())
-					{
-					case "Osomatsu": shortCharName="oso";
-					break;
-					case "Karamatsu": shortCharName="kara";
-					break;
-					case "Choromatsu": shortCharName="choro";
-					break;
-					case "Ichimatsu": shortCharName="ichi";
-					break;
-					case "Jyushimatsu": shortCharName="jyushi";
-					break;
-					case "Todomatsu": shortCharName="todo";
-					break;
-					default: shortCharName=charaCbox.getSelectedItem().toString();
-					break;
-					}
 					
-					if(shortCharName!=charaCbox.getSelectedItem().toString())
+					
+					if(charaCbox.getSelectedItem().toString()!="None")
 					{
 					tmpFace=faceCbox.getSelectedItem().toString();
 					revisedExpressionName=tmpFace.substring(0, tmpFace.length()-1)+"0";
@@ -480,20 +462,20 @@ public class PositionScreen implements ActionListener {
 					
 					
 					
-					File baseFile = new File("image\\"+charaCbox.getSelectedItem().toString()+".jpg");
+					//File baseFile = new File("image\\"+charaCbox.getSelectedItem().toString()+".jpg");
 					
 					
-					File outfitFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+shortCharName+"_"+clothesCbox.getSelectedItem().toString()+".png");
+					File outfitFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+".png");
 					
 					System.out.println(tmpFace);
-					File faceFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+revisedExpressionName+meme+".png");
-					File faceFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace+"01.png");	
-					File faceFile3 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace+".png");	
-					File faceFile4 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+shortCharName+"_"+tmpFace.substring(0,tmpFace.length()-1)+"0"+tmpFace.charAt(tmpFace.length()-1)+".png");
+					File faceFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+revisedExpressionName+meme+".png");
+					File faceFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+"01.png");	
+					File faceFile3 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+".png");	
+					File faceFile4 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace.substring(0,tmpFace.length()-1)+"0"+tmpFace.charAt(tmpFace.length()-1)+".png");
 					
 					
-					File armFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+shortCharName+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s0"+armCbox.getSelectedItem().toString().charAt(armCbox.getSelectedItem().toString().length()-1)+".png");
-					File armFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+shortCharName+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s.png");
+					File armFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s0"+armCbox.getSelectedItem().toString().charAt(armCbox.getSelectedItem().toString().length()-1)+".png");
+					File armFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s.png");
 						
 					
 					
@@ -895,7 +877,7 @@ public class PositionScreen implements ActionListener {
 		JOptionPane.showMessageDialog(null, "Scene Generated");
 		counterNum++;
 		counter.setText("Line: "+counterNum);
-		codeText.add("done");
+		codeText.add("done" + counterNum);
 		
 		for(int y=0; y<codeText.size(); y++)
 		{
