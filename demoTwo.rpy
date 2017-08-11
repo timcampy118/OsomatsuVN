@@ -1,7 +1,6 @@
 label demoTwo:
         
     scene bg_hallway with fade
-    
 
     show choro SchoolS 02 Nervous at pos7
     choro "We..."
@@ -16,17 +15,18 @@ label demoTwo:
     hide oso
     show ichi SchoolS 02 Angry2 at pos7
     ichi "Tch... I owe Todomatsu 500 yen..."
-    show oso SchoolS 03 Neutral Flip at pos2
-    show ichi SchoolS 02 Angry2 Fade at pos7
+    hide ichi
+    show oso SchoolS 03 Neutral Flip at pos3
+    #show ichi SchoolS 02 Angry2 Fade at pos7
     oso "What was that?"
-    show oso SchoolS 03 Neutral Fade Flip at pos2
-    show jyushi SchoolS 03 Nervous at pos4
+    show oso SchoolS 03 Neutral Fade Flip at pos3
+    show jyushi SchoolS 03 Nervous at pos6
     jyushi "Nothing!"
-    show oso SchoolS 03 Neutral Fade Flip at pos2
-    show jyushi SchoolS 03 Happy1 at pos4
+    show oso SchoolS 03 Neutral Fade Flip at pos3
+    show jyushi SchoolS 03 Happy1 at pos6
     jyushi "Ahaha! Let's get ready for summer!"
-    show oso SchoolS 01 Happy1 Flip at pos2
-    show jyushi SchoolS 03 Happy1 Fade at pos4
+    show oso SchoolS 01 Happy1 Flip at pos3
+    show jyushi SchoolS 03 Happy1 Fade at pos6
     oso "Oh... Haha. That's the spirit, Jyushimatsu!"
     hide oso
     hide jyushi
@@ -35,80 +35,80 @@ label demoTwo:
     scene bg_lr_daytime with fade
     
     oso "Ugh..."
-    show oso Maintee 03 Sad Flip at pos2
-    show kara Maintee 01 Neutral Fade at pos4
+    show oso Maintee 03 Sad Flip at pos3
+    show kara Maintee 01 Neutral Fade at pos6
     oso "The heat..."
-    show oso Maintee 01 Sad Flip at pos2
-    show kara Maintee 01 Neutral Fade at pos4
+    show oso Maintee 01 Sad Flip at pos3
+    show kara Maintee 01 Neutral Fade at pos6
     oso "Karamatsu, can you pass the shaved ice?"
-    show oso Maintee 01 Sad Fade Flip at pos2
-    show kara Maintee 01 Neutral at pos4
+    show oso Maintee 01 Sad Fade Flip at pos3
+    show kara Maintee 01 Neutral at pos6
     kara "Here you go, Osomatsu."
-    show oso Maintee 01 Neutral Flip at pos2
-    show kara Maintee 01 Neutral Fade at pos4
+    show oso Maintee 01 Neutral Flip at pos3
+    show kara Maintee 01 Neutral Fade at pos6
     oso "Aha, Thanks! This tastes really good!"
-    show oso Maintee 01 Neutral Fade Flip at pos2
-    show kara Maintee 01 Happy1 at pos4
+    show oso Maintee 01 Neutral Fade Flip at pos3
+    show kara Maintee 01 Happy1 at pos6
     kara "Heh. Of course it does, my brother. I poured all my passion into it, after all."
-    show oso Maintee 01 Blank1 Flip at pos2
-    show kara Maintee 01 Happy1 Fade at pos4
+    show oso Maintee 01 Blank1 Flip at pos3
+    show kara Maintee 01 Happy1 Fade at pos6
     oso "More like you poured all your sweat into it."
     hide oso
     hide kara
-    show ichi Maintee 01 Neutral Flip at pos2
-    show jyushi Maintee 01 Displeased1 Fade at pos4
+    show ichi Maintee 01 Neutral Flip at pos3
+    show jyushi Maintee 01 Displeased1 Fade at pos6
     ichi "Time's up, Jyushimatsu. It's my turn to use the fan now."
-    show ichi Maintee 01 Neutral Fade Flip at pos2
-    show jyushi Maintee 01 Shocked1 at pos4
+    show ichi Maintee 01 Neutral Fade Flip at pos3
+    show jyushi Maintee 01 Shocked1 at pos6
     jyushi "But! It's so hot!"
-    show ichi Maintee 02 Angry2 Flip at pos2
-    show jyushi Maintee 01 Shocked1 Fade at pos4
+    show ichi Maintee 02 Angry2 Flip at pos3
+    show jyushi Maintee 01 Shocked1 Fade at pos6
     ichi "You've hogged it for an hour. Can't you share?"
-    show ichi Maintee 02 Angry2 Fade Flip at pos2
-    show jyushi Maintee 01 Angry1 at pos4
+    show ichi Maintee 02 Angry2 Fade Flip at pos3
+    show jyushi Maintee 01 Angry1 at pos6
     jyushi "I need air conditioning!"
-    show ichi Maintee 01 Gasp Flip at pos2
-    show jyushi Maintee 01 Angry1 Fade at pos4
+    show ichi Maintee 01 Gasp Flip at pos3
+    show jyushi Maintee 01 Angry1 Fade at pos6
     ichi "C-Calm down, Jyushimatsu—"
-    show ichi Maintee 01 Gasp Fade Flip at pos2
-    show jyushi Maintee 03 Angry1 at pos4
+    show ichi Maintee 01 Gasp Fade Flip at pos3
+    show jyushi Maintee 03 Angry1 at pos6
     jyushi "AIR CONDITIONING!!!"
-    show ichi Maintee 01 Shocked1 Flip at pos2
-    show jyushi Maintee 03 Angry1 Fade at pos4
+    show ichi Maintee 01 Shocked1 Flip at pos3
+    show jyushi Maintee 03 Angry1 Fade at pos6
     ichi "—?!"
-    show ichi Maintee 01 Nervous Flip at pos2
-    show jyushi Maintee 03 Angry1 Fade at pos4
+    show ichi Maintee 01 Nervous Flip at pos3
+    show jyushi Maintee 03 Angry1 Fade at pos6
     ichi "D-Did you just eat three whole popsicles in one bite?"
-    show ichi Maintee 01 Nervous Fade Flip at pos2
+    show ichi Maintee 01 Nervous Fade Flip at pos3
     show jyushi Maintee 03 Angry1 Fade at pos4
     show choro Maintee 01 Angry3 at pos5
     choro "You know, you could just use a hand fan instead..."
     hide ichi
     hide jyushi
-    show oso Maintee 03 Blank1 Flip at pos2
-    show choro Maintee 01 Angry3 Fade at pos4
+    show oso Maintee 03 Blank1 Flip at pos3
+    show choro Maintee 01 Angry3 Fade at pos6
     oso "Hot sure is summer..."
-    show oso Maintee 03 Blank1 Fade Flip at pos2
-    show choro Maintee 01 Blank1 at pos4
-    choro "Don't you mean, summer sure is hot?"
-    show oso Maintee 03 Nervous Flip at pos2
-    show choro Maintee 01 Blank1 Fade at pos4
+    show oso Maintee 03 Blank1 Fade Flip at pos3
+    show choro Maintee 01 Blank1 at pos6
+    choro "Don't you mean, \"summer sure is hot?\""
+    show oso Maintee 03 Nervous Flip at pos3
+    show choro Maintee 01 Blank1 Fade at pos6
     oso "Ah... The brain's really messing with my heat."
-    show oso Maintee 03 Surprised Flip at pos2
-    show choro Maintee 01 Blank1 Fade at pos4
+    show oso Maintee 03 Surprised Flip at pos3
+    show choro Maintee 01 Blank1 Fade at pos6
     oso "Gahh!! It's sooooo hot!"
-    show oso Maintee 01 Shocked1 Flip at pos2
-    show choro Maintee 01 Blank1 Fade at pos4
+    show oso Maintee 01 Shocked1 Flip at pos3
+    show choro Maintee 01 Blank1 Fade at pos6
     oso "And I'm sooooo bored..."
-    show oso Maintee 01 Angry5 Flip at pos2 
-    show choro Maintee 01 Blank1 Fade at pos4
+    show oso Maintee 01 Angry5 Flip at pos3 
+    show choro Maintee 01 Blank1 Fade at pos6
     oso "Can't summer be more exciting?!"
     hide choro
-    show oso Maintee 01 Angry5 Fade Flip at pos2
-    show todo Maintee 01 Angry1 at pos4
+    show oso Maintee 01 Angry5 Fade Flip at pos3
+    show todo Maintee 01 Angry1 at pos6
     todo "Ahh, geez! Osomatsu-niisan, will you shut up already?!"
-    show oso Maintee 01 Angry5 Fade Flip at pos2
-    show todo Maintee 01 Displeased1 at pos4
+    show oso Maintee 01 Angry5 Fade Flip at pos3
+    show todo Maintee 01 Displeased1 at pos6
     todo "If you stopped moving around so much, you wouldn't feel as hot."
     hide oso
     hide todo
@@ -142,121 +142,125 @@ label demoTwo:
     show kara Swim 01 Angry1 at pos7
     kara "AHHH!!! OW, OW, OW!!! IT'S PINCHING ME!!! GET IT OFF!!! GET IT OFF!!!"
     hide kara
-    show choro Swim 01 Nervous Flip at pos2
-    show kara Swim 01 Angry1 Fade at pos4
+    show choro Swim 01 Nervous Flip at pos3
+    show kara Swim 01 Angry1 Fade at pos6
     choro "Ah—! Karamatsu-niisan!"
-    show choro Swim 01 Nervous Fade Flip at pos2
-    show kara Swim 01 Shocked1 at pos4
+    show choro Swim 01 Nervous Fade Flip at pos3
+    show kara Swim 01 Shocked1 at pos6
     kara "Phew..."
-    show choro Swim 01 Nervous Fade Flip at pos2
-    show kara Swim 01 Blank1 at pos4
+    show choro Swim 01 Nervous Fade Flip at pos3
+    show kara Swim 01 Blank1 at pos6
     kara "I thought I was going to die..."
-    show choro Swim 01 Nervous Fade Flip at pos2
-    show kara Swim 01 Happy1 at pos4
+    show choro Swim 01 Nervous Fade Flip at pos3
+    show kara Swim 01 Happy1 at pos6
     kara "Thank you for getting rid of that crab, Choromatsu."
-    show choro Swim 01 Displeased3 Flip at pos2
-    show kara Swim 01 Happy1 Fade at pos4
+    show choro Swim 01 Displeased3 Flip at pos3
+    show kara Swim 01 Happy1 Fade at pos6
     choro "What the hell were you doing...?"
-    show choro Swim 01 Displeased3 Flip at pos2
-    show kara Swim 01 Happy1 Fade at pos4
+    show choro Swim 01 Displeased3 Flip at pos3
+    show kara Swim 01 Happy1 Fade at pos6
     choro "Talking like that to a crab..."
-    show choro Swim 01 Displeased3 Fade Flip at pos2
-    show kara Swim 02 Neutral at pos4
+    show choro Swim 01 Displeased3 Fade Flip at pos3
+    show kara Swim 02 Neutral at pos6
     kara "I was trying to improve my acting."
-    show choro Swim 01 Displeased3 Fade Flip at pos2
-    show kara Swim 02 Displeased2 at pos4
+    show choro Swim 01 Displeased3 Fade Flip at pos3
+    show kara Swim 02 Displeased2 at pos6
     kara "Since I failed in obtaining the lead role..."
     hide choro
-    show oso Swim 01 Neutral Flip at pos2
-    show kara Swim 02 Displeased2 Fade at pos4
+    show oso Swim 01 Neutral Flip at pos3
+    show kara Swim 02 Displeased2 Fade at pos6
     oso "Nyahahaha! Your acting was really funny, Karamatsu!"
-    show oso Swim 01 Happy1 Flip at pos2
-    show kara Swim 02 Displeased2 Fade at pos4
+    show oso Swim 01 Happy1 Flip at pos3
+    show kara Swim 02 Displeased2 Fade at pos6
     oso "Haaa, I haven't laughed this hard in a while!"
-    show oso Swim 01 Happy1 Fade Flip at pos2
-    show kara Swim 02 Nervous at pos4
+    show oso Swim 01 Happy1 Fade Flip at pos3
+    show kara Swim 02 Nervous at pos6
     kara "You were watching the whole time?!"
-    show oso Swim 01 Neutral Flip at pos2
-    show kara Swim 02 Nervous Fade at pos4
+    show oso Swim 01 Neutral Flip at pos3
+    show kara Swim 02 Nervous Fade at pos6
     oso "Yup!"
-    show oso Swim 01 Neutral Fade Flip at pos2
-    show kara Swim 03 Nervous at pos4
+    show oso Swim 01 Neutral Fade Flip at pos3
+    show kara Swim 03 Nervous at pos6
     kara "W-Why didn't you help me with the crab?"
-    show oso Swim 03 Happy1 Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
+    show oso Swim 03 Happy1 Flip at pos3
+    show kara Swim 03 Nervous Fade at pos6
     oso "Because it was way too funny!"
-    show oso Swim 03 Happy1 Fade Flip at pos2
-    show kara Swim 03 Nervous at pos4
+    show oso Swim 03 Happy1 Fade Flip at pos3
+    show kara Swim 03 Nervous at pos6
     kara "I... I see. Well, nevermind that."
-    show oso Swim 03 Happy1 Fade Flip at pos2
-    show kara Swim 03 Nervous at pos4
+    show oso Swim 03 Happy1 Fade Flip at pos3
+    show kara Swim 03 Nervous at pos6
     kara "W-What did you think of my acting?"
-    show oso Swim 03 Gasp Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
+    show oso Swim 03 Gasp Flip at pos3
+    show kara Swim 03 Nervous Fade at pos6
     oso "Oh, um..."
-    show oso Swim 03 Happy1 Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "It was so bad, it was funny!"
-    show oso Swim 03 Happy1 Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "You'd be a hit playing the butt of the joke! Ahaha!"
-    show oso Swim 03 Happy1 Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "You have a lotta potential!"
-    show oso Swim 03 Neutral Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "Just keep practicing and you'll be able to get the lead role one day!"
-    show oso Swim 03 Neutral Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "Trust me! I'm your older brother, after all."
-    show oso Swim 03 Neutral Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "It looked natural, I guess."
-    show oso Swim 03 Happy1 Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "I think it suits you!"
-    show oso Swim 03 Thinking Flip at pos2
-    show kara Swim 03 Nervous Fade at pos4
-    oso "But it's not like I know much about acting in the first place."
-    show oso Swim 03 Neutral Fade Flip at pos2
-    show kara Swim 01 Gasp at pos4
+    
+    
+    menu:
+        
+        "It was so bad, it was funny!":
+   
+            show oso Swim 03 Happy1 Flip at pos3
+            show kara Swim 03 Nervous Fade at pos6
+            oso "You'd be a hit playing the butt of the joke! Ahaha!"
+            
+        "You have a lotta potential!":
+            show oso Swim 03 Neutral Flip at pos3
+            show kara Swim 03 Nervous Fade at pos6
+            oso "Just keep practicing and you'll be able to get the lead role one day!"
+            show oso Swim 03 Neutral Flip at pos3
+            show kara Swim 03 Nervous Fade at pos6
+            oso "Trust me! I'm your older brother, after all."
+        
+            
+        "It looked natural, I guess.":
+            show oso Swim 03 Happy1 Flip at pos3
+            show kara Swim 03 Nervous Fade at pos6
+            oso "I think it suits you!"
+            show oso Swim 03 Thinking Flip at pos3
+            show kara Swim 03 Nervous Fade at pos6
+            oso "But it's not like I know much about acting in the first place."
+    
+    
+    show oso Swim 03 Neutral Fade Flip at pos3
+    show kara Swim 01 Gasp at pos6
     kara "I see..."
-    show oso Swim 03 Neutral Fade Flip at pos2
-    show kara Swim 01 Neutral at pos4
+    show oso Swim 03 Neutral Fade Flip at pos3
+    show kara Swim 01 Neutral at pos6
     kara "Thanks for the feedback, Osomatsu."
-    show oso Swim 03 Neutral Fade Flip at pos2
+    show oso Swim 03 Neutral Fade Flip at pos3
     show kara Swim 01 Neutral Fade at pos4
     show choro Swim 03 Neutral at pos5
     choro "You should have more confidence in yourself, Karamatsu-niisan."
-    show oso Swim 03 Neutral Fade Flip at pos2
+    show oso Swim 03 Neutral Fade Flip at pos3
     show kara Swim 01 Neutral Fade at pos4
     show choro Swim 03 Happy2 at pos5
     choro "After all, didn't you join the drama club because you enjoyed their performance at the cultural festival?"
-    show oso Swim 03 Neutral Fade Flip at pos2
+    show oso Swim 03 Neutral Fade Flip at pos3
     show kara Swim 01 Displeased2 at pos4
     show choro Swim 03 Happy2 Fade at pos5
     kara "Ah... That's true."
-    show oso Swim 03 Displeased1 Flip at pos2
+    show oso Swim 03 Displeased1 Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 03 Happy2 Fade at pos5
     oso "It's nothing to be stressed about. "
-    show oso Swim 03 Neutral Flip at pos2
+    show oso Swim 03 Neutral Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 03 Neutral Fade at pos5
     oso "Right now, we're here to enjoy summer!"
-    show oso Swim 03 Displeased1 Flip at pos2
+    show oso Swim 03 Displeased1 Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 03 Neutral Fade at pos5
     oso "But it's pretty disappointing to see that there aren't many people here..."
-    show oso Swim 03 Angry1 Flip at pos2
+    show oso Swim 03 Angry1 Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 03 Neutral Fade at pos5
     oso "...And it's all old people! What the hell?!"
-    show oso Swim 03 Angry2 Flip at pos2
+    show oso Swim 03 Angry2 Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 03 Neutral Fade at pos5
     oso "I don't wanna see some grandpa's back."
-    show oso Swim 03 Angry2 Fade Flip at pos2
+    show oso Swim 03 Angry2 Fade Flip at pos3
     show kara Swim 01 Displeased2 Fade at pos4
     show choro Swim 01 Blank1 at pos5
 
@@ -265,20 +269,20 @@ label demoTwo:
     choro "At least everyone else looks like they're enjoying themselves."
     hide kara
     hide choro
-    show jyushi Swim 03 Neutral Flip at pos1
+    show jyushi Swim 03 Neutral Flip at pos3
     hide oso
     show todo Swim 01 Neutral Fade at pos4
     show ichi Swim 01 Neutral Fade at pos5
     jyushi "YAHOOOO!"
-    show jyushi Swim 03 Neutral Fade Flip at pos1
+    show jyushi Swim 03 Neutral Fade Flip at pos3
     show todo Swim 03 Nervous at pos4
     show ichi Swim 01 Neutral Fade at pos5
     todo "Jyushimatsu-niisan, wait! You need to put some sunscreen on first!"
-    show jyushi Swim 03 Neutral Fade Flip at pos1
+    show jyushi Swim 03 Neutral Fade Flip at pos3
     show todo Swim 03 Nervous at pos4
     show ichi Swim 01 Neutral Fade at pos5
     todo "Don't just run off like that..."
-    show jyushi Swim 03 Neutral Fade Flip at pos1
+    show jyushi Swim 03 Neutral Fade Flip at pos3
     show todo Swim 03 Surprised at pos4
     show ichi Swim 01 Neutral Fade at pos5
     todo "Ah, geez! Jyushimatsu-niisan is so energetic."
@@ -301,7 +305,7 @@ label demoTwo:
     show todo Swim 01 Happy1 Fade at pos4
     show ichi Swim 01 Angry2 at pos5
     ichi "Eh..."
-    show oso Swim 02 Happy1 Flip at pos2
+    show oso Swim 02 Happy1 Flip at pos3
     show todo Swim 01 Blank1 Fade at pos4
     show ichi Swim 01 Neutral Fade at pos5
     oso "Yo, Ichimatsu~! Todomatsu~!"
@@ -314,7 +318,7 @@ label demoTwo:
     show choro Swim 02 Displeased3 Fade Flip at pos1
     show oso Swim 02 Neutral Fade Flip at pos2
     hide todo
-    show kara Swim 01 Neutral at pos7
+    show kara Swim 01 Neutral at pos6
     kara "Let's just sit down and relax, Choromatsu."
     hide kara
     show choro Swim 02 Neutral Fade Flip at pos1
@@ -347,6 +351,8 @@ label demoTwo:
     hide choro
     hide oso
     hide kara
+    
+    
     chibita "GET OFF, YA IDJIT!!!"
     chibita "WHAT THE HELL!!! I WAS JUST RELAXING IN THE SAND—"
     show ichi Swim 01 Neutral Fade Flip at pos1
@@ -435,7 +441,7 @@ label demoTwo:
     show oso Swim 01 Neutral Fade at pos4
     show kara Swim 01 Displeased1 Fade Flip at pos2
     show choro Swim 01 Displeased3 at pos5
-    choro "Unbored isn't a—"
+    choro "\"Unbored\" isn't a—"
     show kara Swim 03 Happy1 Flip at pos2
     show choro Swim 01 Displeased3 Fade at pos5
     kara "Let's go, Choromatsu. May I rub sunscreen on your back?"
@@ -445,7 +451,7 @@ label demoTwo:
     hide kara
     hide choro
     show oso Swim 01 Neutral at pos4
-    oso "So what's this something you've got for me to do."
+    oso "So what's this \"something\" you've got for me to do."
     show oso Swim 01 Neutral Fade at pos4
     iyami "Me is teaching people how to surf, zansu."
     oso "But there's barely anyone here. Just a bunch of old geezers..."
@@ -548,7 +554,7 @@ label demoTwo:
     show oso Swim 01 Neutral Flip at pos2
     show jyushi Swim 01 Happy1 Fade at pos4
     show kara Swim 01 Happy1 Fade at pos5
-    oso "It'll be one of those wild high school memories we can look back on and laugh about when we get older!"
+    oso "It'll be one of those \"wild high school memories\" we can look back on and laugh about when we get older!"
     show oso Swim 01 Happy1 Flip at pos2
     show jyushi Swim 01 Happy1 Fade at pos4
     show kara Swim 01 Happy1 Fade at pos5
@@ -589,7 +595,7 @@ label demoTwo:
     todo "I don't see why not. I can't lay around all day without getting bored."
     show kara Swim 02 Blank1 Fade Flip at pos3
     show todo Swim 01 Happy1 at pos4
-    todo "So why not get on board too~"
+    todo "So why not get \"on board\" too~"
     hide kara
     hide todo
     show jyushi Swim 01 Happy1 Flip at pos2
@@ -678,7 +684,7 @@ label demoTwo:
     show ichi Swim 01 Shocked1 at pos4
     show todo Swim 01 Shocked1 at pos5
     show jyushi Swim 01 Shocked1 at pos6
-    all "...?!"
+    everyone "...?!"
     hide oso
     hide choro
     hide kara
@@ -707,7 +713,7 @@ label demoTwo:
     oso "...S-See?"
     show oso Swim 01 Nervous Fade Flip at pos2
     show choro Swim 01 Angry1 at pos4
-    choro "WHAT DO YOU MEAN, SEE?! THAT GUY JUST DIED!!!"
+    choro "WHAT DO YOU MEAN, \"SEE?!\" THAT GUY JUST DIED!!!"
     show oso Swim 01 Nervous Fade Flip at pos2
     show choro Swim 01 Angry1 Fade at pos4
     show todo Swim 02 Angry1 at pos5
