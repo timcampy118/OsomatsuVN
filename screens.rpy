@@ -130,7 +130,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.png", xalign=0.5, yalign=1)
 
 style namebox:
     xpos gui.name_xpos
@@ -217,7 +217,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 0.5
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -296,6 +296,8 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
+            
+            textbutton _("Credits") action ShowMenu("credits")
 
         else:
 
@@ -397,6 +399,35 @@ style main_menu_title:
 
 style main_menu_version:
     properties gui.text_properties("version")
+    
+
+## Credits screen ############################################################
+##
+## Credits Stuff
+## Ayy thank you forum poster
+    
+screen credits():
+    tag menu
+    
+    frame:
+        background "images/BG_pathhome_evening.jpg"
+    
+    frame:
+        background "gui/overlay/credits.png"
+    
+    frame:
+        background "gui/box.png"
+        xpadding 200
+        xmargin 400
+        xalign 0.5
+        yalign 0.5
+        
+        fixed: #This puts the elements in a vertical box, you could use an hbox or a grid or a fixed, etc.
+            text "{a=https://cansextupletsgraduate-game.tumblr.com/}Tumblr{/a}" xalign 0.5 yalign 0.4
+            text "{a=https://twitter.com/OsosanDiscord}Twitter{/a}" xalign 0.5 yalign 0.45
+            text "{color=#ffffff}This game is still currently a work in progress.{/color}" xalign 0.5 yalign 0.55
+            textbutton _("Return") xalign 0.5 yalign 0.65 action Return()
+    
 
 
 ## Game Menu screen ############################################################
