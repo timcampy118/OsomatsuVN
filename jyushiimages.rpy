@@ -96,17 +96,14 @@ image jyushi SchoolS 03 Blank2 Flip= Transform("jyushi SchoolS 03 Blank2",xzoom=
 image jyushi SchoolS 03 Blank2 Fade Flip= Transform("jyushi SchoolS 03 Blank2 Fade",xzoom=-1.0)
 image jyushi SchoolS 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"01","false",800,950))
 image jyushi SchoolS 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"01","true",800,950))
-done
 image jyushi SchoolS 01 Dark Flip= Transform("jyushi SchoolS 01 Dark",xzoom=-1.0)
 image jyushi SchoolS 01 Dark Fade Flip= Transform("jyushi SchoolS 01 Dark Fade",xzoom=-1.0)
 image jyushi SchoolS 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"02","false",800,950))
 image jyushi SchoolS 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"02","true",800,950))
-done
 image jyushi SchoolS 02 Dark Flip= Transform("jyushi SchoolS 02 Dark",xzoom=-1.0)
 image jyushi SchoolS 02 Dark Fade Flip= Transform("jyushi SchoolS 02 Dark Fade",xzoom=-1.0)
 image jyushi SchoolS 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"03","false",800,950))
 image jyushi SchoolS 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schools","",1,"03","true",800,950))
-done
 image jyushi SchoolS 03 Dark Flip= Transform("jyushi SchoolS 03 Dark",xzoom=-1.0)
 image jyushi SchoolS 03 Dark Fade Flip= Transform("jyushi SchoolS 03 Dark Fade",xzoom=-1.0)
 image jyushi SchoolS 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","schools","",1,"01","false",800,950))
@@ -351,17 +348,14 @@ image jyushi SchoolW 03 Blank2 Flip= Transform("jyushi SchoolW 03 Blank2",xzoom=
 image jyushi SchoolW 03 Blank2 Fade Flip= Transform("jyushi SchoolW 03 Blank2 Fade",xzoom=-1.0)
 image jyushi SchoolW 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"01","false",800,950))
 image jyushi SchoolW 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"01","true",800,950))
-done
 image jyushi SchoolW 01 Dark Flip= Transform("jyushi SchoolW 01 Dark",xzoom=-1.0)
 image jyushi SchoolW 01 Dark Fade Flip= Transform("jyushi SchoolW 01 Dark Fade",xzoom=-1.0)
 image jyushi SchoolW 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"02","false",800,950))
 image jyushi SchoolW 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"02","true",800,950))
-done
 image jyushi SchoolW 02 Dark Flip= Transform("jyushi SchoolW 02 Dark",xzoom=-1.0)
 image jyushi SchoolW 02 Dark Fade Flip= Transform("jyushi SchoolW 02 Dark Fade",xzoom=-1.0)
 image jyushi SchoolW 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"03","false",800,950))
 image jyushi SchoolW 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","schoolw","",1,"03","true",800,950))
-done
 image jyushi SchoolW 03 Dark Flip= Transform("jyushi SchoolW 03 Dark",xzoom=-1.0)
 image jyushi SchoolW 03 Dark Fade Flip= Transform("jyushi SchoolW 03 Dark Fade",xzoom=-1.0)
 image jyushi SchoolW 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","schoolw","",1,"01","false",800,950))
@@ -606,17 +600,14 @@ image jyushi Mainparka 03 Blank2 Flip= Transform("jyushi Mainparka 03 Blank2",xz
 image jyushi Mainparka 03 Blank2 Fade Flip= Transform("jyushi Mainparka 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Mainparka 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"01","false",800,950))
 image jyushi Mainparka 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"01","true",800,950))
-done
 image jyushi Mainparka 01 Dark Flip= Transform("jyushi Mainparka 01 Dark",xzoom=-1.0)
 image jyushi Mainparka 01 Dark Fade Flip= Transform("jyushi Mainparka 01 Dark Fade",xzoom=-1.0)
 image jyushi Mainparka 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"02","false",800,950))
 image jyushi Mainparka 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"02","true",800,950))
-done
 image jyushi Mainparka 02 Dark Flip= Transform("jyushi Mainparka 02 Dark",xzoom=-1.0)
 image jyushi Mainparka 02 Dark Fade Flip= Transform("jyushi Mainparka 02 Dark Fade",xzoom=-1.0)
 image jyushi Mainparka 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"03","false",800,950))
 image jyushi Mainparka 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","mainparka","",1,"03","true",800,950))
-done
 image jyushi Mainparka 03 Dark Flip= Transform("jyushi Mainparka 03 Dark",xzoom=-1.0)
 image jyushi Mainparka 03 Dark Fade Flip= Transform("jyushi Mainparka 03 Dark Fade",xzoom=-1.0)
 image jyushi Mainparka 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","mainparka","",1,"01","false",800,950))
@@ -861,17 +852,14 @@ image jyushi Maintee 03 Blank2 Flip= Transform("jyushi Maintee 03 Blank2",xzoom=
 image jyushi Maintee 03 Blank2 Fade Flip= Transform("jyushi Maintee 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Maintee 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"01","false",800,950))
 image jyushi Maintee 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"01","true",800,950))
-done
 image jyushi Maintee 01 Dark Flip= Transform("jyushi Maintee 01 Dark",xzoom=-1.0)
 image jyushi Maintee 01 Dark Fade Flip= Transform("jyushi Maintee 01 Dark Fade",xzoom=-1.0)
 image jyushi Maintee 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"02","false",800,950))
 image jyushi Maintee 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"02","true",800,950))
-done
 image jyushi Maintee 02 Dark Flip= Transform("jyushi Maintee 02 Dark",xzoom=-1.0)
 image jyushi Maintee 02 Dark Fade Flip= Transform("jyushi Maintee 02 Dark Fade",xzoom=-1.0)
 image jyushi Maintee 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"03","false",800,950))
 image jyushi Maintee 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","maintee","",1,"03","true",800,950))
-done
 image jyushi Maintee 03 Dark Flip= Transform("jyushi Maintee 03 Dark",xzoom=-1.0)
 image jyushi Maintee 03 Dark Fade Flip= Transform("jyushi Maintee 03 Dark Fade",xzoom=-1.0)
 image jyushi Maintee 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","maintee","",1,"01","false",800,950))
@@ -1116,17 +1104,14 @@ image jyushi Naked 03 Blank2 Flip= Transform("jyushi Naked 03 Blank2",xzoom=-1.0
 image jyushi Naked 03 Blank2 Fade Flip= Transform("jyushi Naked 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Naked 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"01","false",800,950))
 image jyushi Naked 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"01","true",800,950))
-done
 image jyushi Naked 01 Dark Flip= Transform("jyushi Naked 01 Dark",xzoom=-1.0)
 image jyushi Naked 01 Dark Fade Flip= Transform("jyushi Naked 01 Dark Fade",xzoom=-1.0)
 image jyushi Naked 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"02","false",800,950))
 image jyushi Naked 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"02","true",800,950))
-done
 image jyushi Naked 02 Dark Flip= Transform("jyushi Naked 02 Dark",xzoom=-1.0)
 image jyushi Naked 02 Dark Fade Flip= Transform("jyushi Naked 02 Dark Fade",xzoom=-1.0)
 image jyushi Naked 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"03","false",800,950))
 image jyushi Naked 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","naked","",1,"03","true",800,950))
-done
 image jyushi Naked 03 Dark Flip= Transform("jyushi Naked 03 Dark",xzoom=-1.0)
 image jyushi Naked 03 Dark Fade Flip= Transform("jyushi Naked 03 Dark Fade",xzoom=-1.0)
 image jyushi Naked 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","naked","",1,"01","false",800,950))
@@ -1371,17 +1356,14 @@ image jyushi Pj 03 Blank2 Flip= Transform("jyushi Pj 03 Blank2",xzoom=-1.0)
 image jyushi Pj 03 Blank2 Fade Flip= Transform("jyushi Pj 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Pj 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"01","false",800,950))
 image jyushi Pj 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"01","true",800,950))
-done
 image jyushi Pj 01 Dark Flip= Transform("jyushi Pj 01 Dark",xzoom=-1.0)
 image jyushi Pj 01 Dark Fade Flip= Transform("jyushi Pj 01 Dark Fade",xzoom=-1.0)
 image jyushi Pj 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"02","false",800,950))
 image jyushi Pj 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"02","true",800,950))
-done
 image jyushi Pj 02 Dark Flip= Transform("jyushi Pj 02 Dark",xzoom=-1.0)
 image jyushi Pj 02 Dark Fade Flip= Transform("jyushi Pj 02 Dark Fade",xzoom=-1.0)
 image jyushi Pj 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"03","false",800,950))
 image jyushi Pj 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","pj","",1,"03","true",800,950))
-done
 image jyushi Pj 03 Dark Flip= Transform("jyushi Pj 03 Dark",xzoom=-1.0)
 image jyushi Pj 03 Dark Fade Flip= Transform("jyushi Pj 03 Dark Fade",xzoom=-1.0)
 image jyushi Pj 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","pj","",1,"01","false",800,950))
@@ -1626,17 +1608,14 @@ image jyushi Casual 03 Blank2 Flip= Transform("jyushi Casual 03 Blank2",xzoom=-1
 image jyushi Casual 03 Blank2 Fade Flip= Transform("jyushi Casual 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Casual 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"01","false",800,950))
 image jyushi Casual 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"01","true",800,950))
-done
 image jyushi Casual 01 Dark Flip= Transform("jyushi Casual 01 Dark",xzoom=-1.0)
 image jyushi Casual 01 Dark Fade Flip= Transform("jyushi Casual 01 Dark Fade",xzoom=-1.0)
 image jyushi Casual 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"02","false",800,950))
 image jyushi Casual 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"02","true",800,950))
-done
 image jyushi Casual 02 Dark Flip= Transform("jyushi Casual 02 Dark",xzoom=-1.0)
 image jyushi Casual 02 Dark Fade Flip= Transform("jyushi Casual 02 Dark Fade",xzoom=-1.0)
 image jyushi Casual 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"03","false",800,950))
 image jyushi Casual 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","casual","",1,"03","true",800,950))
-done
 image jyushi Casual 03 Dark Flip= Transform("jyushi Casual 03 Dark",xzoom=-1.0)
 image jyushi Casual 03 Dark Fade Flip= Transform("jyushi Casual 03 Dark Fade",xzoom=-1.0)
 image jyushi Casual 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","casual","",1,"01","false",800,950))
@@ -1881,17 +1860,14 @@ image jyushi Bathtowel 03 Blank2 Flip= Transform("jyushi Bathtowel 03 Blank2",xz
 image jyushi Bathtowel 03 Blank2 Fade Flip= Transform("jyushi Bathtowel 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Bathtowel 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"01","false",800,950))
 image jyushi Bathtowel 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"01","true",800,950))
-done
 image jyushi Bathtowel 01 Dark Flip= Transform("jyushi Bathtowel 01 Dark",xzoom=-1.0)
 image jyushi Bathtowel 01 Dark Fade Flip= Transform("jyushi Bathtowel 01 Dark Fade",xzoom=-1.0)
 image jyushi Bathtowel 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"02","false",800,950))
 image jyushi Bathtowel 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"02","true",800,950))
-done
 image jyushi Bathtowel 02 Dark Flip= Transform("jyushi Bathtowel 02 Dark",xzoom=-1.0)
 image jyushi Bathtowel 02 Dark Fade Flip= Transform("jyushi Bathtowel 02 Dark Fade",xzoom=-1.0)
 image jyushi Bathtowel 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"03","false",800,950))
 image jyushi Bathtowel 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathtowel","",1,"03","true",800,950))
-done
 image jyushi Bathtowel 03 Dark Flip= Transform("jyushi Bathtowel 03 Dark",xzoom=-1.0)
 image jyushi Bathtowel 03 Dark Fade Flip= Transform("jyushi Bathtowel 03 Dark Fade",xzoom=-1.0)
 image jyushi Bathtowel 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","bathtowel","",1,"01","false",800,950))
@@ -2136,17 +2112,14 @@ image jyushi Bathrobe 03 Blank2 Flip= Transform("jyushi Bathrobe 03 Blank2",xzoo
 image jyushi Bathrobe 03 Blank2 Fade Flip= Transform("jyushi Bathrobe 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Bathrobe 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"01","false",800,950))
 image jyushi Bathrobe 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"01","true",800,950))
-done
 image jyushi Bathrobe 01 Dark Flip= Transform("jyushi Bathrobe 01 Dark",xzoom=-1.0)
 image jyushi Bathrobe 01 Dark Fade Flip= Transform("jyushi Bathrobe 01 Dark Fade",xzoom=-1.0)
 image jyushi Bathrobe 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"02","false",800,950))
 image jyushi Bathrobe 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"02","true",800,950))
-done
 image jyushi Bathrobe 02 Dark Flip= Transform("jyushi Bathrobe 02 Dark",xzoom=-1.0)
 image jyushi Bathrobe 02 Dark Fade Flip= Transform("jyushi Bathrobe 02 Dark Fade",xzoom=-1.0)
 image jyushi Bathrobe 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"03","false",800,950))
 image jyushi Bathrobe 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","bathrobe","",1,"03","true",800,950))
-done
 image jyushi Bathrobe 03 Dark Flip= Transform("jyushi Bathrobe 03 Dark",xzoom=-1.0)
 image jyushi Bathrobe 03 Dark Fade Flip= Transform("jyushi Bathrobe 03 Dark Fade",xzoom=-1.0)
 image jyushi Bathrobe 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","bathrobe","",1,"01","false",800,950))
@@ -2391,17 +2364,14 @@ image jyushi Sera 03 Blank2 Flip= Transform("jyushi Sera 03 Blank2",xzoom=-1.0)
 image jyushi Sera 03 Blank2 Fade Flip= Transform("jyushi Sera 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Sera 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"01","false",800,950))
 image jyushi Sera 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"01","true",800,950))
-done
 image jyushi Sera 01 Dark Flip= Transform("jyushi Sera 01 Dark",xzoom=-1.0)
 image jyushi Sera 01 Dark Fade Flip= Transform("jyushi Sera 01 Dark Fade",xzoom=-1.0)
 image jyushi Sera 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"02","false",800,950))
 image jyushi Sera 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"02","true",800,950))
-done
 image jyushi Sera 02 Dark Flip= Transform("jyushi Sera 02 Dark",xzoom=-1.0)
 image jyushi Sera 02 Dark Fade Flip= Transform("jyushi Sera 02 Dark Fade",xzoom=-1.0)
 image jyushi Sera 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"03","false",800,950))
 image jyushi Sera 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","sera","",1,"03","true",800,950))
-done
 image jyushi Sera 03 Dark Flip= Transform("jyushi Sera 03 Dark",xzoom=-1.0)
 image jyushi Sera 03 Dark Fade Flip= Transform("jyushi Sera 03 Dark Fade",xzoom=-1.0)
 image jyushi Sera 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","sera","",1,"01","false",800,950))
@@ -2646,17 +2616,14 @@ image jyushi Swim 03 Blank2 Flip= Transform("jyushi Swim 03 Blank2",xzoom=-1.0)
 image jyushi Swim 03 Blank2 Fade Flip= Transform("jyushi Swim 03 Blank2 Fade",xzoom=-1.0)
 image jyushi Swim 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"01","false",800,950))
 image jyushi Swim 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"01","true",800,950))
-done
 image jyushi Swim 01 Dark Flip= Transform("jyushi Swim 01 Dark",xzoom=-1.0)
 image jyushi Swim 01 Dark Fade Flip= Transform("jyushi Swim 01 Dark Fade",xzoom=-1.0)
 image jyushi Swim 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"02","false",800,950))
 image jyushi Swim 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"02","true",800,950))
-done
 image jyushi Swim 02 Dark Flip= Transform("jyushi Swim 02 Dark",xzoom=-1.0)
 image jyushi Swim 02 Dark Fade Flip= Transform("jyushi Swim 02 Dark Fade",xzoom=-1.0)
 image jyushi Swim 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"03","false",800,950))
 image jyushi Swim 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("jyushi","dark","","","swim","",1,"03","true",800,950))
-done
 image jyushi Swim 03 Dark Flip= Transform("jyushi Swim 03 Dark",xzoom=-1.0)
 image jyushi Swim 03 Dark Fade Flip= Transform("jyushi Swim 03 Dark Fade",xzoom=-1.0)
 image jyushi Swim 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("jyushi","displeased","01","02","swim","",1,"01","false",800,950))

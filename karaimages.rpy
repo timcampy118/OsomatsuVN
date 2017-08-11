@@ -96,17 +96,14 @@ image kara SchoolS 03 Blank2 Flip= Transform("kara SchoolS 03 Blank2",xzoom=-1.0
 image kara SchoolS 03 Blank2 Fade Flip= Transform("kara SchoolS 03 Blank2 Fade",xzoom=-1.0)
 image kara SchoolS 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"01","false",800,950))
 image kara SchoolS 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"01","true",800,950))
-done
 image kara SchoolS 01 Dark Flip= Transform("kara SchoolS 01 Dark",xzoom=-1.0)
 image kara SchoolS 01 Dark Fade Flip= Transform("kara SchoolS 01 Dark Fade",xzoom=-1.0)
 image kara SchoolS 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"02","false",800,950))
 image kara SchoolS 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"02","true",800,950))
-done
 image kara SchoolS 02 Dark Flip= Transform("kara SchoolS 02 Dark",xzoom=-1.0)
 image kara SchoolS 02 Dark Fade Flip= Transform("kara SchoolS 02 Dark Fade",xzoom=-1.0)
 image kara SchoolS 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"03","false",800,950))
 image kara SchoolS 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schools","",1,"03","true",800,950))
-done
 image kara SchoolS 03 Dark Flip= Transform("kara SchoolS 03 Dark",xzoom=-1.0)
 image kara SchoolS 03 Dark Fade Flip= Transform("kara SchoolS 03 Dark Fade",xzoom=-1.0)
 image kara SchoolS 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","schools","",1,"01","false",800,950))
@@ -351,17 +348,14 @@ image kara SchoolW 03 Blank2 Flip= Transform("kara SchoolW 03 Blank2",xzoom=-1.0
 image kara SchoolW 03 Blank2 Fade Flip= Transform("kara SchoolW 03 Blank2 Fade",xzoom=-1.0)
 image kara SchoolW 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"01","false",800,950))
 image kara SchoolW 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"01","true",800,950))
-done
 image kara SchoolW 01 Dark Flip= Transform("kara SchoolW 01 Dark",xzoom=-1.0)
 image kara SchoolW 01 Dark Fade Flip= Transform("kara SchoolW 01 Dark Fade",xzoom=-1.0)
 image kara SchoolW 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"02","false",800,950))
 image kara SchoolW 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"02","true",800,950))
-done
 image kara SchoolW 02 Dark Flip= Transform("kara SchoolW 02 Dark",xzoom=-1.0)
 image kara SchoolW 02 Dark Fade Flip= Transform("kara SchoolW 02 Dark Fade",xzoom=-1.0)
 image kara SchoolW 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"03","false",800,950))
 image kara SchoolW 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","schoolw","",1,"03","true",800,950))
-done
 image kara SchoolW 03 Dark Flip= Transform("kara SchoolW 03 Dark",xzoom=-1.0)
 image kara SchoolW 03 Dark Fade Flip= Transform("kara SchoolW 03 Dark Fade",xzoom=-1.0)
 image kara SchoolW 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","schoolw","",1,"01","false",800,950))
@@ -606,17 +600,14 @@ image kara Mainparka 03 Blank2 Flip= Transform("kara Mainparka 03 Blank2",xzoom=
 image kara Mainparka 03 Blank2 Fade Flip= Transform("kara Mainparka 03 Blank2 Fade",xzoom=-1.0)
 image kara Mainparka 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"01","false",800,950))
 image kara Mainparka 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"01","true",800,950))
-done
 image kara Mainparka 01 Dark Flip= Transform("kara Mainparka 01 Dark",xzoom=-1.0)
 image kara Mainparka 01 Dark Fade Flip= Transform("kara Mainparka 01 Dark Fade",xzoom=-1.0)
 image kara Mainparka 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"02","false",800,950))
 image kara Mainparka 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"02","true",800,950))
-done
 image kara Mainparka 02 Dark Flip= Transform("kara Mainparka 02 Dark",xzoom=-1.0)
 image kara Mainparka 02 Dark Fade Flip= Transform("kara Mainparka 02 Dark Fade",xzoom=-1.0)
 image kara Mainparka 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"03","false",800,950))
 image kara Mainparka 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","mainparka","",1,"03","true",800,950))
-done
 image kara Mainparka 03 Dark Flip= Transform("kara Mainparka 03 Dark",xzoom=-1.0)
 image kara Mainparka 03 Dark Fade Flip= Transform("kara Mainparka 03 Dark Fade",xzoom=-1.0)
 image kara Mainparka 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","mainparka","",1,"01","false",800,950))
@@ -861,17 +852,14 @@ image kara Maintee 03 Blank2 Flip= Transform("kara Maintee 03 Blank2",xzoom=-1.0
 image kara Maintee 03 Blank2 Fade Flip= Transform("kara Maintee 03 Blank2 Fade",xzoom=-1.0)
 image kara Maintee 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"01","false",800,950))
 image kara Maintee 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"01","true",800,950))
-done
 image kara Maintee 01 Dark Flip= Transform("kara Maintee 01 Dark",xzoom=-1.0)
 image kara Maintee 01 Dark Fade Flip= Transform("kara Maintee 01 Dark Fade",xzoom=-1.0)
 image kara Maintee 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"02","false",800,950))
 image kara Maintee 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"02","true",800,950))
-done
 image kara Maintee 02 Dark Flip= Transform("kara Maintee 02 Dark",xzoom=-1.0)
 image kara Maintee 02 Dark Fade Flip= Transform("kara Maintee 02 Dark Fade",xzoom=-1.0)
 image kara Maintee 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"03","false",800,950))
 image kara Maintee 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","maintee","",1,"03","true",800,950))
-done
 image kara Maintee 03 Dark Flip= Transform("kara Maintee 03 Dark",xzoom=-1.0)
 image kara Maintee 03 Dark Fade Flip= Transform("kara Maintee 03 Dark Fade",xzoom=-1.0)
 image kara Maintee 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","maintee","",1,"01","false",800,950))
@@ -1116,17 +1104,14 @@ image kara Naked 03 Blank2 Flip= Transform("kara Naked 03 Blank2",xzoom=-1.0)
 image kara Naked 03 Blank2 Fade Flip= Transform("kara Naked 03 Blank2 Fade",xzoom=-1.0)
 image kara Naked 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"01","false",800,950))
 image kara Naked 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"01","true",800,950))
-done
 image kara Naked 01 Dark Flip= Transform("kara Naked 01 Dark",xzoom=-1.0)
 image kara Naked 01 Dark Fade Flip= Transform("kara Naked 01 Dark Fade",xzoom=-1.0)
 image kara Naked 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"02","false",800,950))
 image kara Naked 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"02","true",800,950))
-done
 image kara Naked 02 Dark Flip= Transform("kara Naked 02 Dark",xzoom=-1.0)
 image kara Naked 02 Dark Fade Flip= Transform("kara Naked 02 Dark Fade",xzoom=-1.0)
 image kara Naked 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"03","false",800,950))
 image kara Naked 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","naked","",1,"03","true",800,950))
-done
 image kara Naked 03 Dark Flip= Transform("kara Naked 03 Dark",xzoom=-1.0)
 image kara Naked 03 Dark Fade Flip= Transform("kara Naked 03 Dark Fade",xzoom=-1.0)
 image kara Naked 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","naked","",1,"01","false",800,950))
@@ -1371,17 +1356,14 @@ image kara Pj 03 Blank2 Flip= Transform("kara Pj 03 Blank2",xzoom=-1.0)
 image kara Pj 03 Blank2 Fade Flip= Transform("kara Pj 03 Blank2 Fade",xzoom=-1.0)
 image kara Pj 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"01","false",800,950))
 image kara Pj 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"01","true",800,950))
-done
 image kara Pj 01 Dark Flip= Transform("kara Pj 01 Dark",xzoom=-1.0)
 image kara Pj 01 Dark Fade Flip= Transform("kara Pj 01 Dark Fade",xzoom=-1.0)
 image kara Pj 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"02","false",800,950))
 image kara Pj 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"02","true",800,950))
-done
 image kara Pj 02 Dark Flip= Transform("kara Pj 02 Dark",xzoom=-1.0)
 image kara Pj 02 Dark Fade Flip= Transform("kara Pj 02 Dark Fade",xzoom=-1.0)
 image kara Pj 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"03","false",800,950))
 image kara Pj 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","pj","",1,"03","true",800,950))
-done
 image kara Pj 03 Dark Flip= Transform("kara Pj 03 Dark",xzoom=-1.0)
 image kara Pj 03 Dark Fade Flip= Transform("kara Pj 03 Dark Fade",xzoom=-1.0)
 image kara Pj 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","pj","",1,"01","false",800,950))
@@ -1626,17 +1608,14 @@ image kara Casual 03 Blank2 Flip= Transform("kara Casual 03 Blank2",xzoom=-1.0)
 image kara Casual 03 Blank2 Fade Flip= Transform("kara Casual 03 Blank2 Fade",xzoom=-1.0)
 image kara Casual 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"01","false",800,950))
 image kara Casual 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"01","true",800,950))
-done
 image kara Casual 01 Dark Flip= Transform("kara Casual 01 Dark",xzoom=-1.0)
 image kara Casual 01 Dark Fade Flip= Transform("kara Casual 01 Dark Fade",xzoom=-1.0)
 image kara Casual 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"02","false",800,950))
 image kara Casual 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"02","true",800,950))
-done
 image kara Casual 02 Dark Flip= Transform("kara Casual 02 Dark",xzoom=-1.0)
 image kara Casual 02 Dark Fade Flip= Transform("kara Casual 02 Dark Fade",xzoom=-1.0)
 image kara Casual 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"03","false",800,950))
 image kara Casual 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","casual","",1,"03","true",800,950))
-done
 image kara Casual 03 Dark Flip= Transform("kara Casual 03 Dark",xzoom=-1.0)
 image kara Casual 03 Dark Fade Flip= Transform("kara Casual 03 Dark Fade",xzoom=-1.0)
 image kara Casual 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","casual","",1,"01","false",800,950))
@@ -1881,17 +1860,14 @@ image kara Bathtowel 03 Blank2 Flip= Transform("kara Bathtowel 03 Blank2",xzoom=
 image kara Bathtowel 03 Blank2 Fade Flip= Transform("kara Bathtowel 03 Blank2 Fade",xzoom=-1.0)
 image kara Bathtowel 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"01","false",800,950))
 image kara Bathtowel 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"01","true",800,950))
-done
 image kara Bathtowel 01 Dark Flip= Transform("kara Bathtowel 01 Dark",xzoom=-1.0)
 image kara Bathtowel 01 Dark Fade Flip= Transform("kara Bathtowel 01 Dark Fade",xzoom=-1.0)
 image kara Bathtowel 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"02","false",800,950))
 image kara Bathtowel 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"02","true",800,950))
-done
 image kara Bathtowel 02 Dark Flip= Transform("kara Bathtowel 02 Dark",xzoom=-1.0)
 image kara Bathtowel 02 Dark Fade Flip= Transform("kara Bathtowel 02 Dark Fade",xzoom=-1.0)
 image kara Bathtowel 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"03","false",800,950))
 image kara Bathtowel 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathtowel","",1,"03","true",800,950))
-done
 image kara Bathtowel 03 Dark Flip= Transform("kara Bathtowel 03 Dark",xzoom=-1.0)
 image kara Bathtowel 03 Dark Fade Flip= Transform("kara Bathtowel 03 Dark Fade",xzoom=-1.0)
 image kara Bathtowel 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","bathtowel","",1,"01","false",800,950))
@@ -2136,17 +2112,14 @@ image kara Bathrobe 03 Blank2 Flip= Transform("kara Bathrobe 03 Blank2",xzoom=-1
 image kara Bathrobe 03 Blank2 Fade Flip= Transform("kara Bathrobe 03 Blank2 Fade",xzoom=-1.0)
 image kara Bathrobe 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"01","false",800,950))
 image kara Bathrobe 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"01","true",800,950))
-done
 image kara Bathrobe 01 Dark Flip= Transform("kara Bathrobe 01 Dark",xzoom=-1.0)
 image kara Bathrobe 01 Dark Fade Flip= Transform("kara Bathrobe 01 Dark Fade",xzoom=-1.0)
 image kara Bathrobe 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"02","false",800,950))
 image kara Bathrobe 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"02","true",800,950))
-done
 image kara Bathrobe 02 Dark Flip= Transform("kara Bathrobe 02 Dark",xzoom=-1.0)
 image kara Bathrobe 02 Dark Fade Flip= Transform("kara Bathrobe 02 Dark Fade",xzoom=-1.0)
 image kara Bathrobe 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"03","false",800,950))
 image kara Bathrobe 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","bathrobe","",1,"03","true",800,950))
-done
 image kara Bathrobe 03 Dark Flip= Transform("kara Bathrobe 03 Dark",xzoom=-1.0)
 image kara Bathrobe 03 Dark Fade Flip= Transform("kara Bathrobe 03 Dark Fade",xzoom=-1.0)
 image kara Bathrobe 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","bathrobe","",1,"01","false",800,950))
@@ -2391,17 +2364,14 @@ image kara Sera 03 Blank2 Flip= Transform("kara Sera 03 Blank2",xzoom=-1.0)
 image kara Sera 03 Blank2 Fade Flip= Transform("kara Sera 03 Blank2 Fade",xzoom=-1.0)
 image kara Sera 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"01","false",800,950))
 image kara Sera 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"01","true",800,950))
-done
 image kara Sera 01 Dark Flip= Transform("kara Sera 01 Dark",xzoom=-1.0)
 image kara Sera 01 Dark Fade Flip= Transform("kara Sera 01 Dark Fade",xzoom=-1.0)
 image kara Sera 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"02","false",800,950))
 image kara Sera 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"02","true",800,950))
-done
 image kara Sera 02 Dark Flip= Transform("kara Sera 02 Dark",xzoom=-1.0)
 image kara Sera 02 Dark Fade Flip= Transform("kara Sera 02 Dark Fade",xzoom=-1.0)
 image kara Sera 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"03","false",800,950))
 image kara Sera 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","sera","",1,"03","true",800,950))
-done
 image kara Sera 03 Dark Flip= Transform("kara Sera 03 Dark",xzoom=-1.0)
 image kara Sera 03 Dark Fade Flip= Transform("kara Sera 03 Dark Fade",xzoom=-1.0)
 image kara Sera 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","sera","",1,"01","false",800,950))
@@ -2646,17 +2616,14 @@ image kara Swim 03 Blank2 Flip= Transform("kara Swim 03 Blank2",xzoom=-1.0)
 image kara Swim 03 Blank2 Fade Flip= Transform("kara Swim 03 Blank2 Fade",xzoom=-1.0)
 image kara Swim 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"01","false",800,950))
 image kara Swim 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"01","true",800,950))
-done
 image kara Swim 01 Dark Flip= Transform("kara Swim 01 Dark",xzoom=-1.0)
 image kara Swim 01 Dark Fade Flip= Transform("kara Swim 01 Dark Fade",xzoom=-1.0)
 image kara Swim 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"02","false",800,950))
 image kara Swim 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"02","true",800,950))
-done
 image kara Swim 02 Dark Flip= Transform("kara Swim 02 Dark",xzoom=-1.0)
 image kara Swim 02 Dark Fade Flip= Transform("kara Swim 02 Dark Fade",xzoom=-1.0)
 image kara Swim 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"03","false",800,950))
 image kara Swim 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("kara","dark","","","swim","",1,"03","true",800,950))
-done
 image kara Swim 03 Dark Flip= Transform("kara Swim 03 Dark",xzoom=-1.0)
 image kara Swim 03 Dark Fade Flip= Transform("kara Swim 03 Dark Fade",xzoom=-1.0)
 image kara Swim 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("kara","displeased","01","02","swim","",1,"01","false",800,950))

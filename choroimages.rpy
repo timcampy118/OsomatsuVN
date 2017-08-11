@@ -96,17 +96,14 @@ image choro SchoolS 03 Blank2 Flip= Transform("choro SchoolS 03 Blank2",xzoom=-1
 image choro SchoolS 03 Blank2 Fade Flip= Transform("choro SchoolS 03 Blank2 Fade",xzoom=-1.0)
 image choro SchoolS 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"01","false",800,950))
 image choro SchoolS 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"01","true",800,950))
-done
 image choro SchoolS 01 Dark Flip= Transform("choro SchoolS 01 Dark",xzoom=-1.0)
 image choro SchoolS 01 Dark Fade Flip= Transform("choro SchoolS 01 Dark Fade",xzoom=-1.0)
 image choro SchoolS 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"02","false",800,950))
 image choro SchoolS 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"02","true",800,950))
-done
 image choro SchoolS 02 Dark Flip= Transform("choro SchoolS 02 Dark",xzoom=-1.0)
 image choro SchoolS 02 Dark Fade Flip= Transform("choro SchoolS 02 Dark Fade",xzoom=-1.0)
 image choro SchoolS 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"03","false",800,950))
 image choro SchoolS 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schools","",1,"03","true",800,950))
-done
 image choro SchoolS 03 Dark Flip= Transform("choro SchoolS 03 Dark",xzoom=-1.0)
 image choro SchoolS 03 Dark Fade Flip= Transform("choro SchoolS 03 Dark Fade",xzoom=-1.0)
 image choro SchoolS 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","schools","",1,"01","false",800,950))
@@ -351,17 +348,14 @@ image choro SchoolW 03 Blank2 Flip= Transform("choro SchoolW 03 Blank2",xzoom=-1
 image choro SchoolW 03 Blank2 Fade Flip= Transform("choro SchoolW 03 Blank2 Fade",xzoom=-1.0)
 image choro SchoolW 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"01","false",800,950))
 image choro SchoolW 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"01","true",800,950))
-done
 image choro SchoolW 01 Dark Flip= Transform("choro SchoolW 01 Dark",xzoom=-1.0)
 image choro SchoolW 01 Dark Fade Flip= Transform("choro SchoolW 01 Dark Fade",xzoom=-1.0)
 image choro SchoolW 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"02","false",800,950))
 image choro SchoolW 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"02","true",800,950))
-done
 image choro SchoolW 02 Dark Flip= Transform("choro SchoolW 02 Dark",xzoom=-1.0)
 image choro SchoolW 02 Dark Fade Flip= Transform("choro SchoolW 02 Dark Fade",xzoom=-1.0)
 image choro SchoolW 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"03","false",800,950))
 image choro SchoolW 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","schoolw","",1,"03","true",800,950))
-done
 image choro SchoolW 03 Dark Flip= Transform("choro SchoolW 03 Dark",xzoom=-1.0)
 image choro SchoolW 03 Dark Fade Flip= Transform("choro SchoolW 03 Dark Fade",xzoom=-1.0)
 image choro SchoolW 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","schoolw","",1,"01","false",800,950))
@@ -606,17 +600,14 @@ image choro Mainparka 03 Blank2 Flip= Transform("choro Mainparka 03 Blank2",xzoo
 image choro Mainparka 03 Blank2 Fade Flip= Transform("choro Mainparka 03 Blank2 Fade",xzoom=-1.0)
 image choro Mainparka 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"01","false",800,950))
 image choro Mainparka 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"01","true",800,950))
-done
 image choro Mainparka 01 Dark Flip= Transform("choro Mainparka 01 Dark",xzoom=-1.0)
 image choro Mainparka 01 Dark Fade Flip= Transform("choro Mainparka 01 Dark Fade",xzoom=-1.0)
 image choro Mainparka 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"02","false",800,950))
 image choro Mainparka 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"02","true",800,950))
-done
 image choro Mainparka 02 Dark Flip= Transform("choro Mainparka 02 Dark",xzoom=-1.0)
 image choro Mainparka 02 Dark Fade Flip= Transform("choro Mainparka 02 Dark Fade",xzoom=-1.0)
 image choro Mainparka 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"03","false",800,950))
 image choro Mainparka 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","mainparka","",1,"03","true",800,950))
-done
 image choro Mainparka 03 Dark Flip= Transform("choro Mainparka 03 Dark",xzoom=-1.0)
 image choro Mainparka 03 Dark Fade Flip= Transform("choro Mainparka 03 Dark Fade",xzoom=-1.0)
 image choro Mainparka 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","mainparka","",1,"01","false",800,950))
@@ -861,17 +852,14 @@ image choro Maintee 03 Blank2 Flip= Transform("choro Maintee 03 Blank2",xzoom=-1
 image choro Maintee 03 Blank2 Fade Flip= Transform("choro Maintee 03 Blank2 Fade",xzoom=-1.0)
 image choro Maintee 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"01","false",800,950))
 image choro Maintee 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"01","true",800,950))
-done
 image choro Maintee 01 Dark Flip= Transform("choro Maintee 01 Dark",xzoom=-1.0)
 image choro Maintee 01 Dark Fade Flip= Transform("choro Maintee 01 Dark Fade",xzoom=-1.0)
 image choro Maintee 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"02","false",800,950))
 image choro Maintee 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"02","true",800,950))
-done
 image choro Maintee 02 Dark Flip= Transform("choro Maintee 02 Dark",xzoom=-1.0)
 image choro Maintee 02 Dark Fade Flip= Transform("choro Maintee 02 Dark Fade",xzoom=-1.0)
 image choro Maintee 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"03","false",800,950))
 image choro Maintee 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","maintee","",1,"03","true",800,950))
-done
 image choro Maintee 03 Dark Flip= Transform("choro Maintee 03 Dark",xzoom=-1.0)
 image choro Maintee 03 Dark Fade Flip= Transform("choro Maintee 03 Dark Fade",xzoom=-1.0)
 image choro Maintee 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","maintee","",1,"01","false",800,950))
@@ -1116,17 +1104,14 @@ image choro Naked 03 Blank2 Flip= Transform("choro Naked 03 Blank2",xzoom=-1.0)
 image choro Naked 03 Blank2 Fade Flip= Transform("choro Naked 03 Blank2 Fade",xzoom=-1.0)
 image choro Naked 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"01","false",800,950))
 image choro Naked 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"01","true",800,950))
-done
 image choro Naked 01 Dark Flip= Transform("choro Naked 01 Dark",xzoom=-1.0)
 image choro Naked 01 Dark Fade Flip= Transform("choro Naked 01 Dark Fade",xzoom=-1.0)
 image choro Naked 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"02","false",800,950))
 image choro Naked 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"02","true",800,950))
-done
 image choro Naked 02 Dark Flip= Transform("choro Naked 02 Dark",xzoom=-1.0)
 image choro Naked 02 Dark Fade Flip= Transform("choro Naked 02 Dark Fade",xzoom=-1.0)
 image choro Naked 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"03","false",800,950))
 image choro Naked 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","naked","",1,"03","true",800,950))
-done
 image choro Naked 03 Dark Flip= Transform("choro Naked 03 Dark",xzoom=-1.0)
 image choro Naked 03 Dark Fade Flip= Transform("choro Naked 03 Dark Fade",xzoom=-1.0)
 image choro Naked 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","naked","",1,"01","false",800,950))
@@ -1371,17 +1356,14 @@ image choro Pj 03 Blank2 Flip= Transform("choro Pj 03 Blank2",xzoom=-1.0)
 image choro Pj 03 Blank2 Fade Flip= Transform("choro Pj 03 Blank2 Fade",xzoom=-1.0)
 image choro Pj 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"01","false",800,950))
 image choro Pj 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"01","true",800,950))
-done
 image choro Pj 01 Dark Flip= Transform("choro Pj 01 Dark",xzoom=-1.0)
 image choro Pj 01 Dark Fade Flip= Transform("choro Pj 01 Dark Fade",xzoom=-1.0)
 image choro Pj 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"02","false",800,950))
 image choro Pj 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"02","true",800,950))
-done
 image choro Pj 02 Dark Flip= Transform("choro Pj 02 Dark",xzoom=-1.0)
 image choro Pj 02 Dark Fade Flip= Transform("choro Pj 02 Dark Fade",xzoom=-1.0)
 image choro Pj 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"03","false",800,950))
 image choro Pj 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","pj","",1,"03","true",800,950))
-done
 image choro Pj 03 Dark Flip= Transform("choro Pj 03 Dark",xzoom=-1.0)
 image choro Pj 03 Dark Fade Flip= Transform("choro Pj 03 Dark Fade",xzoom=-1.0)
 image choro Pj 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","pj","",1,"01","false",800,950))
@@ -1626,17 +1608,14 @@ image choro Casual 03 Blank2 Flip= Transform("choro Casual 03 Blank2",xzoom=-1.0
 image choro Casual 03 Blank2 Fade Flip= Transform("choro Casual 03 Blank2 Fade",xzoom=-1.0)
 image choro Casual 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"01","false",800,950))
 image choro Casual 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"01","true",800,950))
-done
 image choro Casual 01 Dark Flip= Transform("choro Casual 01 Dark",xzoom=-1.0)
 image choro Casual 01 Dark Fade Flip= Transform("choro Casual 01 Dark Fade",xzoom=-1.0)
 image choro Casual 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"02","false",800,950))
 image choro Casual 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"02","true",800,950))
-done
 image choro Casual 02 Dark Flip= Transform("choro Casual 02 Dark",xzoom=-1.0)
 image choro Casual 02 Dark Fade Flip= Transform("choro Casual 02 Dark Fade",xzoom=-1.0)
 image choro Casual 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"03","false",800,950))
 image choro Casual 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","casual","",1,"03","true",800,950))
-done
 image choro Casual 03 Dark Flip= Transform("choro Casual 03 Dark",xzoom=-1.0)
 image choro Casual 03 Dark Fade Flip= Transform("choro Casual 03 Dark Fade",xzoom=-1.0)
 image choro Casual 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","casual","",1,"01","false",800,950))
@@ -1881,17 +1860,14 @@ image choro Bathtowel 03 Blank2 Flip= Transform("choro Bathtowel 03 Blank2",xzoo
 image choro Bathtowel 03 Blank2 Fade Flip= Transform("choro Bathtowel 03 Blank2 Fade",xzoom=-1.0)
 image choro Bathtowel 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"01","false",800,950))
 image choro Bathtowel 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"01","true",800,950))
-done
 image choro Bathtowel 01 Dark Flip= Transform("choro Bathtowel 01 Dark",xzoom=-1.0)
 image choro Bathtowel 01 Dark Fade Flip= Transform("choro Bathtowel 01 Dark Fade",xzoom=-1.0)
 image choro Bathtowel 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"02","false",800,950))
 image choro Bathtowel 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"02","true",800,950))
-done
 image choro Bathtowel 02 Dark Flip= Transform("choro Bathtowel 02 Dark",xzoom=-1.0)
 image choro Bathtowel 02 Dark Fade Flip= Transform("choro Bathtowel 02 Dark Fade",xzoom=-1.0)
 image choro Bathtowel 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"03","false",800,950))
 image choro Bathtowel 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathtowel","",1,"03","true",800,950))
-done
 image choro Bathtowel 03 Dark Flip= Transform("choro Bathtowel 03 Dark",xzoom=-1.0)
 image choro Bathtowel 03 Dark Fade Flip= Transform("choro Bathtowel 03 Dark Fade",xzoom=-1.0)
 image choro Bathtowel 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","bathtowel","",1,"01","false",800,950))
@@ -2136,17 +2112,14 @@ image choro Bathrobe 03 Blank2 Flip= Transform("choro Bathrobe 03 Blank2",xzoom=
 image choro Bathrobe 03 Blank2 Fade Flip= Transform("choro Bathrobe 03 Blank2 Fade",xzoom=-1.0)
 image choro Bathrobe 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"01","false",800,950))
 image choro Bathrobe 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"01","true",800,950))
-done
 image choro Bathrobe 01 Dark Flip= Transform("choro Bathrobe 01 Dark",xzoom=-1.0)
 image choro Bathrobe 01 Dark Fade Flip= Transform("choro Bathrobe 01 Dark Fade",xzoom=-1.0)
 image choro Bathrobe 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"02","false",800,950))
 image choro Bathrobe 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"02","true",800,950))
-done
 image choro Bathrobe 02 Dark Flip= Transform("choro Bathrobe 02 Dark",xzoom=-1.0)
 image choro Bathrobe 02 Dark Fade Flip= Transform("choro Bathrobe 02 Dark Fade",xzoom=-1.0)
 image choro Bathrobe 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"03","false",800,950))
 image choro Bathrobe 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","bathrobe","",1,"03","true",800,950))
-done
 image choro Bathrobe 03 Dark Flip= Transform("choro Bathrobe 03 Dark",xzoom=-1.0)
 image choro Bathrobe 03 Dark Fade Flip= Transform("choro Bathrobe 03 Dark Fade",xzoom=-1.0)
 image choro Bathrobe 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","bathrobe","",1,"01","false",800,950))
@@ -2391,17 +2364,14 @@ image choro Sera 03 Blank2 Flip= Transform("choro Sera 03 Blank2",xzoom=-1.0)
 image choro Sera 03 Blank2 Fade Flip= Transform("choro Sera 03 Blank2 Fade",xzoom=-1.0)
 image choro Sera 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"01","false",800,950))
 image choro Sera 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"01","true",800,950))
-done
 image choro Sera 01 Dark Flip= Transform("choro Sera 01 Dark",xzoom=-1.0)
 image choro Sera 01 Dark Fade Flip= Transform("choro Sera 01 Dark Fade",xzoom=-1.0)
 image choro Sera 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"02","false",800,950))
 image choro Sera 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"02","true",800,950))
-done
 image choro Sera 02 Dark Flip= Transform("choro Sera 02 Dark",xzoom=-1.0)
 image choro Sera 02 Dark Fade Flip= Transform("choro Sera 02 Dark Fade",xzoom=-1.0)
 image choro Sera 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"03","false",800,950))
 image choro Sera 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","sera","",1,"03","true",800,950))
-done
 image choro Sera 03 Dark Flip= Transform("choro Sera 03 Dark",xzoom=-1.0)
 image choro Sera 03 Dark Fade Flip= Transform("choro Sera 03 Dark Fade",xzoom=-1.0)
 image choro Sera 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","sera","",1,"01","false",800,950))
@@ -2646,17 +2616,14 @@ image choro Swim 03 Blank2 Flip= Transform("choro Swim 03 Blank2",xzoom=-1.0)
 image choro Swim 03 Blank2 Fade Flip= Transform("choro Swim 03 Blank2 Fade",xzoom=-1.0)
 image choro Swim 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"01","false",800,950))
 image choro Swim 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"01","true",800,950))
-done
 image choro Swim 01 Dark Flip= Transform("choro Swim 01 Dark",xzoom=-1.0)
 image choro Swim 01 Dark Fade Flip= Transform("choro Swim 01 Dark Fade",xzoom=-1.0)
 image choro Swim 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"02","false",800,950))
 image choro Swim 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"02","true",800,950))
-done
 image choro Swim 02 Dark Flip= Transform("choro Swim 02 Dark",xzoom=-1.0)
 image choro Swim 02 Dark Fade Flip= Transform("choro Swim 02 Dark Fade",xzoom=-1.0)
 image choro Swim 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"03","false",800,950))
 image choro Swim 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("choro","dark","","","swim","",1,"03","true",800,950))
-done
 image choro Swim 03 Dark Flip= Transform("choro Swim 03 Dark",xzoom=-1.0)
 image choro Swim 03 Dark Fade Flip= Transform("choro Swim 03 Dark Fade",xzoom=-1.0)
 image choro Swim 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("choro","displeased","01","02","swim","",1,"01","false",800,950))

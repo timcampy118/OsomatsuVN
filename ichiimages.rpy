@@ -96,17 +96,14 @@ image ichi SchoolS 03 Blank2 Flip= Transform("ichi SchoolS 03 Blank2",xzoom=-1.0
 image ichi SchoolS 03 Blank2 Fade Flip= Transform("ichi SchoolS 03 Blank2 Fade",xzoom=-1.0)
 image ichi SchoolS 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"01","false",800,950))
 image ichi SchoolS 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"01","true",800,950))
-done
 image ichi SchoolS 01 Dark Flip= Transform("ichi SchoolS 01 Dark",xzoom=-1.0)
 image ichi SchoolS 01 Dark Fade Flip= Transform("ichi SchoolS 01 Dark Fade",xzoom=-1.0)
 image ichi SchoolS 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"02","false",800,950))
 image ichi SchoolS 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"02","true",800,950))
-done
 image ichi SchoolS 02 Dark Flip= Transform("ichi SchoolS 02 Dark",xzoom=-1.0)
 image ichi SchoolS 02 Dark Fade Flip= Transform("ichi SchoolS 02 Dark Fade",xzoom=-1.0)
 image ichi SchoolS 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"03","false",800,950))
 image ichi SchoolS 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schools","",1,"03","true",800,950))
-done
 image ichi SchoolS 03 Dark Flip= Transform("ichi SchoolS 03 Dark",xzoom=-1.0)
 image ichi SchoolS 03 Dark Fade Flip= Transform("ichi SchoolS 03 Dark Fade",xzoom=-1.0)
 image ichi SchoolS 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","schools","",1,"01","false",800,950))
@@ -351,17 +348,14 @@ image ichi SchoolW 03 Blank2 Flip= Transform("ichi SchoolW 03 Blank2",xzoom=-1.0
 image ichi SchoolW 03 Blank2 Fade Flip= Transform("ichi SchoolW 03 Blank2 Fade",xzoom=-1.0)
 image ichi SchoolW 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"01","false",800,950))
 image ichi SchoolW 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"01","true",800,950))
-done
 image ichi SchoolW 01 Dark Flip= Transform("ichi SchoolW 01 Dark",xzoom=-1.0)
 image ichi SchoolW 01 Dark Fade Flip= Transform("ichi SchoolW 01 Dark Fade",xzoom=-1.0)
 image ichi SchoolW 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"02","false",800,950))
 image ichi SchoolW 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"02","true",800,950))
-done
 image ichi SchoolW 02 Dark Flip= Transform("ichi SchoolW 02 Dark",xzoom=-1.0)
 image ichi SchoolW 02 Dark Fade Flip= Transform("ichi SchoolW 02 Dark Fade",xzoom=-1.0)
 image ichi SchoolW 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"03","false",800,950))
 image ichi SchoolW 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","schoolw","",1,"03","true",800,950))
-done
 image ichi SchoolW 03 Dark Flip= Transform("ichi SchoolW 03 Dark",xzoom=-1.0)
 image ichi SchoolW 03 Dark Fade Flip= Transform("ichi SchoolW 03 Dark Fade",xzoom=-1.0)
 image ichi SchoolW 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","schoolw","",1,"01","false",800,950))
@@ -606,17 +600,14 @@ image ichi Mainparka 03 Blank2 Flip= Transform("ichi Mainparka 03 Blank2",xzoom=
 image ichi Mainparka 03 Blank2 Fade Flip= Transform("ichi Mainparka 03 Blank2 Fade",xzoom=-1.0)
 image ichi Mainparka 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"01","false",800,950))
 image ichi Mainparka 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"01","true",800,950))
-done
 image ichi Mainparka 01 Dark Flip= Transform("ichi Mainparka 01 Dark",xzoom=-1.0)
 image ichi Mainparka 01 Dark Fade Flip= Transform("ichi Mainparka 01 Dark Fade",xzoom=-1.0)
 image ichi Mainparka 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"02","false",800,950))
 image ichi Mainparka 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"02","true",800,950))
-done
 image ichi Mainparka 02 Dark Flip= Transform("ichi Mainparka 02 Dark",xzoom=-1.0)
 image ichi Mainparka 02 Dark Fade Flip= Transform("ichi Mainparka 02 Dark Fade",xzoom=-1.0)
 image ichi Mainparka 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"03","false",800,950))
 image ichi Mainparka 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","mainparka","",1,"03","true",800,950))
-done
 image ichi Mainparka 03 Dark Flip= Transform("ichi Mainparka 03 Dark",xzoom=-1.0)
 image ichi Mainparka 03 Dark Fade Flip= Transform("ichi Mainparka 03 Dark Fade",xzoom=-1.0)
 image ichi Mainparka 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","mainparka","",1,"01","false",800,950))
@@ -861,17 +852,14 @@ image ichi Maintee 03 Blank2 Flip= Transform("ichi Maintee 03 Blank2",xzoom=-1.0
 image ichi Maintee 03 Blank2 Fade Flip= Transform("ichi Maintee 03 Blank2 Fade",xzoom=-1.0)
 image ichi Maintee 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"01","false",800,950))
 image ichi Maintee 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"01","true",800,950))
-done
 image ichi Maintee 01 Dark Flip= Transform("ichi Maintee 01 Dark",xzoom=-1.0)
 image ichi Maintee 01 Dark Fade Flip= Transform("ichi Maintee 01 Dark Fade",xzoom=-1.0)
 image ichi Maintee 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"02","false",800,950))
 image ichi Maintee 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"02","true",800,950))
-done
 image ichi Maintee 02 Dark Flip= Transform("ichi Maintee 02 Dark",xzoom=-1.0)
 image ichi Maintee 02 Dark Fade Flip= Transform("ichi Maintee 02 Dark Fade",xzoom=-1.0)
 image ichi Maintee 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"03","false",800,950))
 image ichi Maintee 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","maintee","",1,"03","true",800,950))
-done
 image ichi Maintee 03 Dark Flip= Transform("ichi Maintee 03 Dark",xzoom=-1.0)
 image ichi Maintee 03 Dark Fade Flip= Transform("ichi Maintee 03 Dark Fade",xzoom=-1.0)
 image ichi Maintee 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","maintee","",1,"01","false",800,950))
@@ -1116,17 +1104,14 @@ image ichi Naked 03 Blank2 Flip= Transform("ichi Naked 03 Blank2",xzoom=-1.0)
 image ichi Naked 03 Blank2 Fade Flip= Transform("ichi Naked 03 Blank2 Fade",xzoom=-1.0)
 image ichi Naked 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"01","false",800,950))
 image ichi Naked 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"01","true",800,950))
-done
 image ichi Naked 01 Dark Flip= Transform("ichi Naked 01 Dark",xzoom=-1.0)
 image ichi Naked 01 Dark Fade Flip= Transform("ichi Naked 01 Dark Fade",xzoom=-1.0)
 image ichi Naked 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"02","false",800,950))
 image ichi Naked 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"02","true",800,950))
-done
 image ichi Naked 02 Dark Flip= Transform("ichi Naked 02 Dark",xzoom=-1.0)
 image ichi Naked 02 Dark Fade Flip= Transform("ichi Naked 02 Dark Fade",xzoom=-1.0)
 image ichi Naked 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"03","false",800,950))
 image ichi Naked 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","naked","",1,"03","true",800,950))
-done
 image ichi Naked 03 Dark Flip= Transform("ichi Naked 03 Dark",xzoom=-1.0)
 image ichi Naked 03 Dark Fade Flip= Transform("ichi Naked 03 Dark Fade",xzoom=-1.0)
 image ichi Naked 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","naked","",1,"01","false",800,950))
@@ -1371,17 +1356,14 @@ image ichi Pj 03 Blank2 Flip= Transform("ichi Pj 03 Blank2",xzoom=-1.0)
 image ichi Pj 03 Blank2 Fade Flip= Transform("ichi Pj 03 Blank2 Fade",xzoom=-1.0)
 image ichi Pj 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"01","false",800,950))
 image ichi Pj 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"01","true",800,950))
-done
 image ichi Pj 01 Dark Flip= Transform("ichi Pj 01 Dark",xzoom=-1.0)
 image ichi Pj 01 Dark Fade Flip= Transform("ichi Pj 01 Dark Fade",xzoom=-1.0)
 image ichi Pj 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"02","false",800,950))
 image ichi Pj 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"02","true",800,950))
-done
 image ichi Pj 02 Dark Flip= Transform("ichi Pj 02 Dark",xzoom=-1.0)
 image ichi Pj 02 Dark Fade Flip= Transform("ichi Pj 02 Dark Fade",xzoom=-1.0)
 image ichi Pj 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"03","false",800,950))
 image ichi Pj 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","pj","",1,"03","true",800,950))
-done
 image ichi Pj 03 Dark Flip= Transform("ichi Pj 03 Dark",xzoom=-1.0)
 image ichi Pj 03 Dark Fade Flip= Transform("ichi Pj 03 Dark Fade",xzoom=-1.0)
 image ichi Pj 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","pj","",1,"01","false",800,950))
@@ -1626,17 +1608,14 @@ image ichi Casual 03 Blank2 Flip= Transform("ichi Casual 03 Blank2",xzoom=-1.0)
 image ichi Casual 03 Blank2 Fade Flip= Transform("ichi Casual 03 Blank2 Fade",xzoom=-1.0)
 image ichi Casual 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"01","false",800,950))
 image ichi Casual 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"01","true",800,950))
-done
 image ichi Casual 01 Dark Flip= Transform("ichi Casual 01 Dark",xzoom=-1.0)
 image ichi Casual 01 Dark Fade Flip= Transform("ichi Casual 01 Dark Fade",xzoom=-1.0)
 image ichi Casual 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"02","false",800,950))
 image ichi Casual 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"02","true",800,950))
-done
 image ichi Casual 02 Dark Flip= Transform("ichi Casual 02 Dark",xzoom=-1.0)
 image ichi Casual 02 Dark Fade Flip= Transform("ichi Casual 02 Dark Fade",xzoom=-1.0)
 image ichi Casual 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"03","false",800,950))
 image ichi Casual 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","casual","",1,"03","true",800,950))
-done
 image ichi Casual 03 Dark Flip= Transform("ichi Casual 03 Dark",xzoom=-1.0)
 image ichi Casual 03 Dark Fade Flip= Transform("ichi Casual 03 Dark Fade",xzoom=-1.0)
 image ichi Casual 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","casual","",1,"01","false",800,950))
@@ -1881,17 +1860,14 @@ image ichi Bathtowel 03 Blank2 Flip= Transform("ichi Bathtowel 03 Blank2",xzoom=
 image ichi Bathtowel 03 Blank2 Fade Flip= Transform("ichi Bathtowel 03 Blank2 Fade",xzoom=-1.0)
 image ichi Bathtowel 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"01","false",800,950))
 image ichi Bathtowel 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"01","true",800,950))
-done
 image ichi Bathtowel 01 Dark Flip= Transform("ichi Bathtowel 01 Dark",xzoom=-1.0)
 image ichi Bathtowel 01 Dark Fade Flip= Transform("ichi Bathtowel 01 Dark Fade",xzoom=-1.0)
 image ichi Bathtowel 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"02","false",800,950))
 image ichi Bathtowel 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"02","true",800,950))
-done
 image ichi Bathtowel 02 Dark Flip= Transform("ichi Bathtowel 02 Dark",xzoom=-1.0)
 image ichi Bathtowel 02 Dark Fade Flip= Transform("ichi Bathtowel 02 Dark Fade",xzoom=-1.0)
 image ichi Bathtowel 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"03","false",800,950))
 image ichi Bathtowel 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathtowel","",1,"03","true",800,950))
-done
 image ichi Bathtowel 03 Dark Flip= Transform("ichi Bathtowel 03 Dark",xzoom=-1.0)
 image ichi Bathtowel 03 Dark Fade Flip= Transform("ichi Bathtowel 03 Dark Fade",xzoom=-1.0)
 image ichi Bathtowel 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","bathtowel","",1,"01","false",800,950))
@@ -2136,17 +2112,14 @@ image ichi Bathrobe 03 Blank2 Flip= Transform("ichi Bathrobe 03 Blank2",xzoom=-1
 image ichi Bathrobe 03 Blank2 Fade Flip= Transform("ichi Bathrobe 03 Blank2 Fade",xzoom=-1.0)
 image ichi Bathrobe 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"01","false",800,950))
 image ichi Bathrobe 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"01","true",800,950))
-done
 image ichi Bathrobe 01 Dark Flip= Transform("ichi Bathrobe 01 Dark",xzoom=-1.0)
 image ichi Bathrobe 01 Dark Fade Flip= Transform("ichi Bathrobe 01 Dark Fade",xzoom=-1.0)
 image ichi Bathrobe 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"02","false",800,950))
 image ichi Bathrobe 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"02","true",800,950))
-done
 image ichi Bathrobe 02 Dark Flip= Transform("ichi Bathrobe 02 Dark",xzoom=-1.0)
 image ichi Bathrobe 02 Dark Fade Flip= Transform("ichi Bathrobe 02 Dark Fade",xzoom=-1.0)
 image ichi Bathrobe 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"03","false",800,950))
 image ichi Bathrobe 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","bathrobe","",1,"03","true",800,950))
-done
 image ichi Bathrobe 03 Dark Flip= Transform("ichi Bathrobe 03 Dark",xzoom=-1.0)
 image ichi Bathrobe 03 Dark Fade Flip= Transform("ichi Bathrobe 03 Dark Fade",xzoom=-1.0)
 image ichi Bathrobe 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","bathrobe","",1,"01","false",800,950))
@@ -2391,17 +2364,14 @@ image ichi Sera 03 Blank2 Flip= Transform("ichi Sera 03 Blank2",xzoom=-1.0)
 image ichi Sera 03 Blank2 Fade Flip= Transform("ichi Sera 03 Blank2 Fade",xzoom=-1.0)
 image ichi Sera 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"01","false",800,950))
 image ichi Sera 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"01","true",800,950))
-done
 image ichi Sera 01 Dark Flip= Transform("ichi Sera 01 Dark",xzoom=-1.0)
 image ichi Sera 01 Dark Fade Flip= Transform("ichi Sera 01 Dark Fade",xzoom=-1.0)
 image ichi Sera 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"02","false",800,950))
 image ichi Sera 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"02","true",800,950))
-done
 image ichi Sera 02 Dark Flip= Transform("ichi Sera 02 Dark",xzoom=-1.0)
 image ichi Sera 02 Dark Fade Flip= Transform("ichi Sera 02 Dark Fade",xzoom=-1.0)
 image ichi Sera 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"03","false",800,950))
 image ichi Sera 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","sera","",1,"03","true",800,950))
-done
 image ichi Sera 03 Dark Flip= Transform("ichi Sera 03 Dark",xzoom=-1.0)
 image ichi Sera 03 Dark Fade Flip= Transform("ichi Sera 03 Dark Fade",xzoom=-1.0)
 image ichi Sera 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","sera","",1,"01","false",800,950))
@@ -2646,17 +2616,14 @@ image ichi Swim 03 Blank2 Flip= Transform("ichi Swim 03 Blank2",xzoom=-1.0)
 image ichi Swim 03 Blank2 Fade Flip= Transform("ichi Swim 03 Blank2 Fade",xzoom=-1.0)
 image ichi Swim 01 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"01","false",800,950))
 image ichi Swim 01 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"01","true",800,950))
-done
 image ichi Swim 01 Dark Flip= Transform("ichi Swim 01 Dark",xzoom=-1.0)
 image ichi Swim 01 Dark Fade Flip= Transform("ichi Swim 01 Dark Fade",xzoom=-1.0)
 image ichi Swim 02 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"02","false",800,950))
 image ichi Swim 02 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"02","true",800,950))
-done
 image ichi Swim 02 Dark Flip= Transform("ichi Swim 02 Dark",xzoom=-1.0)
 image ichi Swim 02 Dark Fade Flip= Transform("ichi Swim 02 Dark Fade",xzoom=-1.0)
 image ichi Swim 03 Dark = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"03","false",800,950))
 image ichi Swim 03 Dark Fade = DynamicDisplayable(renpy.curry(charComposite)("ichi","dark","","","swim","",1,"03","true",800,950))
-done
 image ichi Swim 03 Dark Flip= Transform("ichi Swim 03 Dark",xzoom=-1.0)
 image ichi Swim 03 Dark Fade Flip= Transform("ichi Swim 03 Dark Fade",xzoom=-1.0)
 image ichi Swim 01 Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("ichi","displeased","01","02","swim","",1,"01","false",800,950))
