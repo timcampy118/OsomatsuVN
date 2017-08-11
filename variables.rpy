@@ -24,7 +24,7 @@ init:
             
             def __init__(self,start,child,dist):
                 if start is None:
-                    start = child.get_plcaement()
+                    start = child.get_placement()
                     
                 self.start = [ self.anchors.get(1,1) for i in start] #central position
                 self.dist = dist # maximum distance, in pixel, from the starting point
@@ -101,16 +101,26 @@ init:
                     )
             return lc, None
         
-        def changeDate(newMonth, newDate, newDay, newTime):
+        def changeDate(newMonth, newDate, newTime):
             global currentDate
-            global currentDay
+            #global currentDay
             global currentMonth
             global currentTime
             
             currentDate = newDate
-            currentDay = newDay
+            #currentDay = newDay
             currentMonth = newMonth
             currentTime = newTime
+        
+        ##### CHANGING HYPERLINK STYLE #####
+        style.hlStyle = Style(style.say_dialogue)
+        style.hlStyle.font = "helsinki.ttf"
+        style.hlStyle.size = 36
+        style.hlStyle.color = "#58b2ff"
+        style.hlStyle.hover_color = "#000000"
+        style.hlStyle.underline = False
+        
+        style.hyperlink_text = style.hlStyle
 
 #a bunch of variables
 init:
@@ -118,42 +128,80 @@ init:
     ##### CHARACTER POSITIONS#####
     
     #default left position 
-    $ leftPos = Position(xpos=0.25, xanchor='center', ypos=1.0, yanchor=1.0)
+    $ pos3 = Position(xpos=0.25, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #left position, close to center
-    $ leftPos2 = Position(xpos=0.4, xanchor='center', ypos=1.0, yanchor=1.0)
+    $ pos2 = Position(xpos=0.35, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #left position, far left
-    $ leftPos3 = Position(xpos=0.1, xanchor='center', ypos=1.0, yanchor=1.0)
+    $ pos1 = Position(xpos=0.1, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #default right position
-    $ rightPos = Position(xpos=0.75, xanchor='center', ypos =1.0, yanchor=1.0)
+    $ pos6 = Position(xpos=0.75, xanchor='center', ypos =1.0, yanchor=1.0)
     
     #right position, close to center
-    $ rightPos2 = Position(xpos=0.6, xanchor='center', ypos = 1.0, yanchor=1.0)
+    $ pos4 = Position(xpos=0.65, xanchor='center', ypos = 1.0, yanchor=1.0)
     
     #right position, far right
-    $ rightPos3 = Position(xpos=0.9, xanchor='center', ypos=1.0, yanchor=1.0)
+    $ pos5 = Position(xpos=0.9, xanchor='center', ypos=1.0, yanchor=1.0)
+
+    #middle
+    $ pos7 = Position(xpos=0.5, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #Special Chibita Position
     $ crightPos = Position (xpos=0.75,xanchor='center', ypos=2.3,yanchor=2.3)
     
+    ##### CALENDAR TEXT STYLES #####
+    style calendarDateStyle:
+        font "FredokaOne-Regular.ttf"
+        color "#FFFFFF"
+        size 100
+        text_align 1.0
+        min_width 200
+        outlines [(absolute(7),"#0b1b7a",absolute(0),absolute(0))]
+        
+    style calendarMonthStyle:
+        font "FredokaOne-Regular.ttf"
+        color "#FFFFFF"
+        size 40
+        text_align 0.0
+        min_width 200
+        outlines [(absolute(6),"#0b1b7a",absolute(0),absolute(0))]
+        
+    style calendarTimeStyle:
+        font "FredokaOne-Regular.ttf"
+        color "#FFFFFF"
+        size 20
+        text_align 0.0
+        min_width 200
+        outlines [(absolute(4),"#0b1b7a",absolute(0),absolute(0))]
+    
     ##### CALENDAR #####
     $ currentDate = 31
-    $ currentDay = "Mon"
-    $ currentMonth = 12
-    $ currentTime = "Morning"
+    #$ currentDay = "Mon"
+    $ currentMonth = "JAN"
+    $ currentTime = "AFTER SCHOOL"
     
     $ broPoints = 0
     $ scrShake = Shake((0,0,0,0),1.0,dist=15) # Shake(position,duration,max distance)
     
     screen calendar:
-        button:
-            background None
-            add "misc/calendar_frame.png" xalign 1.005 yalign -0.25
-            text ("%d/%d" % (currentMonth,currentDate)) xalign 0.95 yalign 12.5 size 40
-            text ("%s" % (currentDay)) xalign 0.99 yalign 3.0 size 30
-            text ("%s" % (currentTime)) xalign 0.98 yalign 8.5 size 30
+        window:
+            background "misc/calendar.png"
+            xpos 975 ypos 260
+            
+            $ displayDate = At(Text("[currentDate]",style="calendarDateStyle"),Transform(rotate=-16))
+            $ displayMonth = At(Text("[currentMonth]",style="calendarMonthStyle"),Transform(rotate=-16))
+            $ displayTime = At(Text("[currentTime]",style="calendarTimeStyle"),Transform(rotate=-16))
+            
+            image displayDate xalign 0.899 yalign 0.45
+            image displayMonth xalign 1.0 yalign -0.55
+            image displayTime xalign 1.005 yalign 0.05
+            
+            #text ("%d" % (currentDate)) xalign 0.95 yalign 12.5 size 106
+            #text ("%s" % (currentMonth)) xalign 0.85 yalign 12.5 size 30
+            #text ("%s" % (currentDay)) xalign 0.99 yalign 3.0 size 30
+            #text ("%s" % (currentTime)) xalign 0.98 yalign 8.5 size 30
 
 transform head(chara,head1,head2):
     
@@ -217,28 +265,29 @@ image ctc_blink:
 
 # Declare characters
 
-define oso = Character("Osomatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define kara = Character("Karamatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define choro = Character("Choromatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define ichi = Character("Ichimatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define jyushi = Character("Jyushimatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define todo = Character("Todomatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
+define oso = Character("OSOMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define kara = Character("KARAMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define choro = Character("CHOROMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define ichi = Character("ICHIMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define jyushi = Character("JYUSHIMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define todo = Character("TODOMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
-define matsuyo = Character("Matsuyo", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define matsuzo = Character("Matsuyo", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define chibita = Character("Chibita", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define iyami = Character("Iyami", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define totoko = Character("Totoko", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define atsushi = Character("Atsushi", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define kaede = Character("Kaede", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
+define matsuyo = Character("MATSUYO", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define matsuzo = Character("MATSUZO", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define chibita = Character("CHIBITA", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define iyami = Character("IYAMI", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define totoko = Character("TOTOKO", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define atsushi = Character("ATSUSHI", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define kaede = Character("KAEDE", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
-define mystery = Character("???", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
+define mystery = Character("???", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define both = Character("BOTH", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
-define everyone = Character("Everyone", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
-define rest = Character("The Rest", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
+define everyone = Character("EVERYONE", color = "#FFFFFF",ctc="ctc_blink",ctc_position="nestled")
+define rest = Character("THE REST", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
 # for narration
-define narrator = Character("")
+define narrator = Character("", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
     
 # character sprites
 
