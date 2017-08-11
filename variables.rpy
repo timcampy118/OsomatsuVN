@@ -15,6 +15,7 @@ init:
                 'right' : 1.0
                 }
             
+
             ### Plays a sound after each line###
             def character_callback(event, interact=True, **kwargs):
                 if(event == "end") and interact:
@@ -22,6 +23,8 @@ init:
             
             config.character_callback = character_callback
             
+=======
+
             def __init__(self,start,child,dist):
                 if start is None:
                     start = child.get_plcaement()
@@ -177,8 +180,12 @@ label splashscreen:
     #skip is still possible with this
     scene black 
     with Pause(1)
+
     
     play sound ("sfx/logo_jingle.ogg")
+=======
+
+
     show splash with dissolve
     with Pause(5)
     
@@ -204,6 +211,7 @@ label splashscreen:
 #label no_return:
         #$ renpy.block_rollback()
         #"You made your decision already."
+
 
 ##### CLICK TO CONTINUE ######
 ###### A blinking arrow ######
@@ -236,6 +244,29 @@ define mystery = Character("???", color = "#273ce0", who_outlines=[(10,"#0b1b7a"
 
 define everyone = Character("Everyone", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
 define rest = Character("The Rest", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")], ctc="ctc_blink",ctc_position="nestled")
+
+# Declare characters
+
+define oso = Character("Osomatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define kara = Character("Karamatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define choro = Character("Choromatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define ichi = Character("Ichimatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define jyushi = Character("Jyushimatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define todo = Character("Todomatsu", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+
+define matsuyo = Character("Matsuyo", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define matsuzo = Character("Matsuyo", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define chibita = Character("Chibita", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define iyami = Character("Iyami", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define totoko = Character("Totoko", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define atsushi = Character("Atsushi", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define kaede = Character("Kaede", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+
+define mystery = Character("???", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+
+define everyone = Character("Everyone", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+define rest = Character("The Rest", color = "#273ce0", who_outlines=[(10,"#0b1b7a"),(5,"#FFFFFF")])
+
 
 # for narration
 define narrator = Character("")
