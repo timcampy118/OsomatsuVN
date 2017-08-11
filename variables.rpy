@@ -15,6 +15,7 @@ init:
                 'right' : 1.0
                 }
             
+
             ### Plays a sound after each line###
             def character_callback(event, interact=True, **kwargs):
                 if(event == "end") and interact:
@@ -22,6 +23,7 @@ init:
             
             config.character_callback = character_callback
             
+
             def __init__(self,start,child,dist):
                 if start is None:
                     start = child.get_placement()
@@ -227,6 +229,7 @@ label splashscreen:
     with Pause(1)
     
     play sound ("sfx/logo_jingle.ogg")
+
     show splash with dissolve
     with Pause(5)
     
@@ -253,6 +256,7 @@ label splashscreen:
         #$ renpy.block_rollback()
         #"You made your decision already."
 
+
 ##### CLICK TO CONTINUE ######
 ###### A blinking arrow ######
 
@@ -262,6 +266,7 @@ image ctc_blink:
     "gui/arrow_blank.png"
     linear 0.5 alpha 1.0
     repeat
+
 
 # Declare characters
 
@@ -285,6 +290,7 @@ define both = Character("BOTH", color = "#FFFFFF", ctc="ctc_blink",ctc_position=
 
 define everyone = Character("EVERYONE", color = "#FFFFFF",ctc="ctc_blink",ctc_position="nestled")
 define rest = Character("THE REST", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+
 
 # for narration
 define narrator = Character("", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
