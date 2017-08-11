@@ -1,9 +1,9 @@
 # The game starts here.
 
 label start:
-
-    $ broPoints = 0
     
-    jump intro
+    jump demoTwo
+    
+    #jump intro
 
     return
