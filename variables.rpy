@@ -106,7 +106,7 @@ init:
         def changeDate(newMonth, newDate, newTime):
             global currentDate
             #global currentDay
-            global currentMonth
+            global currentMonth 
             global currentTime
             
             currentDate = newDate
@@ -151,7 +151,25 @@ init:
     $ pos7 = Position(xpos=0.5, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #Special Chibita Position
-    $ crightPos = Position (xpos=0.75,xanchor='center', ypos=2.3,yanchor=2.3)
+    $ cpos3 = Position(xpos=0.25, xanchor='center', ypos=1.5,yanchor=1.5)
+    
+    #left position, close to center
+    $ cpos2 = Position(xpos=0.35, xanchor='center', ypos=1.5,yanchor=1.5)
+    
+    #left position, far left
+    $ cpos1 = Position(xpos=0.1, xanchor='center', ypos=1.5,yanchor=1.5)
+    
+    #default right position
+    $ cpos6 = Position(xpos=0.75, xanchor='center', ypos=1.5,yanchor=1.5)
+    
+    #right position, close to center
+    $ cpos4 = Position(xpos=0.65, xanchor='center', ypos=1.5,yanchor=1.5)
+    
+    #right position, far right
+    $ cpos5 = Position(xpos=0.9, xanchor='center', ypos=1.5,yanchor=1.5)
+
+    #middle
+    $ cpos7 = Position(xpos=0.5, xanchor='center', ypos=1.5,yanchor=1.5)
     
     ##### CALENDAR TEXT STYLES #####
     style calendarDateStyle:
@@ -160,7 +178,7 @@ init:
         size 100
         text_align 1.0
         min_width 200
-        outlines [(absolute(7),"#0b1b7a",absolute(0),absolute(0))]
+        outlines [(absolute(5),"#0b1b7a",absolute(0),absolute(0))]
         
     style calendarMonthStyle:
         font "FredokaOne-Regular.ttf"
@@ -168,7 +186,7 @@ init:
         size 40
         text_align 0.0
         min_width 200
-        outlines [(absolute(6),"#0b1b7a",absolute(0),absolute(0))]
+        outlines [(absolute(4),"#0b1b7a",absolute(0),absolute(0))]
         
     style calendarTimeStyle:
         font "FredokaOne-Regular.ttf"
@@ -190,7 +208,7 @@ init:
     screen calendar:
         window:
             background "misc/calendar.png"
-            xpos 975 ypos 260
+            xpos 975 ypos 270
             
             $ displayDate = At(Text("[currentDate]",style="calendarDateStyle"),Transform(rotate=-16))
             $ displayMonth = At(Text("[currentMonth]",style="calendarMonthStyle"),Transform(rotate=-16))
@@ -289,12 +307,19 @@ define mystery = Character("???", color = "#FFFFFF", ctc="ctc_blink",ctc_positio
 define both = Character("BOTH", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
 define everyone = Character("EVERYONE", color = "#FFFFFF",ctc="ctc_blink",ctc_position="nestled")
+define everyoneelse = Character("EVERYONE ELSE", color = "#FFFFFF",ctc="ctc_blink",ctc_position="nestled")
 define rest = Character("THE REST", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+define suuji = Character("ICHIMATSU & JYUSHIMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 
 
 # for narration
 define narrator = Character("", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
-    
+define dev = Character("DEVS", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+
+# ticks
+image angryTick = "images/ticks/AngrySymbol.png"
+image sweatTick = "images/ticks/SweatSymbol.png"
+
 # character sprites
 
 ###### ATSUSHI ######
@@ -325,20 +350,20 @@ image iyami Regular Neutral Fade = DynamicDisplayable(renpy.curry(charComposite)
 image iyami Regular Neutral Flip = Transform("iyami Regular Neutral",xzoom=-1.0)
 image iyami Regular Neutral Fade Flip = Transform("iyami Regular Neutral Fade",xzoom=-1.0)
 
-image iyami Regular Angry = DynamicDisplayable(renpy.curry(charComposite)("iyami","angry","","","regular","",0,"","false",800,1010))
-image iyami Regular Angry Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","angry","","","regular","",0,"","true",800,1010))
-image iyami Regular Angry Flip = Transform("iyami Regular Angry",xzoom=-1.0)
-image iyami Regular Angry Fade Flip = Transform("iyami Regular Angry Fade",xzoom=-1.0)
+image iyami Regular Angry1 = DynamicDisplayable(renpy.curry(charComposite)("iyami","angry","","","regular","",0,"","false",800,1010))
+image iyami Regular Angry1 Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","angry","","","regular","",0,"","true",800,1010))
+image iyami Regular Angry1 Flip = Transform("iyami Regular Angry1",xzoom=-1.0)
+image iyami Regular Angry1 Fade Flip = Transform("iyami Regular Angry1 Fade",xzoom=-1.0)
 
-image iyami Regular Frown = DynamicDisplayable(renpy.curry(charComposite)("iyami","frown","","","regular","",0,"","false",800,1010))
-image iyami Regular Frown Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","frown","","","regular","",0,"","true",800,1010))
-image iyami Regular Frown Flip = Transform("iyami Regular Frown",xzoom=-1.0)
-image iyami Regular Frown Fade Flip = Transform("iyami Regular Frown Fade",xzoom=-1.0)
+image iyami Regular Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("iyami","displeased1","","","regular","",0,"","false",800,1010))
+image iyami Regular Displeased1 Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","displeased1","","","regular","",0,"","true",800,1010))
+image iyami Regular Displeased1 Flip = Transform("iyami Regular Displeased1",xzoom=-1.0)
+image iyami Regular Displeased1 Fade Flip = Transform("iyami Regular Displeased1 Fade",xzoom=-1.0)
 
-image iyami Regular Happy = DynamicDisplayable(renpy.curry(charComposite)("iyami","happy","","","regular","",0,"","false",800,1010))
-image iyami Regular Happy Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","happy","","","regular","",0,"","true",800,1010))
-image iyami Regular Happy Flip = Transform("iyami Regular Happy",xzoom=-1.0)
-image iyami Regular Happy Fade Flip = Transform("iyami Regular Happy Fade",xzoom=-1.0)
+image iyami Regular Happy1 = DynamicDisplayable(renpy.curry(charComposite)("iyami","happy","","","regular","",0,"","false",800,1010))
+image iyami Regular Happy1 Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","happy","","","regular","",0,"","true",800,1010))
+image iyami Regular Happy1 Flip = Transform("iyami Regular Happy1",xzoom=-1.0)
+image iyami Regular Happy1 Fade Flip = Transform("iyami Regular Happy1 Fade",xzoom=-1.0)
 
 image iyami Work Neutral = DynamicDisplayable(renpy.curry(charComposite)("iyami","neutral","","","work","work_hat",0,"","false",800,1010))
 image iyami Work Neutral Fade = DynamicDisplayable(renpy.curry(charComposite)("iyami","neutral","","","work","work_hat",0,"","true",800,1010))
@@ -362,17 +387,39 @@ image iyami Work Happy Fade Flip = Transform("iyami Work Happy Fade",xzoom=-1.0)
 
 ##### CHIBITA #####
 
-image chibita Neutral = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","schoolw","",0,"","false",800,950))
-image chibita Neutral Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","schoolw","",0,"","true",800,950))
+image chibita SchoolW Neutral = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","schoolw","",0,"","false",800,950))
+image chibita SchoolW Neutral Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","schoolw","",0,"","true",800,950))
+image chibita SchoolW Neutral Flip = Transform("chibita SchoolW Neutral",xzoom=-1.0)
+image chibita SchoolW Neutral Fade Flip = Transform("chibita SchoolW Neutral Fade",xzoom=-1.0)
 
-image chibita Displeased = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased","","","schoolw","",0,"","false",800,950))
-image chibita Displeased Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased","","","schoolw","",0,"","true",800,950))
+image chibita SchoolW Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased1","","","schoolw","",0,"","false",800,950))
+image chibita SchoolW Displeased1 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased1","","","schoolw","",0,"","true",800,950))
 
-image chibita Angry = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry","","","schoolw","",0,"","false",800,950))
-image chibita Angry Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry","","","schoolw","",0,"","true",800,950))
+image chibita SchoolW Angry1 = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry1","","","schoolw","",0,"","false",800,950))
+image chibita SchoolW Angry1 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry1","","","schoolw","",0,"","true",800,950))
 
-image chibita Frown = DynamicDisplayable(renpy.curry(charComposite)("chibita","frown","","","schoolw","",0,"","false",800,950))
-image chibita Frown Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","frown","","","schoolw","",0,"","true",800,950))
+image chibita SchoolW Displeased2 = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased2","","","schoolw","",0,"","false",800,950))
+image chibita SchoolW Displeased2 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased2","","","schoolw","",0,"","true",800,950))
+
+image chibita Naked Neutral = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","Naked","",0,"","false",800,950))
+image chibita Naked Neutral Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","neutral","","","Naked","",0,"","true",800,950))
+image chibita Naked Neutral Flip = Transform("chibita Naked Neutral",xzoom=-1.0)
+image chibita Naked Neutral Fade Flip = Transform("chibita Naked Neutral Fade",xzoom=-1.0)
+
+image chibita Naked Displeased1 = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased1","","","Naked","",0,"","false",800,950))
+image chibita Naked Displeased1 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased1","","","Naked","",0,"","true",800,950))
+image chibita Naked Displeased1 Flip = Transform("chibita Naked Displeased1",xzoom=-1.0)
+image chibita Naked Displeased1 Fade Flip = Transform("chibita Naked Displeased1 Fade",xzoom=-1.0)
+
+image chibita Naked Angry1 = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry1","","","Naked","",0,"","false",800,950))
+image chibita Naked Angry1 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","angry1","","","Naked","",0,"","true",800,950))
+image chibita Naked Angry1 Flip = Transform("chibita Naked Angry1",xzoom=-1.0)
+image chibita Naked Angry1 Fade Flip = Transform("chibita Naked Angry1 Fade",xzoom=-1.0)
+
+image chibita Naked Displeased2 = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased2","","","Naked","",0,"","false",800,950))
+image chibita Naked Displeased2 Fade = DynamicDisplayable(renpy.curry(charComposite)("chibita","displeased2","","","Naked","",0,"","true",800,950))
+image chibita Naked Displeased2 Flip = Transform("chibita Naked Displeased2",xzoom=-1.0)
+image chibita Naked Displeased2 Fade Flip = Transform("chibita Naked Displeased2 Fade",xzoom=-1.0)
 
 ##### TOTOKO #####
 
