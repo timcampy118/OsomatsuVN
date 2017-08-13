@@ -7,6 +7,7 @@ label demoTwo:
     
     play music "music/tell me hatabou.mp3" fadeout 2.0 fadein 2.0
     
+
     show choro SchoolS 02 Nervous at pos7 with Dissolve(0.05)
     choro "We..."
     hide choro
@@ -32,6 +33,7 @@ label demoTwo:
     jyushi "Ahaha! Let's get ready for summer!"
     show oso SchoolS 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show jyushi SchoolS 03 Happy1 Fade at pos6 with Dissolve(0.1)
+
     oso "Oh... Haha. That's the spirit, Jyushimatsu!"
     hide oso
     hide jyushi
@@ -42,6 +44,7 @@ label demoTwo:
     $changeDate("JUL",22,"AFTERNOON")
     
     $ renpy.music.set_volume(0.7, delay=0, channel='music')
+
     play music "music/dogeza.ogg" fadeout 2.0 fadein 2.0
     
     show oso Maintee 03 Sad Flip at pos3 with Dissolve(0.05)
@@ -94,10 +97,12 @@ label demoTwo:
     ichi "D-Did you just eat the rest of our popsicles in one bite?"
     show ichi Maintee 01 Nervous Fade Flip at pos3 with Dissolve(0.1)
     show jyushi Maintee 03 Angry2 Fade at pos4 with move
+
     show choro Maintee 01 Angry3 at pos5 with moveinright
     choro "You know, you could've used a paper fan too, instead of eating all of that, right?"
     hide ichi
     hide jyushi
+
     show oso Maintee 03 Blank1 Flip at pos3 with Dissolve(0.05)
     show choro Maintee 01 Angry3 Fade at pos6 with Dissolve(0.1)
     oso "Hot sure is summer..."
@@ -173,10 +178,12 @@ label demoTwo:
     show oso Maintee 02 Happy1 Flip at pos3 with Dissolve(0.05)
     show kara Maintee 01 Happy1 Fade at pos4 with Dissolve(0.1)
     show choro Maintee 01 Displeased1 Fade at pos5 with Dissolve(0.1)
+
     oso "No, please do! It'll be hilarious!"
     
     hide choro
     hide kara
+
     show oso Maintee 02 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show todo Maintee 01 Surprised at pos6 with Dissolve(0.05)
     todo "Wait, so we {i}are{/i} going right now?"
@@ -211,6 +218,7 @@ label demoTwo:
     todo "..."
     todo "Fine. But Karamatsu-niisan better not start monologuing when we get there!"
    
+
     stop music fadeout 2.0
     
     scene bg_beach with fade
@@ -218,6 +226,7 @@ label demoTwo:
     $changeDate("JUL",25,"MORNING")
     $ renpy.music.set_volume(1.0, delay=0, channel='music')
     play music "music/chibita flower fairy.ogg" fadeout 2.0 fadein 2.0
+
    
     show kara Swim 01 Surprised at pos7 with Dissolve(0.05)
     kara "Oh my! Whatever is this lovely maiden doing, lying unconsious on the shore?"
@@ -230,18 +239,22 @@ label demoTwo:
     show kara Swim 03 Sad at pos7 with Dissolve(0.05)
     kara "Come, let us hurry you back to the castle."
     show kara Swim 03 Gasp at pos7 with Dissolve(0.05)
+
     kara "My, how light you are... It is as if I am caressing a cloud, or perhaps a ghost from a dream... Your eyes remain closed, yet I feel as if you are gazing into my very core with tender, uncertain yearning..."
     $ renpy.music.set_volume(0.4, delay=0, channel='sound')
     play sound "sfx/smack01.ogg"
     $ renpy.music.set_volume(1.0, delay=0, channel='sound')
     stop music
     
+
     show kara Swim 01 Angry1 at pos7 with Dissolve(0.05)
+
     kara "{size=+10}{b}AHHH!!! OW, OW, OW!!! IT'S PINCHING ME!!! GET IT OFF!!! GET IT OFF!!!{/b}{/size}" with scrShake
     hide kara
     
     play music "music/tell me hatabou.mp3" fadeout 2.0 fadein 2.0
     
+
     show choro Swim 01 Nervous Flip at pos3 with Dissolve(0.05)
     show kara Swim 01 Angry1 Fade at pos6 with Dissolve(0.1)
     choro "Ah—! Karamatsu-niisan!"
@@ -439,10 +452,11 @@ label demoTwo:
     show choro Swim 01 Displeased3 Fade Flip at pos1 with Dissolve(0.1)
     show oso Swim 01 Thinking Fade Flip at pos2 with Dissolve(0.1)
     show kara Swim 01 Neutral at pos6 with Dissolve(0.05)
+
     kara "Ah, this is quite the comfortable rock. It's much softer than any I've ever sat on before."
     
     stop music fadeout 2.0
-    
+
     show choro Swim 01 Blank1 Fade Flip at pos1 with Dissolve(0.1)
     show oso Swim 01 Blank1 Fade Flip at pos2 with Dissolve(0.1)
     show kara Swim 01 Blank1 Fade at pos6 with Dissolve(0.1)
@@ -466,16 +480,21 @@ label demoTwo:
     show choro Swim 01 Nervous Fade Flip at pos1 with Dissolve(0.1)
     show oso Swim 01 Happy1 Fade Flip at pos2 with Dissolve(0.1)
     show kara Swim 01 Gasp at pos6 with Dissolve(0.05)
+    show kara Swim 01 Gasp at pos6
+
     kara "E-EH?!"
     hide choro
     hide oso
     hide kara
+
     show chibita Naked Angry1 at cpos7 with Dissolve(0.05)
+
     chibita "{size=+10}{b}GET OFF, YA IDJIT!!!{/b}{/size}" with scrShake
     chibita "WHAT THE HELL!!! I WAS JUST RELAXING IN THE SAND—"
     chibita "—AND YOU COME OVER AND SUFFOCATE ME WITH YOUR ASS?!"
     chibita "CAN'T I ENJOY MY SUMMER BREAK IN PEACE?! DAMN IT!"
     
+
     show chibita Naked Displeased2 Flip at cpos3 with Dissolve(0.05)
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
@@ -519,10 +538,12 @@ label demoTwo:
     hide choro
     show chibita Naked Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
     show ichi Swim 01 Gasp at pos6 with Dissolve(0.05)
+
     ichi "If Iyami told you that... Doesn't that mean he's here too? "
     hide chibita
     hide ichi
     
+
     $ renpy.music.set_volume(1.0, delay=0, channel='music')
     play music "music/tell me hatabou.mp3" fadeout 2.0 fadein 2.0
     
@@ -768,12 +789,14 @@ label demoTwo:
     show jyushi Swim 01 Displeased1 at pos5 with Dissolve(0.05)
     show todo Swim 01 Displeased1 at pos4 with Dissolve(0.05)
     show ichi Swim 01 Displeased1 at pos6 with Dissolve(0.05)
+
     rest "Ugggghhh..."
     hide kara
     hide choro
     hide ichi
     hide jyushi
     hide todo
+
     show todo Swim 02 Displeased1 at pos6 with Dissolve(0.05)
     todo "Well, if Dad is already paying, then I guess I don't see the harm..."
     show kara Swim 02 Blank1 Flip at pos3 with Dissolve(0.05)
@@ -835,11 +858,13 @@ label demoTwo:
     oso "Fine... I'll take it."
     show oso Swim 02 Neutral Flip at pos3 with Dissolve(0.05)
     show todo Swim 02 Happy1 Fade at pos6 with Dissolve(0.1)
+
     oso "Thanks for the food!"
     hide todo
     
     # BEACH WAVES (probably sound looped instead of music)
     play audio "<loop 0.0>sfx/beachwaves.ogg"
+
     
     show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Happy1 at pos6 with Dissolve(0.05)
@@ -880,12 +905,14 @@ label demoTwo:
     show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show kara Swim 01 Shocked1 at pos4 with Dissolve(0.05)
     show todo Swim 01 Shocked1 Fade at pos5 with Dissolve(0.1)
+
     show choro Swim 01 Shocked1 Fade at pos6 behind kara
     kara "Or perhaps start with trying to balance on the board on land at least?!"
     hide iyami
     hide kara
     hide todo
     hide choro
+
     show iyami Regular Angry1 at pos7 with Dissolve(0.05)
     iyami "Shut up, zansu!"
     show iyami Regular Angry1 Fade at pos7 with Dissolve(0.1)
@@ -904,6 +931,7 @@ label demoTwo:
 
     # SOUND: Wave sounds/probably splash
     $ renpy.music.set_volume(1.0, delay=0, channel='music')
+
     play music "music/a murder case.mp3" fadeout 2.0 fadein 2.0
     
     play audio "sfx/splash01.ogg"
@@ -918,6 +946,7 @@ label demoTwo:
     show ichi Swim 01 Blank1 at pos4 with Dissolve(0.05)
     show todo Swim 01 Blank1 at pos5 with Dissolve(0.05)
     show jyushi Swim 01 Blank1 at pos6 with Dissolve(0.05)
+
     everyone "..."
     hide kara
     hide choro
@@ -934,10 +963,7 @@ label demoTwo:
     show oso Swim 01 Nervous Fade Flip at pos3 with Dissolve(0.1)
     show choro Swim 01 Angry1 Fade at pos4 with Dissolve(0.1)
     show todo Swim 01 Angry1 at pos5 with Dissolve(0.05)
-    todo "{size=+10}{b}AND HE WAS A PRO!!! THERE'S NO WAY I'M RIDING THAT!!!{/b}{/size}"
-    hide oso
-    hide choro
-    hide todo
+
     show ichi Swim 01 Nervous Flip at pos3 with Dissolve(0.05)
     show jyushi Swim 01 Surprised at pos6 with Dissolve(0.05)
     suuji "Scary... Surfing is scary..."
@@ -955,6 +981,7 @@ label demoTwo:
     show ichi Swim 01 Shocked1 at pos4 with Dissolve(0.05)
     show todo Swim 01 Surprised at pos5 with Dissolve(0.05)
     show jyushi Swim 01 Shocked1 at pos6 with Dissolve(0.05)
+
     everyone "Eh?!"
     hide oso
     hide choro
@@ -962,6 +989,7 @@ label demoTwo:
     hide ichi
     hide todo
     hide jyushi
+
     show iyami Regular Displeased1 at pos7 with Dissolve(0.05)
     iyami "As me thought, none of you are worthy of the way of the board."
     show iyami Regular Displeased1 at pos7 with Dissolve(0.05)
@@ -975,6 +1003,7 @@ label demoTwo:
     show ichi Swim 01 Shocked1 at pos4 with Dissolve(0.05)
     show todo Swim 01 Surprised at pos5 with Dissolve(0.05)
     show jyushi Swim 01 Surprised at pos6 with Dissolve(0.05)
+
     everyone "{size=+10}{b}W-Wait—!{/b}{/size}"
     hide oso
     hide choro
@@ -982,6 +1011,7 @@ label demoTwo:
     hide ichi
     hide todo
     hide jyushi
+
     show oso Swim 01 Sad at pos7 with Dissolve(0.05)
     oso "I-Iyami..."
     show oso Swim 01 Sad at pos7 with Dissolve(0.05)
@@ -993,6 +1023,7 @@ label demoTwo:
     show ichi Swim 01 Nervous at pos4 with Dissolve(0.05)
     show todo Swim 01 Nervous at pos5 with Dissolve(0.05)
     show jyushi Swim 01 Sad at pos6 with Dissolve(0.05)
+
     everyone "Please!"
     hide oso
     hide choro
@@ -1000,6 +1031,7 @@ label demoTwo:
     hide ichi
     hide todo
     hide jyushi
+
     show iyami Regular Neutral at pos7 with Dissolve(0.05)
     iyami "..."
     show iyami Regular Happy1 at pos7 with Dissolve(0.05)
@@ -1037,6 +1069,7 @@ label demoTwo:
     scene cgi_beach with fade
     play music "music/a murder case.mp3" fadeout 2.0 fadein 2.0
     
+
     chibita "O-Oi Iyami... This is bad!"
     iyami "Me sees that. "
     iyami "Any witnesses?"
@@ -1054,11 +1087,15 @@ label demoTwo:
     hide screen calendar
     scene bg_black with fade
     
+
     play music "music/dogeza.ogg" fadeout 2.0 fadein 2.0
+
     
     dev "Thanks for playing the demo!"
     dev "See you guys in October for the full game!"
     dev "Be sure to visit our {a=https://twitter.com/OsosanDiscord}twitter{/a} and {a=https://cansextupletsgraduate-game.tumblr.com/}tumblr{/a}!"
     dev "We hope to see you again soon!" 
     
+
     return
+

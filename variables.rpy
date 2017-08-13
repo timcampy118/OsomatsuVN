@@ -15,7 +15,6 @@ init:
                 'right' : 1.0
                 }
             
-
             ### Plays a sound after each line###
             def character_callback(event, interact=True, **kwargs):
                 if(event == "end") and interact:
@@ -130,6 +129,7 @@ init:
     ##### CHARACTER POSITIONS#####
     
     #default left position 
+
     $ pos3 = Position(xpos=0.25, xanchor='center', ypos=1.0, yanchor=1.0)
     
     #left position, close to center
@@ -143,6 +143,7 @@ init:
     
     #right position, close to center
     $ pos4 = Position(xpos=0.65, xanchor='center', ypos = 1.0, yanchor=1.0)
+
     
     #right position, far right
     $ pos5 = Position(xpos=0.9, xanchor='center', ypos=1.0, yanchor=1.0)
@@ -274,7 +275,6 @@ label splashscreen:
         #$ renpy.block_rollback()
         #"You made your decision already."
 
-
 ##### CLICK TO CONTINUE ######
 ###### A blinking arrow ######
 
@@ -284,6 +284,7 @@ image ctc_blink:
     "gui/arrow_blank.png"
     linear 0.5 alpha 1.0
     repeat
+
 
 
 # Declare characters
@@ -310,6 +311,7 @@ define everyone = Character("EVERYONE", color = "#FFFFFF",ctc="ctc_blink",ctc_po
 define everyoneelse = Character("EVERYONE ELSE", color = "#FFFFFF",ctc="ctc_blink",ctc_position="nestled")
 define rest = Character("THE REST", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
 define suuji = Character("ICHIMATSU & JYUSHIMATSU", color = "#FFFFFF", ctc="ctc_blink",ctc_position="nestled")
+
 
 
 # for narration

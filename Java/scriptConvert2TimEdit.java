@@ -142,7 +142,7 @@ public class scriptConvert2TimEdit
         if (!bad)
         {
         	getFromList();
-        	while(!listName.equals("done"))
+        	while(!listName.contains("done"))
             {
         		list.add(listName);
         		getFromList();
@@ -156,7 +156,7 @@ public class scriptConvert2TimEdit
           if(check1&&check2)
           {
         	  getFromList();
-          		while(!listName.equals("done"))
+          		while(!listName.contains("done"))
           		{
 	          		bugList.add(listName);
 	          		getFromList();
