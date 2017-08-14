@@ -945,9 +945,14 @@ screen history():
 style history_window is empty
 
 style history_name is gui_label
-style history_name_text is gui_label_text
-style history_text is gui_text
-
+style history_name_text:
+    font "helsinki.ttf"
+    size 30
+    color "#FFFFFF"
+style history_text:
+    font "fonts/Poppins-Medium.ttf"
+    size 25
+    color "#FFFFFF"
 style history_text is gui_text
 
 style history_label is gui_label

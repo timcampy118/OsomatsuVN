@@ -12,18 +12,18 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Can Sextuplets Graduate From High School")
+define config.name = _("Can Sextuplets Graduate From High School - Demo")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
 
-define config.version = "0.2"
+define config.version = "1.1"
 
 
 ## Text that is placed on the game's about screen. To insert a blank line
@@ -38,6 +38,9 @@ define gui.about = _("")
 
 define build.name = "CanSextupletsGraduateFromHighSchool"
 
+### TRYING TO REDUCE LAG
+define config.image_cache_size = 16
+
 
 ## Sounds and music ############################################################
 
@@ -46,7 +49,7 @@ define build.name = "CanSextupletsGraduateFromHighSchool"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -60,7 +63,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "music/Chibita Flower Fairy.ogg"
 
 
 ## Transitions #################################################################
@@ -176,11 +179,16 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    #build.classify('game/**.rpy',None)
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.mp3', 'archive')
+    build.classify('game/**.ogg', 'archive')
+    build.classify('game/**.otf', 'archive')
+    build.classify('game/**.ttf', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.

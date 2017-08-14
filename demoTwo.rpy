@@ -1,4 +1,4 @@
-label demoTwo:
+﻿label demoTwo:
         
     scene bg_hallway with fade
     
@@ -398,7 +398,10 @@ label demoTwo:
     show ichi Swim 01 Neutral Fade at pos5 with moveinright
     jyushi "YAHOOOO!!!"
     
-    hide jyushi
+
+    show jyushi Swim 03 Neutral at pos3 with Dissolve(0.05)
+    hide jyushi with moveoutleft
+
     #show jyushi Swim 03 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show todo Swim 03 Nervous at pos4 with Dissolve(0.05)
     show ichi Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
@@ -416,7 +419,9 @@ label demoTwo:
     show ichi Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
     todo "It's hard to keep up with his pace."
     show todo Swim 03 Surprised Fade Flip at pos4 with Dissolve(0.1)
-    show ichi Swim 01 Happy1 at pos5 with Dissolve(0.05)
+
+    show ichi Swim 01 Neutral at pos5 with Dissolve(0.05)
+
     ichi "Mm... Yeah."
     show todo Swim 01 Happy1 Flip at pos4 with Dissolve(0.05)
     show ichi Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
@@ -461,7 +466,9 @@ label demoTwo:
     kara "It's just as Todomatsu said. Let us sit down and relax, Choromatsu."
     show choro Swim 01 Displeased3 Fade Flip at pos1 with Dissolve(0.1)
     show oso Swim 01 Thinking Fade Flip at pos2 with Dissolve(0.1)
-    show kara Swim 01 Neutral at pos6 with Dissolve(0.05)
+
+    show kara Swim 02 Neutral at pos6 with Dissolve(0.05)
+
     kara "Ah, this is quite the comfortable rock. It's much softer than any I've ever sat on before."
     
     stop music fadeout 2.0
@@ -710,7 +717,6 @@ label demoTwo:
 
     scene bg_beach with fade
     $changeDate("JUL",25,"AFTERNOON")
-    
 
 
     # BGM TBD
@@ -794,7 +800,8 @@ label demoTwo:
     hide ichi
     hide jyushi
     hide todo
-    show todo Swim 02 Displeased1 at pos6 with Dissolve(0.05)
+    show todo Swim 02 Thinking at pos6 with Dissolve(0.05)
+
     todo "Well, if Dad is already paying, then I guess I don't see the harm..."
     show kara Swim 02 Blank1 Flip at pos3 with Dissolve(0.05)
     show todo Swim 02 Displeased1 Fade at pos6 with Dissolve(0.1)
@@ -841,7 +848,9 @@ label demoTwo:
     show todo Swim 01 Happy1 at pos7 with Dissolve(0.05)
     todo "Yep, yep! He moves too much in his sleep too."
     hide todo
-    show choro Swim 01 Happy3 at pos7 with Dissolve(0.05)
+
+    show choro Swim 01 Displeased3 at pos7 with Dissolve(0.05)
+
     choro "Glad I'm not the only one who thinks that. "
     hide choro
     show oso Swim 01 Angry4 at pos7 with Dissolve(0.05)
@@ -849,7 +858,9 @@ label demoTwo:
     hide oso
     show oso Swim 01 Angry4 Fade Flip at pos3 with Dissolve(0.1)
     show todo Swim 02 Happy1 at pos6 with Dissolve(0.05)
-    todo "You did say we needed to bond as a family, Nii-san."
+
+    todo "You did say we needed to bond as a family, Osomatsu-niisan."
+
     show oso Swim 03 Sad Flip at pos3 with Dissolve(0.05)
     show todo Swim 02 Happy1 Fade at pos6 with Dissolve(0.1)
     oso "Fine... I'll take it."
@@ -894,7 +905,9 @@ label demoTwo:
     show todo Swim 01 Shocked1 at pos5 with Dissolve(0.05)
     show choro Swim 01 Shocked1 Fade at pos6 with Dissolve(0.1)
     show kara Swim 01 Shocked1 Fade at pos4 behind choro
-    todo "Eh-”?! That huge one?! Now?!"
+
+    todo "Eh-?! That huge one?! Now?!"
+
     show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show choro Swim 01 Shocked1 at pos6 with Dissolve(0.05)
     show kara Swim 01 Shocked1 Fade at pos4 behind choro
@@ -931,7 +944,9 @@ label demoTwo:
     play audio "sfx/splash01.ogg"
 
     show oso Swim 01 Neutral Fade at pos7 with Dissolve(0.1)
-    mystery "Natsume-”!! He's drowning!! Someone, call an ambulance!!" 
+
+    mystery "Natsume—!! He's drowning!! Someone, call an ambulance!!" 
+
     show oso Swim 01 Blank1 Fade at pos7 with Dissolve(0.1)
     mystery "...H-He's dead!!"
     hide oso
@@ -997,7 +1012,9 @@ label demoTwo:
     show ichi Swim 01 Shocked1 at pos4 with Dissolve(0.05)
     show todo Swim 01 Surprised at pos5 with Dissolve(0.05)
     show jyushi Swim 01 Surprised at pos6 with Dissolve(0.05)
-    everyone "{size=+10}{b}W-Wait-”!{/b}{/size}"
+
+    everyone "{size=+10}{b}W-Wait—!{/b}{/size}"
+
     hide oso
     hide choro
     hide kara
@@ -1006,15 +1023,24 @@ label demoTwo:
     hide jyushi
     show oso Swim 01 Sad at pos7 with Dissolve(0.05)
     oso "I-Iyami..."
-    show oso Swim 01 Sad at pos7 with Dissolve(0.05)
+    show oso Swim 01 Angry3 at pos7 with Dissolve(0.05)
     oso "We're sorry. Please, teach us how to surf!"
     hide oso
-    show oso Swim 01 Sad at pos1 with Dissolve(0.05)
-    show choro Swim 01 Neutral at pos2 with Dissolve(0.05)
-    show kara Swim 01 Sad at pos3 with Dissolve(0.05)
-    show ichi Swim 01 Nervous at pos4 with Dissolve(0.05)
-    show todo Swim 01 Nervous at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Sad at pos6 with Dissolve(0.05)
+
+    show oso Swim 01 Angry3 at pos1 with Dissolve(0.05)
+    show choro Swim 01 Angry3 at pos2 with Dissolve(0.05)
+    show kara Swim 01 Angry3 at pos3 with Dissolve(0.05)
+    show ichi Swim 01 Angry2 at pos4 with Dissolve(0.05)
+    show todo Swim 01 Displeased1 at pos5 with Dissolve(0.05)
+    show jyushi Swim 01 Thinking at pos6 with Dissolve(0.05)
+
+    #show oso Swim 01 Sad at pos1 with Dissolve(0.05)
+    #show choro Swim 01 Neutral at pos2 with Dissolve(0.05)
+    #show kara Swim 01 Sad at pos3 with Dissolve(0.05)
+    #show ichi Swim 01 Nervous at pos4 with Dissolve(0.05)
+    #show todo Swim 01 Nervous at pos5 with Dissolve(0.05)
+    #show jyushi Swim 01 Sad at pos6 with Dissolve(0.05)
+
     everyone "Please!"
     hide oso
     hide choro
