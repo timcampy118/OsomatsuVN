@@ -79,7 +79,7 @@
     jyushi "I need air conditioning!"
     show ichi Maintee 01 Gasp Flip at pos3 with Dissolve(0.05)
     show jyushi Maintee 01 Angry1 Fade at pos6 with Dissolve(0.1)
-    ichi "C-Calm down, Jyushimatsu-”"
+    ichi "C-Calm down, Jyushimatsu-"
     
     play sound "sfx/crunch01.ogg"
     
@@ -94,8 +94,8 @@
     ichi "D-Did you just eat the rest of our popsicles in one bite?"
     show ichi Maintee 01 Nervous Fade Flip at pos3 with Dissolve(0.1)
     show jyushi Maintee 03 Angry2 Fade at pos4 with move
-    show choro Maintee 01 Angry3 at pos5 with moveinright
-    choro "You know, you could've used a paper fan too, instead of eating all of that, right?"
+    show choro Maintee 01 Angry3 at pos5 with Dissolve(0.05)
+    choro "You know, Jyushimatsu, you could've just used a paper fan instead of eating all that."
     hide ichi
     hide jyushi
     hide choro
@@ -187,7 +187,7 @@
     hide kara
     show oso Maintee 02 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show todo Maintee 01 Surprised at pos6 with Dissolve(0.05)
-    todo "Wait, so we {i}are{/i} going right now?"
+    todo "Wait, so are we going {i}right now{/i}?"
     
     show oso Maintee 02 Neutral Flip at pos3 with Dissolve(0.05)
     show todo Maintee 01 Surprised Fade at pos6 with Dissolve(0.1)
@@ -222,10 +222,15 @@
     stop music fadeout 2.0
     
     scene bg_black with fade
-    $ renpy.pause(1.0, hard=True)
+    $renpy.pause(2.0, hard=True)
+    hide screen calendar
+    scene bg_black with fade
+    $changeDate("JUL",25,"MORNING")
+    show screen calendar
+    $renpy.pause(2.0, hard=True)
     scene bg_beach with fade
     
-    $changeDate("JUL",25,"MORNING")
+    
     $ renpy.music.set_volume(1.0, delay=0, channel='music')
     play music "music/chibita flower fairy.ogg" fadeout 2.0 fadein 2.0 
     
@@ -436,9 +441,10 @@
     show ichi Swim 01 Angry2 at pos5 with Dissolve(0.05)
     ichi "Eh..."
 
+   
+    show todo Swim 01 Happy1 Fade at pos4 with Dissolve(0.05)
+    show ichi Swim 01 Angry2 Fade at pos5 with Dissolve(0.05)
     show oso Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
-    show todo Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show ichi Swim 01 Angry2 Fade at pos5 with Dissolve(0.1)
     oso "Yo, Ichimatsu~! Todomatsu~!"
     show oso Swim 01 Happy1 Fade Flip at pos2 with move
     show choro Swim 01 Displeased3 Flip at pos1 with Dissolve(0.05)
@@ -500,18 +506,18 @@
     hide choro
     hide oso
     hide kara
-    show chibita Naked Angry1 Flip at cpos7 with Dissolve(0.05)
+    show chibita Swim Angry1 Flip at cpos7 with Dissolve(0.05)
     chibita "{size=+10}{b}GET OFF, YA IDJIT!!!{/b}{/size}" with scrShake
-    chibita "WHAT THE HELL!!! I WAS JUST RELAXING IN THE SAND—”"
+    chibita "WHAT THE HELL!!! I WAS JUST RELAXING IN THE SAND—"
     chibita "—AND YOU COME OVER AND SUFFOCATE ME WITH YOUR ASS?!"
     chibita "CAN'T I ENJOY MY SUMMER BREAK IN PEACE?! DAMN IT!"
     
-    show chibita Naked Displeased2 Flip at cpos3 with move
+    show chibita Swim Displeased2 Flip at cpos3 with move
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
     #show kara Swim 01 Neutral Fade at pos6 with Dissolve(0.1)
     chibita "Ah."
-    show chibita Naked Displeased1 Flip at cpos3 
+    show chibita Swim Displeased1 Flip at cpos3 
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
     #show kara Swim 01 Neutral Fade at pos6 with Dissolve(0.1)
@@ -519,33 +525,33 @@
     
     play music "music/dogeza.ogg" fadeout 2.0 fadein 2.0
     
-    show chibita Naked Displeased1 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased1 Fade Flip at cpos3 with Dissolve(0.1)
     show oso Swim 01 Neutral at pos4 with Dissolve(0.05)
     show choro Swim 01 Neutral Fade at pos5 with Dissolve(0.1)
     oso "Hey, Chibita!"
-    show chibita Naked Displeased1 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased1 Fade Flip at cpos3 with Dissolve(0.1)
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Blank1 at pos5 with Dissolve(0.05)
     choro "Uhh... Why exactly were you buried in the sand up to your neck like that...?"
-    show chibita Naked Displeased2 Flip at cpos3 with Dissolve(0.05)
+    show chibita Swim Displeased2 Flip at cpos3 with Dissolve(0.05)
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Blank1 Fade at pos5 with Dissolve(0.1)
     chibita "Hah? Iyami told me that I'd grow taller if I planted myself in the sand."
-    show chibita Naked Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
     show oso Swim 01 Neutral Fade at pos4 with Dissolve(0.1)
     show choro Swim 01 Displeased3 at pos5 with Dissolve(0.05)
     choro "And you believed him...?"
-    show chibita Naked Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
     show oso Swim 01 Happy1 at pos4 with Dissolve(0.05)
     show choro Swim 01 Displeased3 Fade at pos5 with Dissolve(0.1)
     oso "Gyahahaha! How dumb can you be?!"
-    show chibita Naked Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
     show oso Swim 01 Neutral at pos4 with Dissolve(0.05)
     show choro Swim 01 Displeased3 Fade at pos5 with Dissolve(0.1)
     oso "Chibita... Being small is kinda your thing. If you were tall, you wouldn't be {i}Chibita{\i} anymore. "
     hide oso
     hide choro
-    show chibita Naked Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
+    show chibita Swim Displeased2 Fade Flip at cpos3 with Dissolve(0.1)
     show kara Swim 01 Gasp at pos6 with Dissolve(0.05)
     kara "If Iyami told you that... Doesn't that mean he's here too? "
     hide chibita
@@ -553,64 +559,64 @@
     
     play music "music/tell me hatabou.mp3"
     
-    show iyami Regular Happy1 Flip at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos7 with Dissolve(0.05)
     iyami "Uhyohyohyo!"
     iyami "This will be me's most genius plan ever! "
-    show iyami Regular Happy1 Fade Flip at pos3 with move
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with move
     show oso Swim 01 Surprised at pos6 with Dissolve(0.05)
     oso "Eh? Iyami? "
-    show iyami Regular Angry1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Surprised Fade at pos6 with Dissolve(0.1)
     iyami "SEXTUPLETS?!"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Surprised Fade at pos6 with Dissolve(0.1)
     iyami "What are you brats doing here?"
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp at pos6 with Dissolve(0.05)
     oso "Huh? We should be the ones asking you that. "
     hide oso
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show kara Swim 01 Displeased1 at pos6 with Dissolve(0.05)
     kara "You're planning another scam, huh?"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show kara Swim 01 Displeased1 Fade at pos6 with Dissolve(0.1)
     iyami "It's not a scam, zansu. "
-    show iyami Regular Happy1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show kara Swim 01 Displeased1 Fade at pos6 with Dissolve(0.1)
     iyami "Me is just earning some side cash aside from me's job."
     hide kara
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
-    show choro Swim 01 Happy1 at pos6 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show choro Swim 01 Thinking at pos6 with Dissolve(0.05)
     choro "You have a job?!"
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
-    show choro Swim 01 Happy1 Fade at pos6 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
+    show choro Swim 01 Thinking Fade at pos6 with Dissolve(0.1)
     iyami "Me sells bread at your school, zansu."
     hide choro
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp at pos6 with Dissolve(0.05)
     oso "What? You work at our school?"
-    show iyami Regular Angry1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Gasp Fade at pos6 with Dissolve(0.1)
     iyami "SHEEEH!!! You don't even remember?!"
-    show iyami Regular Angry1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Angry1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp Fade at pos4 with move
     show choro Swim 01 Displeased1 at pos5 with Dissolve(0.05)
     choro "Come on, Osomatsu-niisan. Let's go somewhere else."
-    show iyami Regular Angry1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Angry1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp Fade at pos4 behind choro
     show choro Swim 01 Displeased1 Fade at pos6 with move
     show kara Swim 01 Displeased1 at pos5 onlayer master
     kara "Best to leave the man alone."
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Gasp Fade at pos4 with Dissolve(0.1)
     show kara Swim 01 Displeased1 Fade at pos5 with Dissolve(0.1)
     show choro Swim 01 Displeased1 Fade at pos6 with Dissolve(0.1)
     iyami "W-Wait! What if me tells you something you could do!"
-    show iyami Regular Neutral Fade Flip at pos3 
+    show iyami Swim 01 Neutral Fade Flip at pos3 
     show oso Swim 01 Neutral at pos4 with Dissolve(0.05)
     oso "...I'm listening. You guys go on ahead, I'm gonna stay here and be unbored."
-    hide kara with moveoutright
-    hide choro with moveoutright
+    hide kara 
+    hide choro 
     hide oso
     hide iyami
     show kara Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.05)
@@ -624,94 +630,94 @@
     choro "Ah, fine... It'll give me a chance to read a bit of {i}No Longer Human{/i}, anyway."
     hide kara
     hide choro
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
-    show oso Swim 01 Neutral at pos6 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Fade Flip at pos3 
+    show oso Swim 01 Neutral at pos6 
     oso "So what's this \"something\" you've got for me to do?"
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Neutral Fade at pos6 with Dissolve(0.1)
     iyami "Me is teaching people how to surf, zansu."
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Displeased1 at pos6 with Dissolve(0.05)
     oso "But there's barely anyone here. Just a bunch of old geezers..."
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Displeased1 at pos6 with Dissolve(0.05)
     oso "Can you actually teach people?"
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Displeased1 Fade at pos6 with Dissolve(0.1)
     iyami "Trust me, zansu. "
-    show iyami Regular Happy1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Displeased1 Fade at pos6 with Dissolve(0.1)
     iyami "For a small price, me can teach you how to battle the waves."
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp at pos6 with Dissolve(0.05)
     oso "How much?"
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Gasp Fade at pos6 with Dissolve(0.1)
     iyami "2,000 yen per person for two hours. zansu"
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Thinking at pos6 with Dissolve(0.05)
     oso "Hmm, how about... 1,000 yen per person for one hour?"
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Happy1 at pos6 with Dissolve(0.05)
     oso "Like, a sextuplet discount! "
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Happy1 Fade at pos6 with Dissolve(0.1)
     iyami "Hm... "
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Angry3 at pos6 with Dissolve(0.05)
-    oso "Come on, Iyami! We've known each other for a whileâ€”at least give us a discount!"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    oso "Come on, Iyami! We've known each other for a while-”at least give us a discount!"
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Angry3 Fade at pos6 with Dissolve(0.1)
     iyami "Hm..."
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Angry5 at pos6 with Dissolve(0.05)
     oso "Geez! If you're not gonna lower the price, I'm out! "
-    show iyami Regular Angry1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Angry5 Fade at pos6 with Dissolve(0.1)
     iyami "SHEEEH!!! You're so annoying!"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Angry5 Fade at pos6 with Dissolve(0.1)
     iyami "Fine! 10,000 yen for the six of you and 6,000 yen for one big surfboard."
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Angry5 Fade at pos6 with Dissolve(0.1)
     iyami "That's my deal, zansu."
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Gasp at pos6 with Dissolve(0.05)
     oso "Why one?"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Gasp Fade at pos6 with Dissolve(0.1)
     iyami "Well, would you rather pay for six surfboards?"
-    show iyami Regular Happy1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Gasp Fade at pos6 with Dissolve(0.1)
     iyami "Besides, six people on one surfboard balances it better."
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Thinking at pos6 with Dissolve(0.05)
     oso "You've got a point there..."
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Happy1 at pos6 with Dissolve(0.05)
     oso "Alright, I'll take it."
-    show iyami Regular Happy1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Happy1 Fade at pos6 with Dissolve(0.1)
     iyami "That'll be 1,000 yen extra."
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Surprised at pos6 with Dissolve(0.05)
     oso "Eh?! Why?!"
-    show iyami Regular Neutral Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Surprised Fade at pos6 with Dissolve(0.1)
     iyami "You have to make an appointment, so if you pay now for a slot, you won't have to wait long."
-    show iyami Regular Neutral Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Neutral Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Surprised at pos6 with Dissolve(0.05)
     oso "Who the hell are you even teaching here?!"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Surprised Fade at pos6 with Dissolve(0.1)
     iyami "You want the deal or not, zansu? "
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Angry3 at pos6 with Dissolve(0.05)
     oso "Tch... Fine, whatever. Stingy."
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Angry3 at pos6 with Dissolve(0.05)
     oso "{i}I can't believe I'm going through all this trouble just to get my brothers to play with me...{/i}"
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Sad at pos6 with Dissolve(0.05)
     oso "{i}This better be worth it.{/i}"
 
@@ -748,27 +754,27 @@
     hide ichi
     show oso Swim 01 Blank1 Fade Flip at pos3 with Dissolve(0.1)
     show jyushi Swim 01 Happy1 at pos4 with Dissolve(0.05)
-    show kara Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
+    show kara Swim 02 Happy1 Fade at pos5 with Dissolve(0.1)
     jyushi "Want some watermelon, Osomatsu-niisan?"
     show oso Swim 01 Blank1 Fade Flip at pos3 with Dissolve(0.1)
     show jyushi Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show kara Swim 01 Happy1 at pos5 with Dissolve(0.05)
+    show kara Swim 02 Happy1 at pos5 with Dissolve(0.05)
     kara "We saved you a slice."
     show oso Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show jyushi Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show kara Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
+    show kara Swim 02 Happy1 Fade at pos5 with Dissolve(0.1)
     oso "No thanks, I found something fun for us to do!"
     show oso Swim 01 Neutral Flip at pos3 with Dissolve(0.05)
     show jyushi Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show kara Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
+    show kara Swim 02 Happy1 Fade at pos5 with Dissolve(0.1)
     oso "It'll be one of those \"wild high school memories\" we can look back on and laugh about when we get older!"
     show oso Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show jyushi Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show kara Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
+    show kara Swim 02 Happy1 Fade at pos5 with Dissolve(0.1)
     oso "We're going surfing!"
     show oso Swim 01 Thinking Flip at pos3 with Dissolve(0.05)
     show jyushi Swim 01 Happy1 Fade at pos4 with Dissolve(0.1)
-    show kara Swim 01 Happy1 Fade at pos5 with Dissolve(0.1)
+    show kara Swim 02 Happy1 Fade at pos5 with Dissolve(0.1)
     oso "...And Iyami will be teaching us how. "
     hide jyushi
     show oso Swim 01 Thinking Fade Flip at pos3 with Dissolve(0.1)
@@ -789,11 +795,11 @@
     oso "Plus, I already paid with the money Dad gave us for the trip, so we might as well."
     hide oso
     hide choro
-    show kara Swim 01 Displeased1 Flip at pos1 with Dissolve(0.05)
-    show choro Swim 01 Angry2 at pos6 with Dissolve(0.05)
-    show jyushi Swim 01 Displeased1 at pos5 with Dissolve(0.05)
+    show kara Swim 01 Displeased1 Flip at pos1 
+    show choro Swim 01 Angry2 at pos6 
+    show jyushi Swim 01 Displeased1 at pos5 
     show todo Swim 01 Displeased1 at pos4 behind choro
-    show ichi Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
+    show ichi Swim 01 Displeased1 Flip at pos3
     rest "Ugggghhh..."
     hide kara
     hide choro
@@ -836,7 +842,7 @@
     oso "Mmmm... Food~"
     hide oso
     hide choro
-    show kara Swim 02 Neutral at pos7 with Dissolve(0.05)
+    show kara Swim 01 Neutral at pos7 with Dissolve(0.05)
     kara "Ah, there it is. The eldest and his love of food."
     hide kara
     show ichi Swim 01 Happy1 at pos7 with Dissolve(0.05)
@@ -870,65 +876,71 @@
     hide todo
     
     # BEACH WAVES (probably sound looped instead of music)
+    $ renpy.music.set_volume(0.3, delay=0, channel='audio')
+    
     play audio "<loop 0.0>sfx/beachwaves.ogg"
   
     scene bg_beach with fade
     
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show oso Swim 01 Happy1 at pos6 with Dissolve(0.05)
     oso "Yo, Iyami!"
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Happy1 Fade at pos6 with Dissolve(0.1)
     iyami "You're all late, zansu."
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show oso Swim 01 Happy1 Fade at pos6 with Dissolve(0.1)
     iyami "Hurry and start warming up!"
     hide oso
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Displeased1 Fade Flip at pos3 with Dissolve(0.1)
     show kara Swim 01 Blank1 at pos6 with Dissolve(0.05)
     kara "What are we supposed to do?"
-    show iyami Regular Happy1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 Flip at pos3 with Dissolve(0.05)
     show kara Swim 01 Blank1 Fade at pos6 with Dissolve(0.1)
     iyami "For your training, you'll need to learn how to catch a wave, zansu. "
     hide kara
-    show iyami Regular Happy1 Fade Flip at pos3 with Dissolve(0.1)
+    show iyami Swim 01 Happy1 Fade Flip at pos3 with Dissolve(0.1)
     show choro Swim 01 Displeased3 at pos6 with Dissolve(0.05)
     choro "And how do we do that? "
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show choro Swim 01 Displeased3 Fade at pos6 with Dissolve(0.1)
     iyami "Just shut your mouth and listen to me, zansu. "
-    show iyami Regular Displeased1 Flip at pos3 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 Flip at pos3 with Dissolve(0.05)
     show choro Swim 01 Displeased3 Fade at pos6 with Dissolve(0.1)
     iyami "Now, let's start. Go and ride that wave."
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
-    
+    show iyami Swim 01 Displeased1 Flip at pos2 with move
+    show chibita Swim Displeased1 Fade Flip at cpos1 with Dissolve(0.05)    
+    iyami "Chibita here will be helping me watch your progress."
+    show iyami Swim 01 Displeased1 Fade Flip at pos2 with Dissolve(0.1)
+    show choro Swim 01 Displeased3 Fade at pos4 with move
     show todo Swim 01 Shocked1 at pos5 with Dissolve(0.05)
-    show choro Swim 01 Shocked1 Fade at pos6 with Dissolve(0.1)
-    show kara Swim 01 Shocked1 Fade at pos4 behind choro
-
-    todo "Eh-?! That huge one?! Now?!"
-
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
-    show choro Swim 01 Shocked1 at pos6 with Dissolve(0.05)
-    show kara Swim 01 Shocked1 Fade at pos4 behind choro
-    show todo Swim 01 Shocked1 Fade at pos5 behind choro
-    choro "Surely we have to start with some warm-ups first?!"
-    show iyami Regular Displeased1 Fade Flip at pos3 with Dissolve(0.1)
-    show kara Swim 01 Shocked1 at pos4 with Dissolve(0.05)
+    todo "How long has Chibita been there? Ehh?"
     show todo Swim 01 Shocked1 Fade at pos5 with Dissolve(0.1)
-    show choro Swim 01 Shocked1 Fade at pos6 behind kara
-    kara "Or perhaps start with trying to balance on the board on land at least?!"
+    show chibita Swim Angry1 Flip at cpos1 with Dissolve(0.05)  
+    chibita "I've always been here you, idjit!"
+    
+    
+    show chibita Swim Angry1 Fade Flip at cpos1 with Dissolve(0.1)  
+    show iyami Swim 01 Displeased1 Fade Flip at pos2 with Dissolve(0.1)
+    show choro Swim 01 Shocked1 at pos4 with Dissolve(0.05)
+    show todo Swim 01 Shocked1 Fade at pos5 with Dissolve(0.05)
+    choro "Surely we have to start with some warm-ups first?!"
+    show iyami Swim 01 Displeased1 Fade Flip at pos2 with Dissolve(0.1)
+    show todo Swim 01 Shocked1 Fade at pos5 with Dissolve(0.1)
+    show choro Swim 01 Shocked1 at pos4 behind kara
+    choro "Or perhaps start with trying to balance on the board on land at least?!"
     hide iyami
     hide kara
     hide todo
     hide choro
-    show iyami Regular Angry1 at pos7 with Dissolve(0.05)
+    hide chibita
+    show iyami Swim 01 Angry1 at pos7 with Dissolve(0.05)
     iyami "Shut up, zansu!"
-    show iyami Regular Angry1 Fade at pos7 with Dissolve(0.1)
+    show iyami Swim 01 Angry1 Fade at pos7 with Dissolve(0.1)
     everyone "...?!" 
-    show iyami Regular Angry1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 at pos7 with Dissolve(0.05)
     iyami "Who do you think is the teacher here?!"
-    show iyami Regular Angry1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 at pos7 with Dissolve(0.05)
     iyami "It's me! So if I say to do something, you should just do it, zansu!!"
     hide iyami
     show oso Swim 01 Nervous at pos7 with Dissolve(0.05)
@@ -936,11 +948,11 @@
     show oso Swim 01 Nervous Fade at pos7 with Dissolve(0.1)
     mystery "Wow, Natsume! You're doing great! As expected of a pro-surfer!"
     show oso Swim 01 Neutral at pos7 with Dissolve(0.05)
-    oso "Ah, there's someone riding that wave right now! See, he looks perfectlyâ€”"
+    oso "Ah, there's someone riding that wave right now! See, he looks perfectly—”"
 
     # SOUND: Wave sounds/probably splash
     play music "music/a murder case.mp3" fadeout 2.0 fadein 2.0
-    
+    $ renpy.music.set_volume(1.0, delay=0, channel='audio')
     play audio "sfx/splash01.ogg"
 
     show oso Swim 01 Neutral Fade at pos7 with Dissolve(0.1)
@@ -950,11 +962,11 @@
     show oso Swim 01 Blank1 Fade at pos7 with Dissolve(0.1)
     mystery "...H-He's dead!!"
     hide oso
-    show kara Swim 01 Blank1 at pos1 with Dissolve(0.05)
-    show choro Swim 01 Blank1 at pos2 with Dissolve(0.05)
-    show ichi Swim 01 Blank1 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Blank1 at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Blank1 at pos6 with Dissolve(0.05)
+    show kara Swim 01 Blank1 at pos1 
+    show choro Swim 01 Blank1 at pos2 
+    show ichi Swim 01 Blank1 at pos4 
+    show todo Swim 01 Blank1 at pos5 
+    show jyushi Swim 01 Blank1 at pos6 
     everyone "..."
     hide kara
     hide choro
@@ -964,9 +976,9 @@
     show oso Swim 01 Nervous at pos7 with Dissolve(0.05)
     oso "...S-See?"
     hide oso
-    show oso Swim 01 Nervous Fade Flip at pos3 with Dissolve(0.1)
-    show choro Swim 01 Angry1 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Angry1 Fade at pos5 with Dissolve(0.1)
+    show oso Swim 01 Nervous Fade Flip at pos3  
+    show choro Swim 01 Angry1 at pos4  
+    show todo Swim 01 Angry1 Fade at pos5 
     choro "{size=+10}{b}WHAT DO YOU MEAN, \"SEE?!\" THAT GUY JUST DIED!!!{/b}{/size}"
     show oso Swim 01 Nervous Fade Flip at pos3 with Dissolve(0.1)
     show choro Swim 01 Angry1 Fade at pos4 with Dissolve(0.1)
@@ -983,15 +995,15 @@
     show kara Swim 01 Nervous at pos7 with Dissolve(0.05)
     kara "M-Maybe we could try a smaller wave first, Iyami?"
     hide kara
-    show iyami Regular Angry1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Angry1 at pos7 with Dissolve(0.05)
     iyami "You cowards!!"
     hide iyami
-    show oso Swim 01 Surprised at pos1 with Dissolve(0.05)
-    show choro Swim 01 Surprised at pos2 with Dissolve(0.05)
+    show oso Swim 01 Surprised at pos1 
+    show choro Swim 01 Surprised at pos2 
     show kara Swim 01 Surprised at pos3 behind choro
-    show ichi Swim 01 Shocked1 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Surprised at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Shocked1 at pos6 with Dissolve(0.05)
+    show ichi Swim 01 Shocked1 at pos4 
+    show todo Swim 01 Surprised at pos5 
+    show jyushi Swim 01 Shocked1 at pos6 
     everyone "Eh?!"
     hide oso
     hide choro
@@ -999,19 +1011,19 @@
     hide ichi
     hide todo
     hide jyushi
-    show iyami Regular Displeased1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 at pos7 with Dissolve(0.05)
     iyami "As me thought, none of you are worthy of the way of the board."
-    show iyami Regular Displeased1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 at pos7 with Dissolve(0.05)
     iyami "Me was going to give you a chance, but you have only wasted my time, zansu!"
-    show iyami Regular Displeased1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Displeased1 at pos7 with Dissolve(0.05)
     iyami "Farewell, zansu."
     hide iyami
-    show oso Swim 01 Surprised at pos1 with Dissolve(0.05)
-    show choro Swim 01 Surprised at pos2 with Dissolve(0.05)
+    show oso Swim 01 Surprised at pos1
+    show choro Swim 01 Surprised at pos2 
     show kara Swim 01 Surprised at pos3 behind choro
-    show ichi Swim 01 Shocked1 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Surprised at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Surprised at pos6 with Dissolve(0.05)
+    show ichi Swim 01 Shocked1 at pos4 
+    show todo Swim 01 Surprised at pos5 
+    show jyushi Swim 01 Surprised at pos6 
 
     everyone "{size=+10}{b}W-Wait—!{/b}{/size}"
 
@@ -1024,15 +1036,16 @@
     show oso Swim 01 Sad at pos7 with Dissolve(0.05)
     oso "I-Iyami..."
     show oso Swim 01 Angry3 at pos7 with Dissolve(0.05)
+    #show oso Swim 01 Sad at pos7 with Dissolve(0.05)
     oso "We're sorry. Please, teach us how to surf!"
     hide oso
 
-    show oso Swim 01 Angry3 at pos1 with Dissolve(0.05)
-    show choro Swim 01 Angry3 at pos2 with Dissolve(0.05)
-    show kara Swim 01 Angry3 at pos3 with Dissolve(0.05)
-    show ichi Swim 01 Angry2 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Displeased1 at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Thinking at pos6 with Dissolve(0.05)
+    show oso Swim 01 Angry3 at pos1 
+    show choro Swim 01 Angry3 at pos2
+    show kara Swim 01 Angry3 at pos3 
+    show ichi Swim 01 Angry2 at pos4 
+    show todo Swim 01 Displeased1 at pos5 
+    show jyushi Swim 01 Thinking at pos6 
 
     #show oso Swim 01 Sad at pos1 with Dissolve(0.05)
     #show choro Swim 01 Neutral at pos2 with Dissolve(0.05)
@@ -1048,32 +1061,34 @@
     hide ichi
     hide todo
     hide jyushi
-    show iyami Regular Neutral at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Neutral at pos7 with Dissolve(0.05)
     iyami "..."
-    show iyami Regular Happy1 at pos7 with Dissolve(0.05)
+    show iyami Swim 01 Happy1 at pos7 with Dissolve(0.05)
     iyami "You all better be prepared!"
     hide iyami
-    show oso Swim 01 Happy1 at pos1 with Dissolve(0.05)
-    show choro Swim 01 Happy1 at pos2 with Dissolve(0.05)
-    show kara Swim 01 Happy1 at pos3 with Dissolve(0.05)
-    show ichi Swim 01 Happy1 at pos4 with Dissolve(0.05)
-    show todo Swim 01 Happy1 at pos5 with Dissolve(0.05)
-    show jyushi Swim 01 Happy1 at pos6 with Dissolve(0.05)
+    show oso Swim 01 Happy1 at pos1 
+    show choro Swim 01 Happy1 at pos2 
+    show kara Swim 01 Happy1 at pos3
+    show ichi Swim 01 Happy1 at pos4 
+    show todo Swim 01 Happy1 at pos5 
+    show jyushi Swim 01 Happy1 at pos6 
     everyone "....!!"
     hide screen calendar
     scene bg_black with fade
     
-    mystery "Whoa, this board sure can hold all six of us!"
+    mystery "Whoa, this board really can hold all six of us!"
     mystery "Watch where you're touching, Todomatsu!"
     mystery "B-But I'm afraid of falling!"
     mystery "YAY!!! WE'RE SURFING!!!"
     mystery "I could get used to this..."
-    mystery "I-Is that a huge wave coming at us?!"
-    mystery "TURN LEFT!"
-    mystery "HOW DO YOU TURN THIS THING?!"
+    chibita "You're getting the hang of it! Just keep at it!"
+    mystery "I-Is that a huge wave coming right at us?!"
+    mystery "TURN LEFT!!!"
+    mystery "HOW DO YOU EVEN TURN THIS THING?!"
     mystery "IT'S COMING!!!"
-    mystery "DO WE JUMP OFF-”"
-    mystery "TODOMATSU STOP GRABBING MY-”"
+    iyami "Uh oh..."
+    mystery "DO WE JUMP OFF OR—?!”"
+    mystery "TODOMATSU, STOP GRABBING MY—!!!"
      
     play audio "sfx/splash01.ogg"
      
@@ -1090,13 +1105,13 @@
     iyami "Any witnesses?"
     chibita "Not yet... But someone's bound to walk by and see these corpses sooner or later!"
     iyami "C-C-Calm down, zansu! We have to stay calm!"
-    chibita "What do you mean \"we\"?! You're the one shaking all over!"
+    chibita "What do you mean \"we?!\" You're the one shaking all over!"
     iyami "Me thinks it's these sextuplet's spirits haunting me, zansu..."
     chibita "Forget that for now, Iyami! We need to do something about their bodies!"
     iyami "Me knows that, zansu! Here, take this shovel and start digging!"
     chibita "Why do you have these shovels so handy?!"
-    iyami "...Me was hoping to dig for treasure, not graves."
-    
+    iyami "...Me was hoping to ditch you and dig for treasure, not graves."
+    everyone "..."
     stop audio
     
     hide screen calendar
