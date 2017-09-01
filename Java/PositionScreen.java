@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.IOException;
+import java.io.ObjectInputStream.GetField;
+import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,6 +19,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -33,6 +36,7 @@ public class PositionScreen implements ActionListener {
 	
 	static String fadeText;
 	static String flipText;
+	static String transText;
 	static int counterNum;
 	static int errorNum;
 	static int backupCount;
@@ -55,6 +59,7 @@ public class PositionScreen implements ActionListener {
 	JLabel outlabl;
 	JLabel charSelect;
 	JLabel labelPos;
+	JLabel endScene;
 	
 	JLabel clickFace;
 	JLabel clickArm;
@@ -67,7 +72,7 @@ public class PositionScreen implements ActionListener {
 	//define JCheckBox
 	JCheckBox fadeChcbx;
 	JCheckBox hideChcnx;
-
+	static JCheckBox endSceneChcnx;
 
 	//define ComboBox
 	JComboBox armCbox;
@@ -743,6 +748,9 @@ public class PositionScreen implements ActionListener {
 			}
 		});
 		
+		
+		
+		
 		lblCharacter.setLabelFor(charaCbox);
 
 		charaCbox.setModel(new DefaultComboBoxModel(Character.values()));
@@ -817,9 +825,19 @@ public class PositionScreen implements ActionListener {
 			}
 		});
 		
-		btnClear.setBounds(555, 277, 96, 35);
+		
+		btnClear.setBounds(610, 277, 96, 35);
 		frame.getContentPane().add(btnClear);
 		
+	
+		
+		endSceneChcnx= new JCheckBox();
+		endSceneChcnx.setBounds(500,277,35,35);
+		frame.getContentPane().add(endSceneChcnx);
+		
+		endScene= new JLabel("New Scene");
+		endScene.setBounds(535,277,96,35);
+		frame.getContentPane().add(endScene);
 		
 		//generate code for game
 		JButton btnGenerate = new JButton("Generate Scene");
@@ -838,46 +856,217 @@ public class PositionScreen implements ActionListener {
 	//this is where it makes the game code 
 	public static void GenerateScene ()
 	{
-		for(int x=0; x<7; x++)
-		{
+		
+		
+		
+	
+		
+		Boolean move=false;
+	
 
-			//int tmpInt= arraySprite[x].getPosPos();
-			
-			if(arraySprite[x]==null)
+			if(endSceneChcnx.isSelected())
 			{
-				if(isThere[x]!=null)
-					{
-						codeText.add("hide "+isThere[x].getCharacter());
-						isThere[x]=null;
-					}
-			}
-			else if (arraySprite[x]!=null && isThere[x]!=null && isThere[x].getCharacter()!=arraySprite[x].getCharacter())
-				codeText.add("hide " + isThere[x].getCharacter());
-		}
-		for(int x=0; x<7; x++)
-		{
-			
-				fadeText="";
-				flipText="";
-				
-				if(arraySprite[x]!=null)
+				for(int x=0; x<7; x++)
 				{
-					if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
-						flipText= " Flip";
-					if(arraySprite[x].getFade())
-						fadeText= " Fade";
-					System.out.println(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1) +" " +  ((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ));	
-					//THIS IS THE IMPORTANT PART, MAKE SURE THIS IS RIGHT
 					
-					codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
+					if(arraySprite[x]==null)
+					{
+						if(isThere[x]!=null)
+							{
+								codeText.add("hide "+isThere[x].getCharacter());
+								isThere[x]=null;
+							}
+					}
+					else if (arraySprite[x]!=null && isThere[x]!=null && isThere[x].getCharacter()!=arraySprite[x].getCharacter())
+						codeText.add("hide " + isThere[x].getCharacter());
+				}
+				
+				for(int x=0; x<7; x++)
+				{
+					
+						fadeText="";
+						flipText="";
+						
+						if(arraySprite[x]!=null)
+						{
+							if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
+								flipText= " Flip";
+							if(arraySprite[x].getFade())
+								fadeText= " Fade";
+							System.out.println(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1) +" " +  ((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ));	
+							//THIS IS THE IMPORTANT PART, MAKE SURE THIS IS RIGHT
+							
+							
+
+							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
+							{
+								String special="";
+								if(arraySprite[x].getCharacter().equals("chibita"))
+									special="c";
+								codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos());
+								
+								special="";
+								
+							}
+							else
+							codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
+							isThere[x]=arraySprite[x];	
+							
+						}
+					}	
+			}
+			else
+			{
+				Boolean checked[]=new Boolean[7];
+				for(int x=0; x<7; x++)
+				{
+					checked[x]=false;
+					if(arraySprite[x]==null)
+						checked[x]=true;
+				}
+				
+				//checked if previous was in current, if not. hide. 
+				for(int x=0; x<7; x++)
+				{
+					if(isThere[x]==null)
+					{
+						
+					}
+					else
+					{
+						boolean gone=true;
+						for(int y=0; y<7;y++)
+						{
+							if(arraySprite[y]!=null && isThere[x].getCharacter().equals(arraySprite[y].getCharacter()))
+								gone=false;
+						}
+						if(gone)
+						{
+							codeText.add("hide " + isThere[x].getCharacter()+ " with Dissolve(0.05)");
+						}
+						gone=true;
+					}
+					
+				
+					
+				}
+				//break
+				//check if character was in old scene, if so check pos, if different in pos last time. Move character to new pos with move
+				for(int x=0; x<7; x++)
+				{
+					if(arraySprite[x]==null)
+					{
+						
+					}
+					else
+					{
+					move=false;
+					for(int y=0; y<7;y++)
+					{
+						if(isThere[y]!=null && arraySprite[x].getCharacter().equals(isThere[y].getCharacter()))
+							move=true;
+					}
+					
+					if(move)
+					{
+						fadeText="";
+						flipText="";
+						
+						
+							if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
+								flipText= " Flip";
+							if(arraySprite[x].getFade())
+								fadeText= " Fade";
+						
+						
+						if(isThere[arraySprite[x].getPosPos()] !=null && !arraySprite[x].getCharacter().equals(isThere[arraySprite[x].getPosPos()].getCharacter()))
+						{
+							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
+							{
+								String special="";
+								if(arraySprite[x].getCharacter().equals("chibita"))
+									special="c";
+								codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with move");
+								
+								special="";
+								
+							}
+							else
+							codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with move");
+							
+							checked[x]=true;
+						}
+					}
+					move=false;
+
+					}
+					
+				}
+				for(int x=0; x<7; x++)
+				{
+					if(checked[x]=false && arraySprite[x]!=null)
+					{
+						fadeText="";
+						flipText="";
+						
+						
+							if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
+								flipText= " Flip";
+							if(arraySprite[x].getFade())
+								fadeText= " Fade";
+						
+						
+						if(!arraySprite[x].getCharacter().equals(isThere[arraySprite[x].getPosPos()].getCharacter()))
+						{
+							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
+							{
+								String special="";
+								if(arraySprite[x].getCharacter().equals("chibita"))
+									special="c";
+								if(arraySprite[x].getFade())
+									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with Dissolve(0.1)");
+								else
+									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with Dissolve(0.05)");
+								
+								special="";
+								
+							}
+							else
+								if(arraySprite[x].getFade())
+									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with Dissolve(0.1)");
+								
+								else
+									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with Dissolve(0.05)");
+							
+							checked[x]=true;
+						}
+						
+						
+					}
+				}
+				
+				for(int x=0; x<7; x++)
+				{
+					if(checked[x]!=false && isThere[x]!=null)
+						System.out.println("ERROR CHECKED");
 					isThere[x]=arraySprite[x];	
 				}
-			}				
+				
+				
+				
+			}
+				
+			
+
+		
+
+				
 		
 		JOptionPane.showMessageDialog(null, "Scene Generated");
+		codeText.add("done" + counterNum);
 		counterNum++;
 		counter.setText("Line: "+counterNum);
-		codeText.add("done" + counterNum);
+		
 		
 		for(int y=0; y<codeText.size(); y++)
 		{
@@ -997,7 +1186,7 @@ public class PositionScreen implements ActionListener {
 					x--;
 					try
 					{
-						while(codeText.get(x-1)!="done")
+						while(!codeText.get(x-1).contains("done"))
 						{
 							if(x==0)
 								break;
