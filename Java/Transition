@@ -1,0 +1,49 @@
+package script;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Transition {
+	
+static Scanner scan;
+static ArrayList <String> file;
+
+	public static void main(String[] args) throws IOException {
+		scan= new Scanner(new File("episodeOne.rpy"));
+		file= new ArrayList<String>();
+		
+		while(scan.hasNext())
+		{
+			String tmp=scan.nextLine();
+			if(tmp.length()>0 && tmp.charAt(tmp.length()-1)>='0' && tmp.charAt(tmp.length()-1)<='9')
+			{
+				if(tmp.contains("Fade"))
+				{
+					file.add(tmp+" with Dissolve(0.1)");
+				}
+				else
+				{
+					file.add(tmp+" with Dissolve(0.05)");
+				}
+			}
+			else
+			{
+				file.add(tmp);
+			}
+		}
+		
+		for(int x=0;x<file.size();x++)
+		{
+			//System.out.println(file.get(x));
+		}
+		
+		Path filePath = Paths.get("transition.txt");
+		Files.write(filePath, file, Charset.forName("UTF-8"));
+	}
+}
