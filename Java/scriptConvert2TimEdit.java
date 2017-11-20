@@ -1,5 +1,7 @@
 package script;
 
+
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -12,8 +14,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -147,7 +147,7 @@ public class scriptConvert2TimEdit
         		list.add(listName);
         		getFromList();
             }
-          list.add(thisRow.trim());
+          list.add(thisRow.trim()); //+ listName + " "+(rowCount+1)); need to change back
         
         }
         else if (thisRow.trim() != "") 
@@ -162,7 +162,7 @@ public class scriptConvert2TimEdit
 	          		getFromList();
           		}
           }
-          bugList.add(thisRow.trim() + " Row " + rowCount);
+          bugList.add(thisRow.trim() + " Row " + rowCount+1 + " " + listName);
         }
 
         bad = false;
