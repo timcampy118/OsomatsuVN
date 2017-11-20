@@ -1,6 +1,6 @@
 package gui;
 
-//all the imports, oh so many immports, should just imported everything why not
+//all the imports, oh so many imports, should just imported everything why not
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -40,7 +40,7 @@ public class PositionScreen implements ActionListener {
 	static int counterNum;
 	static int errorNum;
 	static int backupCount;
-	
+	static String tofu;
 	//define canvas
 	Canvas fakeScreen;
 	
@@ -469,23 +469,24 @@ public class PositionScreen implements ActionListener {
 					
 					//File baseFile = new File("image\\"+charaCbox.getSelectedItem().toString()+".jpg");
 					
-					
-					File outfitFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+".png");
+					//tofu="C:\\Users\\Leon\\Desktop\\furrytofu\\";
+					tofu="";
+					File outfitFile = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+".png");
 					
 					System.out.println(tmpFace);
-					File faceFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+revisedExpressionName+meme+".png");
-					File faceFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+"01.png");	
-					File faceFile3 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+".png");	
-					File faceFile4 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace.substring(0,tmpFace.length()-1)+"0"+tmpFace.charAt(tmpFace.length()-1)+".png");
+					File faceFile = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+revisedExpressionName+meme+".png");
+					File faceFile2 = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+"01.png");	
+					File faceFile3 = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace+".png");	
+					File faceFile4 = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\head\\"+charaCbox.getSelectedItem().toString()+"_"+tmpFace.substring(0,tmpFace.length()-1)+"0"+tmpFace.charAt(tmpFace.length()-1)+".png");
 					
 					
-					File armFile = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s0"+armCbox.getSelectedItem().toString().charAt(armCbox.getSelectedItem().toString().length()-1)+".png");
-					File armFile2 = new File("image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s.png");
+					File armFile = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s0"+armCbox.getSelectedItem().toString().charAt(armCbox.getSelectedItem().toString().length()-1)+".png");
+					File armFile2 = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+"\\"+charaCbox.getSelectedItem().toString()+"_"+clothesCbox.getSelectedItem().toString()+"_"+armCbox.getSelectedItem().toString().substring(0, armCbox.getSelectedItem().toString().length()-1)+"s.png");
 						
 					
 					
 					
-					File file = new File("image\\none.jpg");
+					File file = new File(tofu+"image\\none.jpg");
 				
 					BufferedImage none = ImageIO.read(file);
 					
@@ -621,7 +622,7 @@ public class PositionScreen implements ActionListener {
 					else
 					{
 						
-						File file = new File("image\\none.jpg");
+						File file = new File(tofu+"image\\none.jpg");
 						
 						Image none = ImageIO.read(file);
 						
@@ -676,7 +677,7 @@ public class PositionScreen implements ActionListener {
 					}
 					
 					
-					File baseFile = new File("image\\"+charaCbox.getSelectedItem().toString()+".jpg");
+					File baseFile = new File(tofu+"image\\"+charaCbox.getSelectedItem().toString()+".jpg");
 					Image nakedImage=null;
 					try {
 						 nakedImage = ImageIO.read(baseFile);
@@ -810,7 +811,7 @@ public class PositionScreen implements ActionListener {
 					arraySprite[x]=null;
 				}
 				
-				File file = new File("image\\none.jpg");
+				File file = new File(tofu+"image\\none.jpg");
 				try {
 					 image = ImageIO.read(file);
 				}
@@ -833,11 +834,12 @@ public class PositionScreen implements ActionListener {
 		
 		endSceneChcnx= new JCheckBox();
 		endSceneChcnx.setBounds(500,277,35,35);
-		frame.getContentPane().add(endSceneChcnx);
+		//frame.getContentPane().add(endSceneChcnx);
+		endSceneChcnx.setSelected(true);
 		
 		endScene= new JLabel("New Scene");
 		endScene.setBounds(535,277,96,35);
-		frame.getContentPane().add(endScene);
+		//frame.getContentPane().add(endScene);
 		
 		//generate code for game
 		JButton btnGenerate = new JButton("Generate Scene");
@@ -1004,7 +1006,7 @@ public class PositionScreen implements ActionListener {
 				}
 				for(int x=0; x<7; x++)
 				{
-					if(checked[x]=false && arraySprite[x]!=null)
+					if((checked[x]=false) && arraySprite[x]!=null)
 					{
 						fadeText="";
 						flipText="";
