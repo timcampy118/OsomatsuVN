@@ -115,7 +115,7 @@ init:
         
         ##### CHANGING HYPERLINK STYLE #####
         style.hlStyle = Style(style.say_dialogue)
-        style.hlStyle.font = "helsinki.ttf"
+        style.hlStyle.font = "fonts/helsinki.ttf"
         style.hlStyle.size = 36
         style.hlStyle.color = "#58b2ff"
         style.hlStyle.hover_color = "#000000"
@@ -174,7 +174,7 @@ init:
     
     ##### CALENDAR TEXT STYLES #####
     style calendarDateStyle:
-        font "FredokaOne-Regular.ttf"
+        font "fonts/FredokaOne-Regular.ttf"
         color "#FFFFFF"
         size 100
         text_align 1.0
@@ -182,7 +182,7 @@ init:
         outlines [(absolute(5),"#0b1b7a",absolute(0),absolute(0))]
         
     style calendarMonthStyle:
-        font "FredokaOne-Regular.ttf"
+        font "fonts/FredokaOne-Regular.ttf"
         color "#FFFFFF"
         size 40
         text_align 0.0
@@ -190,7 +190,7 @@ init:
         outlines [(absolute(4),"#0b1b7a",absolute(0),absolute(0))]
         
     style calendarTimeStyle:
-        font "FredokaOne-Regular.ttf"
+        font "fonts/FredokaOne-Regular.ttf"
         color "#FFFFFF"
         size 20
         text_align 0.0
@@ -199,7 +199,7 @@ init:
     
     ##### CALENDAR #####
     $ currentDate = 31
-    #$ currentDay = "Mon"
+    #$ currentDay = "Mon
     $ currentMonth = "JAN"
     $ currentTime = "AFTER SCHOOL"
     

@@ -298,6 +298,8 @@ screen navigation():
             textbutton _("Start") action Start()
             
             textbutton _("Credits") action ShowMenu("credits")
+            
+            textbutton _("Languages") action ShowMenu("languages")
 
         else:
 
@@ -427,6 +429,34 @@ screen credits():
             text "{a=https://twitter.com/OsosanDiscord}Twitter{/a}" xalign 0.5 yalign 0.45
             text "{color=#ffffff}This game is still currently a work in progress.{/color}" xalign 0.5 yalign 0.55
             textbutton _("Return") xalign 0.5 yalign 0.65 action Return()
+            
+## Language select screen ############################################################
+##
+## Copypasta'd from credits
+    
+screen languages():
+    tag menu
+    
+    #frame:
+    #    background "images/BG_pathhome_evening.jpg"
+    
+    frame:
+        background "gui/overlay/credits.png"
+    
+    frame:
+        background "gui/box.png"
+        xpadding 200
+        xmargin 400
+        xalign 0.5
+        yalign 0.5
+        
+        vbox: #This puts the elements in a vertical box, you could use an hbox or a grid or a fixed, etc.
+            
+            label _("Language")
+            textbutton ("English") action Language(None)
+            textbutton ("한국어") style "krTxtBtn_text" text_style "krTxtBtn_text" action Language("korean")
+            
+            textbutton _("Return") xalign 0.5 yalign 200 action Return()
     
 
 
@@ -946,7 +976,7 @@ style history_window is empty
 
 style history_name is gui_label
 style history_name_text:
-    font "helsinki.ttf"
+    font "fonts/helsinki.ttf"
     size 30
     color "#FFFFFF"
 style history_text:
