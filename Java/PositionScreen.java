@@ -10,19 +10,26 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
-import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 @SuppressWarnings("rawtypes")
 public class PositionScreen implements ActionListener { 
 
@@ -41,6 +48,21 @@ public class PositionScreen implements ActionListener {
 	static int errorNum;
 	static int backupCount;
 	static String tofu;
+	
+	
+	static XSSFWorkbook workbook;
+	static XSSFSheet sheet;
+	static Iterator<Row> rowIterator;
+	static Row row;
+	static Cell cell;
+	static Iterator<Cell> cellIterator;
+	
+	static String scriptName;
+	static String scriptTalk;
+	
+
+	
+	
 	//define canvas
 	Canvas fakeScreen;
 	
@@ -61,12 +83,21 @@ public class PositionScreen implements ActionListener {
 	JLabel labelPos;
 	JLabel endScene;
 	
+	JLabel oneBool;
+	JLabel twoBool;
+	JLabel threeBool;
+	JLabel fourBool;
+	JLabel fiveBool;
+	JLabel sixBool;
+	JLabel sevenBool;
+	
 	JLabel clickFace;
 	JLabel clickArm;
 	JLabel clickOutfit;
 	JLabel clickFade;
 	JLabel clickCharacter;
 	JLabel clickpos;
+	static JLabel textPos;
 	static JLabel counter;
 
 	//define JCheckBox
@@ -135,9 +166,84 @@ public class PositionScreen implements ActionListener {
 		}
 		
 	}
+	
+	  public static File getFile()
+	  {
+	    File file = null;
+	    try {
+	      String current = new File(".").getCanonicalPath();
+	      file = new File(current + "/script.xlsx");
+	    }
+	    catch (Exception e) {
+	      System.out.println("ERROR: " + e.getMessage());
+	    }
+
+	    return file;
+	  }
+	  
+	  public static void nextScript()
+	  {
+		  try
+      {
+		  	String temp="";
+			row = (Row)rowIterator.next();
+			//row = (Row)rowIterator.next();
+			//row = (Row)rowIterator.next();
+	        cellIterator = row.cellIterator();
+	       
+	        
+	        while (cellIterator.hasNext()) 
+	        {
+	        	 System.out.println(row.getRowNum()+"rownum");
+	        	 cell = (Cell)cellIterator.next();
+	          
+		          try
+		          {
+		            temp=temp+(cell.getStringCellValue() + " ");
+		        	if(cell.getColumnIndex()==0) 
+		        	{
+		        		scriptName=cell.getStringCellValue();
+		        		temp=temp+":";
+		        	}
+		        	else
+		        		scriptTalk=cell.getStringCellValue();
+		          }
+		          catch (Exception e)
+		          {
+		        	 temp=temp+(Double.toString(cell.getNumericCellValue())+ " ");
+		        	 if(cell.getColumnIndex()==0) 
+		        	 {
+			        	scriptName=Double.toString(cell.getNumericCellValue());
+			        	temp=temp+":";
+		        	 }
+			        else
+			        	scriptTalk=Double.toString(cell.getNumericCellValue());
+		          }  
+	        }
+	        System.out.println("script "+temp);
+	        if(temp.length()<5)
+	        {
+	        	nextScript();
+	        	System.out.println("nope");
+	        }
+	        else
+	        {
+	        	textPos.setText(temp);
+	        }
+      }
+		  catch (Exception d)
+          {
+			  System.out.println(d);
+          }
+		  
+	  }
+	        
+	   
+	  
+	  
 
 	@SuppressWarnings("unchecked")
-	private void initialize()  {
+	private void initialize() throws InvalidFormatException, IOException  {
 		
 		//ignore generic stuff im getting lazy
 		menuBar            = new JMenuBar();
@@ -149,7 +255,17 @@ public class PositionScreen implements ActionListener {
 	    exitMenuItem	   = new JMenuItem("Exit");
 	    clearListMenuItem  = new JMenuItem("Clear all Scene");
 	    
+	    File inputFile = getFile();
+		
+	    
+	    workbook = new XSSFWorkbook(inputFile);
+	    sheet = workbook.getSheetAt(0);
+	    rowIterator = sheet.iterator(); 
+	    
 	 
+	   
+	   
+	    
 	    genTextFileMenuItem.addActionListener(this);
 	    setCounter.addActionListener(this);
 	    deleteEntryMenuItem.addActionListener(this);
@@ -158,11 +274,11 @@ public class PositionScreen implements ActionListener {
 	    
 	    menuBar.add(fileMenu);
 	    fileMenu.add(genTextFileMenuItem);
-	    fileMenu.add(setCounter);
+	    //fileMenu.add(setCounter);
 	    fileMenu.add(exitMenuItem);
 	    counterNum=0;
 	    menuBar.add(iMessedUpMenu);
-	    iMessedUpMenu.add(deleteEntryMenuItem);
+	    //iMessedUpMenu.add(deleteEntryMenuItem);
 	    iMessedUpMenu.add(clearListMenuItem);
 	    
 	  
@@ -186,7 +302,33 @@ public class PositionScreen implements ActionListener {
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(charSelect);
 
+		oneBool = new JLabel("Pos 1: No");
+		oneBool.setBounds(140, 16, 60, 11);
+		frame.getContentPane().add(oneBool);
 		
+		twoBool = new JLabel("Pos 2: No");
+		twoBool.setBounds(140, 44, 60, 11);
+		frame.getContentPane().add(twoBool);
+		
+		threeBool = new JLabel("Pos 3: No");
+		threeBool.setBounds(140, 72, 60, 11);
+		frame.getContentPane().add(threeBool);
+		
+		fourBool = new JLabel("Pos 4: No");
+		fourBool.setBounds(140, 100, 60, 11);
+		frame.getContentPane().add(fourBool);
+		
+		fiveBool = new JLabel("Pos 5: No");
+		fiveBool.setBounds(140, 128, 60, 11);
+		frame.getContentPane().add(fiveBool);
+		
+		sixBool = new JLabel("Pos 6: No");
+		sixBool.setBounds(140, 156, 60, 11);
+		frame.getContentPane().add(sixBool);
+		
+		sevenBool = new JLabel("Pos 7: No");
+		sevenBool.setBounds(140, 184, 60, 11);
+		frame.getContentPane().add(sevenBool);
 		
 		//adding fakeScreen
 		fakeScreen = new Canvas();
@@ -424,7 +566,10 @@ public class PositionScreen implements ActionListener {
 		
 		counter = new JLabel("Line: " + counterNum);
 		counter.setBounds(370, 30, 97, 23);
-		charDetailsSelect.add(counter);
+		//charDetailsSelect.add(counter);
+		
+		
+		
 		
 		
 		//ignore not needed anymore
@@ -724,7 +869,40 @@ public class PositionScreen implements ActionListener {
 					e1.printStackTrace();
 				}
 			
+				if(arraySprite[0]==null)
+					oneBool.setText("Pos 1:No");
+				else
+					oneBool.setText("Pos 1:Yes");	
 				
+				if(arraySprite[1]==null)
+					twoBool.setText("Pos 2:No");
+				else
+					twoBool.setText("Pos 2:Yes");
+				
+				if(arraySprite[2]==null)
+					threeBool.setText("Pos 3:No");
+				else
+					threeBool.setText("Pos 3:Yes");
+				
+				if(arraySprite[3]==null)
+					fourBool.setText("Pos 4:No");
+				else
+					fourBool.setText("Pos 4:Yes");
+				
+				if(arraySprite[4]==null)
+					fiveBool.setText("Pos 5:No");
+				else
+					fiveBool.setText("Pos 5:Yes");
+				
+				if(arraySprite[5]==null)
+					sixBool.setText("Pos 6:No");
+				else
+					sixBool.setText("Pos 6:Yes");
+				
+				if(arraySprite[6]==null)
+					sevenBool.setText("Pos 7:No");
+				else
+					sevenBool.setText("Pos 7:Yes");
 				
 			}
 		});
@@ -735,8 +913,15 @@ public class PositionScreen implements ActionListener {
 		charDetailsSelect.add(showChara);
 
 		lblCharacter = new JLabel("Character:");
-		lblCharacter.setBounds(29, 246, 63, 14);
+		lblCharacter.setBounds(0, 235, 63, 14);
 		frame.getContentPane().add(lblCharacter);
+		
+		
+		textPos = new JLabel("Text:");
+		textPos.setBounds(0, 262, 1400, 14);
+		frame.getContentPane().add(textPos);
+		nextScript();
+
 
 		//making chara drop down
 		charaCbox = new JComboBox();
@@ -756,7 +941,7 @@ public class PositionScreen implements ActionListener {
 
 		charaCbox.setModel(new DefaultComboBoxModel(Character.values()));
 		charaCbox.setSelectedIndex(0);
-		charaCbox.setBounds(94, 246, 105, 20);
+		charaCbox.setBounds(63, 235, 105, 20);
 		frame.getContentPane().add(charaCbox);
 
 		
@@ -764,7 +949,7 @@ public class PositionScreen implements ActionListener {
 		//character detail layout setup 
 		clickPanel = new JPanel();
 		clickPanel.setBorder(new TitledBorder(null,"Character Details", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		clickPanel.setBounds(6, 16, 150, 200);
+		clickPanel.setBounds(6, 16, 130, 200);
 		frame.getContentPane().add(clickPanel);
 		clickPanel.setLayout(null);
 		
@@ -793,7 +978,18 @@ public class PositionScreen implements ActionListener {
 		clickpos.setBounds(6, 111, 150, 14);
 		clickPanel.add(clickpos);
 		
-	
+		
+	    
+		
+		
+	        
+	        
+			
+		
+		
+		
+		
+		
 		
 		
 		
@@ -819,6 +1015,14 @@ public class PositionScreen implements ActionListener {
 				{
 					
 				}
+				
+				oneBool.setText("Pos 1:No");
+				twoBool.setText("Pos 2:No");
+				threeBool.setText("Pos 3:No");
+				fourBool.setText("Pos 4:No");
+				fiveBool.setText("Pos 5:No");
+				sixBool.setText("Pos 6:No");
+				sevenBool.setText("Pos 7:No");
 				
 			fakeScreen.getGraphics().drawImage(image, 0, 50, 900,200 ,null);		
 			
@@ -897,10 +1101,15 @@ public class PositionScreen implements ActionListener {
 								fadeText= " Fade";
 							System.out.println(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1) +" " +  ((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ));	
 							//THIS IS THE IMPORTANT PART, MAKE SURE THIS IS RIGHT
-							
-							
-
-							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
+							if(arraySprite[x].getCharacter().equals("oso")||arraySprite[x].getCharacter().equals("kara")||arraySprite[x].getCharacter().equals("choro")||arraySprite[x].getCharacter().equals("ichi")||arraySprite[x].getCharacter().equals("jyushi")||arraySprite[x].getCharacter().equals("todo"))
+							{
+								codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
+							}
+							else if(arraySprite[x].getCharacter().contains("NPC"))
+							{
+								codeText.add("show "+arraySprite[x].getCharacter() + fadeText + flipText +" at "+ arraySprite[x].getPos());
+							}
+							else
 							{
 								String special="";
 								if(arraySprite[x].getCharacter().equals("chibita"))
@@ -910,154 +1119,14 @@ public class PositionScreen implements ActionListener {
 								special="";
 								
 							}
-							else
-							codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos());
+							
 							isThere[x]=arraySprite[x];	
 							
 						}
 					}	
 			}
-			else
-			{
-				Boolean checked[]=new Boolean[7];
-				for(int x=0; x<7; x++)
-				{
-					checked[x]=false;
-					if(arraySprite[x]==null)
-						checked[x]=true;
-				}
-				
-				//checked if previous was in current, if not. hide. 
-				for(int x=0; x<7; x++)
-				{
-					if(isThere[x]==null)
-					{
-						
-					}
-					else
-					{
-						boolean gone=true;
-						for(int y=0; y<7;y++)
-						{
-							if(arraySprite[y]!=null && isThere[x].getCharacter().equals(arraySprite[y].getCharacter()))
-								gone=false;
-						}
-						if(gone)
-						{
-							codeText.add("hide " + isThere[x].getCharacter()+ " with Dissolve(0.05)");
-						}
-						gone=true;
-					}
-					
-				
-					
-				}
-				//break
-				//check if character was in old scene, if so check pos, if different in pos last time. Move character to new pos with move
-				for(int x=0; x<7; x++)
-				{
-					if(arraySprite[x]==null)
-					{
-						
-					}
-					else
-					{
-					move=false;
-					for(int y=0; y<7;y++)
-					{
-						if(isThere[y]!=null && arraySprite[x].getCharacter().equals(isThere[y].getCharacter()))
-							move=true;
-					}
-					
-					if(move)
-					{
-						fadeText="";
-						flipText="";
-						
-						
-							if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
-								flipText= " Flip";
-							if(arraySprite[x].getFade())
-								fadeText= " Fade";
-						
-						
-						if(isThere[arraySprite[x].getPosPos()] !=null && !arraySprite[x].getCharacter().equals(isThere[arraySprite[x].getPosPos()].getCharacter()))
-						{
-							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
-							{
-								String special="";
-								if(arraySprite[x].getCharacter().equals("chibita"))
-									special="c";
-								codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with move");
-								
-								special="";
-								
-							}
-							else
-							codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with move");
-							
-							checked[x]=true;
-						}
-					}
-					move=false;
-
-					}
-					
-				}
-				for(int x=0; x<7; x++)
-				{
-					if((checked[x]=false) && arraySprite[x]!=null)
-					{
-						fadeText="";
-						flipText="";
-						
-						
-							if(((int)(arraySprite[x].getPos().charAt(arraySprite[x].getPos().length()-1))-48 ) <4)
-								flipText= " Flip";
-							if(arraySprite[x].getFade())
-								fadeText= " Fade";
-						
-						
-						if(!arraySprite[x].getCharacter().equals(isThere[arraySprite[x].getPosPos()].getCharacter()))
-						{
-							if(arraySprite[x].getCharacter().equals("iyami")||arraySprite[x].getCharacter().equals("chibita")||arraySprite[x].getCharacter().equals("totoko")||arraySprite[x].getCharacter().equals("matsuyo")||arraySprite[x].getCharacter().equals("atsushi"))
-							{
-								String special="";
-								if(arraySprite[x].getCharacter().equals("chibita"))
-									special="c";
-								if(arraySprite[x].getFade())
-									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with Dissolve(0.1)");
-								else
-									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + arraySprite[x].getFace() + fadeText + flipText +" at " +special+ arraySprite[x].getPos() +" with Dissolve(0.05)");
-								
-								special="";
-								
-							}
-							else
-								if(arraySprite[x].getFade())
-									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with Dissolve(0.1)");
-								
-								else
-									codeText.add("show "+arraySprite[x].getCharacter() + " "+ arraySprite[x].getOutfit() +" " + "0"+ arraySprite[x].getArm().charAt(arraySprite[x].getArm().length()-1)+ " "+ arraySprite[x].getFace() + fadeText + flipText +" at " + arraySprite[x].getPos()+" with Dissolve(0.05)");
-							
-							checked[x]=true;
-						}
-						
-						
-					}
-				}
-				
-				for(int x=0; x<7; x++)
-				{
-					if(checked[x]!=false && isThere[x]!=null)
-						System.out.println("ERROR CHECKED");
-					isThere[x]=arraySprite[x];	
-				}
-				
-				
-				
-			}
-				
+			
+			codeText.add(scriptName+" \""+scriptTalk+"\"");
 			
 
 		
@@ -1065,7 +1134,10 @@ public class PositionScreen implements ActionListener {
 				
 		
 		JOptionPane.showMessageDialog(null, "Scene Generated");
-		codeText.add("done" + counterNum);
+		scriptName="";
+		scriptTalk="";
+		nextScript();
+		//codeText.add("done" + counterNum);
 		counterNum++;
 		counter.setText("Line: "+counterNum);
 		
